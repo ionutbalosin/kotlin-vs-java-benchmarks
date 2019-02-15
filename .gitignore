@@ -1,0 +1,17 @@
+.classpath
+.project
+.settings/
+.gradle/
+.iml
+.ipr
+.iws
+.metadata/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.log
+**/generated-classes/*
+**/build/*
+**/target/*
+**/logs/*
