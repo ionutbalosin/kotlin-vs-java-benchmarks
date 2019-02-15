@@ -8,11 +8,11 @@ import java.util.concurrent.TimeUnit
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 10, time = 5, timeUnit = TimeUnit.NANOSECONDS)
-@Measurement(iterations = 10, time = 1, timeUnit = TimeUnit.NANOSECONDS)
+@Warmup(iterations = 10, time = 3, timeUnit = TimeUnit.NANOSECONDS)
+@Measurement(iterations = 10, time = 3, timeUnit = TimeUnit.NANOSECONDS)
 @Fork(value = 3, jvmArgsAppend = [])
 @State(Scope.Benchmark)
-open class StringInterpolationBenchmark {
+open class StringInterpolationKtBenchmark {
 
 
     @Param("1")
@@ -36,7 +36,7 @@ open class StringInterpolationBenchmark {
             // sudo java -jar target/benchmarks.jar ".*StringInterpolationBenchmark.*" -wi 10 -i 10 -r 1 -f 3 -prof perfasm:intelSyntax=true
 
             val opt = OptionsBuilder()
-                    .include(StringInterpolationBenchmark::class.java.simpleName)
+                    .include(StringInterpolationKtBenchmark::class.java.simpleName)
                     .build()
 
             Runner(opt).run()

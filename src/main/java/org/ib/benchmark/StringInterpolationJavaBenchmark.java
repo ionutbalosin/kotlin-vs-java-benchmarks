@@ -10,8 +10,8 @@ import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 10, time = 1, timeUnit = TimeUnit.NANOSECONDS)
-@Measurement(iterations = 10, time = 1, timeUnit = TimeUnit.NANOSECONDS)
+@Warmup(iterations = 10, time = 3, timeUnit = TimeUnit.NANOSECONDS)
+@Measurement(iterations = 10, time = 3, timeUnit = TimeUnit.NANOSECONDS)
 @Fork(value = 3, jvmArgsAppend = { })
 @State(Scope.Benchmark)
 public class StringInterpolationJavaBenchmark {
