@@ -8,12 +8,26 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Ionut Balosin [www.ionutbalosin.com / @ionutbalosin]
+ * @copyright (c) Ionut Balosin
+ * <p>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 10, time = 3, timeUnit = TimeUnit.NANOSECONDS)
-@Measurement(iterations = 10, time = 3, timeUnit = TimeUnit.NANOSECONDS)
-@Fork(value = 3, jvmArgsAppend = { })
+@Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Fork(value = 3, jvmArgsAppend = {})
 @State(Scope.Benchmark)
+/**
+ * @author Ionut Balosin [www.ionutbalosin.com / @ionutbalosin]
+ * @copyright (c) Ionut Balosin
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 public class StringInterpolationJavaBenchmark {
 
 
@@ -34,9 +48,9 @@ public class StringInterpolationJavaBenchmark {
         // sudo java -jar target/benchmarks.jar ".*StringInterpolationJavaBenchmark.*" -wi 10 -i 10 -r 1 -f 3 -prof perfasm:intelSyntax=true
 
         Options opt =
-            new OptionsBuilder()
-                    .include(StringInterpolationJavaBenchmark.class.getSimpleName())
-                    .build();
+                new OptionsBuilder()
+                        .include(StringInterpolationJavaBenchmark.class.getSimpleName())
+                        .build();
 
         new Runner(opt).run();
     }
