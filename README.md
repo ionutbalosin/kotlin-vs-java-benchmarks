@@ -36,6 +36,12 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*InlineClass.*" -prof gc > 
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*MegamorphicCall.*" -prof perfasm:intelSyntax=true > results/MegamorphicCallBenchmark.out
 ```
 
+#### High-order function tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*HighOrderFunction.*"  > results/HighOrderFunctionBenchmark.out
+```
+
+
 ## License
 
 The project is licensed under [GNU](https://www.gnu.org/licenses/). For the full copyright and license information, please check the LICENSE file included in the `src/main/resources` folder
