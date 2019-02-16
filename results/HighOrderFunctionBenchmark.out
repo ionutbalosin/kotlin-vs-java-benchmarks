@@ -127,7 +127,8 @@ HighOrderFunctionJavaBenchmark.sumOfSquares  1000000  avgt   15  3.088 ± 0.064 
 HighOrderFunctionKtBenchmark.sumOfSquares    1000000  avgt   15  0.409 ± 0.005  ms/op
 
 Few thoughts:
-    - Inlining the function at call-sites saves memory allocations (both for function objects and classes) and reduces virtual calls, as seen below in the example:
+    - Inlining the function at call-sites saves the lambda objects to be created which in essence it means less memory allocations and less virtual calls
+    - The bytecode from Kotlin code looks like below:
 
         @Benchmark
         public final long sumOfSquares() {              <<-- Inlined version
@@ -151,4 +152,4 @@ Few thoughts:
 
             return sum$iv;
         }
-    - in Java it pays the cost of INVOKEDYNAMIC and INVOKEVIRTUAL calls
+    - in Java it pays the cost of INVOKEDYNAMIC and INVOKEVIRTUAL calls (as a result of lambda objects created)
