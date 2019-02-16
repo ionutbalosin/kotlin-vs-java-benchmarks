@@ -23,7 +23,6 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Benchmark)
 public class StringInterpolationJavaBenchmark {
 
-
     @Param("1")
     private int quantity;
 

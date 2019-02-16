@@ -1,0 +1,271 @@
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.InlineClassJavaBenchmark.circleDiameter
+# Parameters: (param = 3.5)
+
+# Run progress: 0.00% complete, ETA 00:01:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 2.463 ns/op
+# Warmup Iteration   2: 2.490 ns/op
+# Warmup Iteration   3: 2.404 ns/op
+# Warmup Iteration   4: 2.322 ns/op
+# Warmup Iteration   5: 2.166 ns/op
+Iteration   1: 2.168 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 2.169 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 2.168 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 2.164 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 2.174 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+
+# Run progress: 16.67% complete, ETA 00:01:16
+# Fork: 2 of 3
+# Warmup Iteration   1: 2.630 ns/op
+# Warmup Iteration   2: 2.614 ns/op
+# Warmup Iteration   3: 2.319 ns/op
+# Warmup Iteration   4: 2.323 ns/op
+# Warmup Iteration   5: 2.335 ns/op
+Iteration   1: 2.170 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 2.151 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 2.163 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 2.167 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 2.160 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+
+# Run progress: 33.33% complete, ETA 00:01:01
+# Fork: 3 of 3
+# Warmup Iteration   1: 2.641 ns/op
+# Warmup Iteration   2: 2.615 ns/op
+# Warmup Iteration   3: 2.348 ns/op
+# Warmup Iteration   4: 2.323 ns/op
+# Warmup Iteration   5: 2.156 ns/op
+Iteration   1: 2.341 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 2.332 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 2.342 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 2.338 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 2.340 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+
+
+Result "org.ib.benchmark.InlineClassJavaBenchmark.circleDiameter":
+  2.223 ±(99.9%) 0.091 ns/op [Average]
+  (min, avg, max) = (2.151, 2.223, 2.342), stdev = 0.085
+  CI (99.9%): [2.132, 2.314] (assumes normal distribution)
+
+Secondary result "org.ib.benchmark.InlineClassJavaBenchmark.circleDiameter:·gc.alloc.rate":
+  ≈ 10⁻⁴ MB/sec
+
+Secondary result "org.ib.benchmark.InlineClassJavaBenchmark.circleDiameter:·gc.alloc.rate.norm":
+  ≈ 10⁻⁶ B/op
+
+Secondary result "org.ib.benchmark.InlineClassJavaBenchmark.circleDiameter:·gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.InlineClassKtBenchmark.circleDiameter
+# Parameters: (param = 3.5)
+
+# Run progress: 50.00% complete, ETA 00:00:45
+# Fork: 1 of 3
+# Warmup Iteration   1: 2.432 ns/op
+# Warmup Iteration   2: 2.420 ns/op
+# Warmup Iteration   3: 2.155 ns/op
+# Warmup Iteration   4: 2.351 ns/op
+# Warmup Iteration   5: 2.325 ns/op
+Iteration   1: 2.321 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 2.320 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 2.316 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 2.320 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 2.318 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+
+# Run progress: 66.67% complete, ETA 00:00:30
+# Fork: 2 of 3
+# Warmup Iteration   1: 2.475 ns/op
+# Warmup Iteration   2: 2.445 ns/op
+# Warmup Iteration   3: 2.188 ns/op
+# Warmup Iteration   4: 2.185 ns/op
+# Warmup Iteration   5: 2.220 ns/op
+Iteration   1: 2.180 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 2.193 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 2.200 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 2.194 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 2.302 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+
+# Run progress: 83.33% complete, ETA 00:00:15
+# Fork: 3 of 3
+# Warmup Iteration   1: 2.479 ns/op
+# Warmup Iteration   2: 2.474 ns/op
+# Warmup Iteration   3: 2.190 ns/op
+# Warmup Iteration   4: 2.191 ns/op
+# Warmup Iteration   5: 2.197 ns/op
+Iteration   1: 2.205 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 2.370 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 2.463 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 2.337 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 2.592 ns/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: ≈ 10⁻⁶ B/op
+                 ·gc.count:           ≈ 0 counts
+
+
+
+Result "org.ib.benchmark.InlineClassKtBenchmark.circleDiameter":
+  2.309 ±(99.9%) 0.120 ns/op [Average]
+  (min, avg, max) = (2.180, 2.309, 2.592), stdev = 0.112
+  CI (99.9%): [2.189, 2.428] (assumes normal distribution)
+
+Secondary result "org.ib.benchmark.InlineClassKtBenchmark.circleDiameter:·gc.alloc.rate":
+  ≈ 10⁻⁴ MB/sec
+
+Secondary result "org.ib.benchmark.InlineClassKtBenchmark.circleDiameter:·gc.alloc.rate.norm":
+  ≈ 10⁻⁶ B/op
+
+Secondary result "org.ib.benchmark.InlineClassKtBenchmark.circleDiameter:·gc.count":
+  ≈ 0 counts
+
+
+# Run complete. Total time: 00:01:32
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                    (param)  Mode  Cnt   Score    Error   Units
+InlineClassJavaBenchmark.circleDiameter                          3.5  avgt   15   2.223 ±  0.091   ns/op
+InlineClassJavaBenchmark.circleDiameter:·gc.alloc.rate           3.5  avgt   15  ≈ 10⁻⁴           MB/sec
+InlineClassJavaBenchmark.circleDiameter:·gc.alloc.rate.norm      3.5  avgt   15  ≈ 10⁻⁶             B/op
+InlineClassJavaBenchmark.circleDiameter:·gc.count                3.5  avgt   15     ≈ 0           counts
+InlineClassKtBenchmark.circleDiameter                            3.5  avgt   15   2.309 ±  0.120   ns/op
+InlineClassKtBenchmark.circleDiameter:·gc.alloc.rate             3.5  avgt   15  ≈ 10⁻⁴           MB/sec
+InlineClassKtBenchmark.circleDiameter:·gc.alloc.rate.norm        3.5  avgt   15  ≈ 10⁻⁶             B/op
+InlineClassKtBenchmark.circleDiameter:·gc.count                  3.5  avgt   15     ≈ 0           counts

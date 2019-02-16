@@ -21,7 +21,6 @@ import java.util.concurrent.TimeUnit
 @State(Scope.Benchmark)
 open class StringInterpolationKtBenchmark {
 
-
     @Param("1")
     private var quantity: Int = 0
 
@@ -35,18 +34,16 @@ open class StringInterpolationKtBenchmark {
     private var currency: String = ""
 
     @Param("2")
-    private var length: Double = 5.0
+    private var length: Double = 0.0
 
     @Param("3")
-    private var width: Double = 2.0
+    private var width: Double = 0.0
 
     companion object {
 
         @Throws(RunnerException::class)
         @JvmStatic
         fun main(args: Array<String>) {
-
-            // sudo java -jar target/benchmarks.jar ".*StringInterpolationBenchmark.*" -wi 10 -i 10 -r 1 -f 3 -prof perfasm:intelSyntax=true
 
             val opt = OptionsBuilder()
                     .include(StringInterpolationKtBenchmark::class.java.simpleName)
