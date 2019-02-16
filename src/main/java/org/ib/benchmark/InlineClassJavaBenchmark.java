@@ -1,6 +1,10 @@
 package org.ib.benchmark;
 
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.runner.Runner;
+import org.openjdk.jmh.runner.RunnerException;
+import org.openjdk.jmh.runner.options.Options;
+import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +25,16 @@ public class InlineClassJavaBenchmark {
 
     @Param({"3.5"})
     private double param;
+
+    public static void main(String[] args) throws RunnerException {
+
+        Options opt =
+            new OptionsBuilder()
+                .include(InlineClassJavaBenchmark.class.getSimpleName())
+                .build();
+
+        new Runner(opt).run();
+    }
 
     @Benchmark
     public double circleDiameter() {

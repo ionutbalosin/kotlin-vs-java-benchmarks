@@ -269,3 +269,7 @@ InlineClassKtBenchmark.circleDiameter                            3.5  avgt   15 
 InlineClassKtBenchmark.circleDiameter:·gc.alloc.rate             3.5  avgt   15  ≈ 10⁻⁴           MB/sec
 InlineClassKtBenchmark.circleDiameter:·gc.alloc.rate.norm        3.5  avgt   15  ≈ 10⁻⁶             B/op
 InlineClassKtBenchmark.circleDiameter:·gc.count                  3.5  avgt   15     ≈ 0           counts
+
+Few thoughts:
+    - Inlining classes in Kotlin can save few GC allocations, however, also JIT Compiler ends up with similar optimizations based on Scalar Replacement
+    - inlining classes in Kotlin have a lot of restrictions (I would say it is quite limited but interesting language feature)

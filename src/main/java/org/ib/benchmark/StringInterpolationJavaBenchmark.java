@@ -43,12 +43,10 @@ public class StringInterpolationJavaBenchmark {
 
     public static void main(String[] args) throws RunnerException {
 
-        // sudo java -jar target/benchmarks.jar ".*StringInterpolationJavaBenchmark.*" -wi 10 -i 10 -r 1 -f 3 -prof perfasm:intelSyntax=true
-
         Options opt =
-                new OptionsBuilder()
-                        .include(StringInterpolationJavaBenchmark.class.getSimpleName())
-                        .build();
+            new OptionsBuilder()
+                .include(StringInterpolationJavaBenchmark.class.getSimpleName())
+                .build();
 
         new Runner(opt).run();
     }

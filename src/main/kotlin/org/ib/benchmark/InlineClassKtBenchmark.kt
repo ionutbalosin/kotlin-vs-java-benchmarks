@@ -48,6 +48,15 @@ open class InlineClassKtBenchmark {
     }
 }
 
+/**
+ * Inline class limitations:
+ * - Inline class must have a public primary constructor with a single value parameter
+ * - Inline class must have a single read-only (val) property as an underlying value, which is defined in primary constructor
+ * - Inline class cannot have init block
+ * - Inline class must be final
+ * - Inline class can implement only interfaces
+ * - Inline class must be a toplevel class
+ */
 inline class Circle(private val radius: Double) {
     val diameter get() = 2 * radius
 }
