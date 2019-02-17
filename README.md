@@ -41,6 +41,11 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*MegamorphicCall.*" -prof p
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*HighOrderFunction.*"  > results/HighOrderFunctionBenchmark.out
 ```
 
+#### Tail recursion function tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*TailRecursiveFunction.*" > results/TailRecursiveFunctionBenchmark.out
+```
+
 
 ## License
 
