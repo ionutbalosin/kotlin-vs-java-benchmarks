@@ -46,6 +46,10 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*HighOrderFunction.*"  > re
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*TailRecursiveFunction.*" > results/TailRecursiveFunctionBenchmark.out
 ```
 
+#### Null safety tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*NullSafety.*" -prof perfasm:intelSyntax=true > results/NullSafetyBenchmark.out
+```
 
 ## License
 

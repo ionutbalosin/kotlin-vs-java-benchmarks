@@ -152,6 +152,7 @@ Few thoughts:
     - may be an improvement for Kotlin would be to automatically detect and being optimized by the compiler
         - maybe ask Kotlin why there is an explicit keyword for that!
     - Kotlin tailrec function performance is similar to non-recursive (i.e. liniear) approach with the advantage of keeping the code more compact
+    - Using IDEA IDE it suggest when a function is tailrec and when it is not tailrec!
 
 ToDo:
     - try Kotlin tailrec function for sum of elements and compare the result with Java :) You may be surprised!
