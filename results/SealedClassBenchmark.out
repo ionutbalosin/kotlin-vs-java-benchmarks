@@ -123,3 +123,6 @@ Do not assume the numbers tell you what you want them to tell.
 Benchmark                      Mode  Cnt  Score   Error  Units
 SealedClassJavaBenchmark.area  avgt   15  9.080 ± 0.412  ns/op
 SealedClassKtBenchmark.area    avgt   15  8.746 ± 0.366  ns/op
+
+Few thoughts:
+    - not any relevant/significant performance difference
