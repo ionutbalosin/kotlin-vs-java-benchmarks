@@ -56,6 +56,10 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*NullSafety.*" -prof perfas
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*SealedClass.*" > results/SealedClassBenchmark.out
 ```
 
+#### Default arguments tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*DefaultArguments.*" -prof perfasm:intelSyntax=true > results/DefaultArgumentsBenchmark.out
+```
 
 ## License
 
