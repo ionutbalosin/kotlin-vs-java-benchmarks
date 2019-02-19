@@ -44,9 +44,9 @@ public class StringInterpolationJavaBenchmark {
     public static void main(String[] args) throws RunnerException {
 
         Options opt =
-            new OptionsBuilder()
-                .include(StringInterpolationJavaBenchmark.class.getSimpleName())
-                .build();
+                new OptionsBuilder()
+                        .include(StringInterpolationJavaBenchmark.class.getSimpleName())
+                        .build();
 
         new Runner(opt).run();
     }

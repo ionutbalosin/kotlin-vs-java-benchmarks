@@ -34,8 +34,8 @@ open class InlineClassKtBenchmark {
         fun main(args: Array<String>) {
 
             val opt = OptionsBuilder()
-                .include(InlineClassKtBenchmark::class.java.simpleName)
-                .build()
+                    .include(InlineClassKtBenchmark::class.java.simpleName)
+                    .build()
 
             Runner(opt).run()
         }

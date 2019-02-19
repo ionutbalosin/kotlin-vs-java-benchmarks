@@ -29,9 +29,9 @@ public class InlineClassJavaBenchmark {
     public static void main(String[] args) throws RunnerException {
 
         Options opt =
-            new OptionsBuilder()
-                .include(InlineClassJavaBenchmark.class.getSimpleName())
-                .build();
+                new OptionsBuilder()
+                        .include(InlineClassJavaBenchmark.class.getSimpleName())
+                        .build();
 
         new Runner(opt).run();
     }
@@ -49,7 +49,7 @@ public class InlineClassJavaBenchmark {
             this.radius = radius;
         }
 
-        public double getDiameter(){
+        public double getDiameter() {
             return 2 * radius;
         }
     }

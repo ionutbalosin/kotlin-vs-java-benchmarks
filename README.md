@@ -51,6 +51,12 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*TailRecursiveFunction.*" >
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*NullSafety.*" -prof perfasm:intelSyntax=true > results/NullSafetyBenchmark.out
 ```
 
+#### Sealed classes tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*SealedClass.*" > results/SealedClassBenchmark.out
+```
+
+
 ## License
 
 The project is licensed under [GNU](https://www.gnu.org/licenses/). For the full copyright and license information, please check the LICENSE file included in the `src/main/resources` folder

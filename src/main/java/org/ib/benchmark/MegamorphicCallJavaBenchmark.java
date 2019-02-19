@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-@Fork(value = 3, jvmArgsAppend = {"-XX:-TieredCompilation", "-Xbatch"} )
+@Fork(value = 3, jvmArgsAppend = {"-XX:-TieredCompilation", "-Xbatch"})
 @State(Scope.Benchmark)
 public class MegamorphicCallJavaBenchmark {
 
@@ -33,21 +33,21 @@ public class MegamorphicCallJavaBenchmark {
         new Runner(opt).run();
     }
 
+    //@CompilerControl(CompilerControl.Mode.DONT_INLINE)
+    public static int compute(VirtualCallJavaCMath cmath, int i) {
+        return cmath.compute(i);
+    }
+
     @Benchmark
     @Group("Megamorphic3Java")
-    public int megamorphic3Call(Megamorphic3JavaState state ) {
+    public int megamorphic3Call(Megamorphic3JavaState state) {
         return state.megamorphic3Call();
     }
 
     @Benchmark
     @Group("Megamorphic4Java")
-    public int megamorphic4Call(Megamorphic4JavaState state ) {
+    public int megamorphic4Call(Megamorphic4JavaState state) {
         return state.megamorphic4Call();
-    }
-
-    //@CompilerControl(CompilerControl.Mode.DONT_INLINE)
-    public static int compute(VirtualCallJavaCMath cmath, int i){
-        return cmath.compute(i);
     }
 
     @State(Scope.Thread)
@@ -59,8 +59,7 @@ public class MegamorphicCallJavaBenchmark {
         VirtualCallJavaCMath alg2 = new VirtualCallJavaAlg2();
         VirtualCallJavaCMath alg3 = new VirtualCallJavaAlg3();
 
-        int megamorphic3Call()
-        {
+        int megamorphic3Call() {
             return compute(alg1, param) + compute(alg2, param) + compute(alg3, param);
         }
     }
@@ -75,8 +74,7 @@ public class MegamorphicCallJavaBenchmark {
         VirtualCallJavaCMath alg3 = new VirtualCallJavaAlg3();
         VirtualCallJavaCMath alg4 = new VirtualCallJavaAlg4();
 
-        int megamorphic4Call()
-        {
+        int megamorphic4Call() {
             return compute(alg1, param) + compute(alg2, param) + compute(alg3, param) + compute(alg4, param);
         }
     }
