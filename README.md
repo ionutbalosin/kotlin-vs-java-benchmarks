@@ -61,6 +61,11 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*SealedClass.*" > results/S
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*DefaultArguments.*" -prof perfasm:intelSyntax=true > results/DefaultArgumentsBenchmark.out
 ```
 
+#### Varargs tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*Varargs.*" -prof perfasm:intelSyntax=true > results/VarargsBenchmark.out
+```
+
 ## License
 
 The project is licensed under [GNU](https://www.gnu.org/licenses/). For the full copyright and license information, please check the LICENSE file included in the `src/main/resources` folder

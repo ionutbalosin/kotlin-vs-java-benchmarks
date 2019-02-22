@@ -1,0 +1,1694 @@
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.VarargsJavaBenchmark.average
+# Parameters: (param1 = 3, param2 = 5, param3 = 7, param4 = 9, param5 = 11, param6 = 13, param7 = 15, param8 = 17)
+
+# Run progress: 0.00% complete, ETA 00:01:00
+# Fork: 1 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 11.879 ns/op
+# Warmup Iteration   2: 8.881 ns/op
+# Warmup Iteration   3: 7.797 ns/op
+# Warmup Iteration   4: 7.907 ns/op
+# Warmup Iteration   5: 7.662 ns/op
+Iteration   1: 7.968 ns/op
+Iteration   2: 7.856 ns/op
+Iteration   3: 7.615 ns/op
+Iteration   4: 7.705 ns/op
+Iteration   5: 7.988 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 16.67% complete, ETA 00:01:05
+# Fork: 2 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 11.775 ns/op
+# Warmup Iteration   2: 8.461 ns/op
+# Warmup Iteration   3: 8.195 ns/op
+# Warmup Iteration   4: 7.660 ns/op
+# Warmup Iteration   5: 7.967 ns/op
+Iteration   1: 7.715 ns/op
+Iteration   2: 8.118 ns/op
+Iteration   3: 7.849 ns/op
+Iteration   4: 8.183 ns/op
+Iteration   5: 7.822 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 33.33% complete, ETA 00:00:51
+# Fork: 3 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 12.653 ns/op
+# Warmup Iteration   2: 11.366 ns/op
+# Warmup Iteration   3: 8.149 ns/op
+# Warmup Iteration   4: 8.049 ns/op
+# Warmup Iteration   5: 8.161 ns/op
+Iteration   1: 8.442 ns/op
+Iteration   2: 8.404 ns/op
+Iteration   3: 8.108 ns/op
+Iteration   4: 7.994 ns/op
+Iteration   5: 8.284 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "org.ib.benchmark.VarargsJavaBenchmark.average":
+  8.003 ±(99.9%) 0.270 ns/op [Average]
+  (min, avg, max) = (7.615, 8.003, 8.442), stdev = 0.252
+  CI (99.9%): [7.734, 8.273] (assumes normal distribution)
+
+Secondary result "org.ib.benchmark.VarargsJavaBenchmark.average:·asm":
+PrintAssembly processed: 144965 total address lines.
+Perf output processed (skipped 7.167 seconds):
+ Column 1: cycles (5376 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 529 (298 bytes) 
+
+                                                           ; implicit exception: dispatches to 0x00007f0de073e3c2
+             0x00007f0de073e1d9: test   r11d,r11d
+             0x00007f0de073e1dc: jne    0x00007f0de073e345  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+             0x00007f0de073e1e2: mov    ebp,0x1
+         ╭   0x00007f0de073e1e7: jmp    0x00007f0de073e30c
+         │   0x00007f0de073e1ec: nop    DWORD PTR [rax+0x0]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+         │                                                 ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         │                                                 ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.51%  │↗  0x00007f0de073e1f0: mov    QWORD PTR [r15+0x118],r10
+  1.12%  ││  0x00007f0de073e1f7: prefetchw BYTE PTR [r10+0xc0]
+  0.50%  ││  0x00007f0de073e1ff: mov    QWORD PTR [rax],0x1
+  0.54%  ││  0x00007f0de073e206: prefetchw BYTE PTR [r10+0x100]
+  1.71%  ││  0x00007f0de073e20e: mov    DWORD PTR [rax+0x8],0xc10
+         ││                                                ;   {metadata({type array int})}
+  1.67%  ││  0x00007f0de073e215: prefetchw BYTE PTR [r10+0x140]
+  1.40%  ││  0x00007f0de073e21d: mov    DWORD PTR [rax+0xc],0x8
+  0.56%  ││  0x00007f0de073e224: prefetchw BYTE PTR [r10+0x180]
+  2.33%  ││  0x00007f0de073e22c: mov    QWORD PTR [rax+0x10],0x0
+  1.32%  ││  0x00007f0de073e234: mov    QWORD PTR [rax+0x18],0x0
+  0.09%  ││  0x00007f0de073e23c: mov    QWORD PTR [rax+0x20],0x0
+  0.52%  ││  0x00007f0de073e244: mov    QWORD PTR [rax+0x28],0x0
+  1.67%  ││  0x00007f0de073e24c: mov    QWORD PTR [rsp+0x48],r9  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@3 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.15%  ││  0x00007f0de073e251: mov    r10,QWORD PTR [rsp+0x50]
+  0.02%  ││  0x00007f0de073e256: mov    r11d,DWORD PTR [r10+0xc]  ;*getfield param1 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@8 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.47%  ││  0x00007f0de073e25a: mov    DWORD PTR [rax+0x10],r11d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@11 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.53%  ││  0x00007f0de073e25e: mov    edx,DWORD PTR [r10+0x10]  ;*getfield param2 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@15 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.06%  ││  0x00007f0de073e262: mov    DWORD PTR [rax+0x14],edx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@18 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007f0de073e265: mov    r8d,DWORD PTR [r10+0x28]  ;*getfield param8 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@59 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.52%  ││  0x00007f0de073e269: mov    ecx,DWORD PTR [r10+0x24]  ;*getfield param7 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@51 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.26%  ││  0x00007f0de073e26d: mov    r9d,DWORD PTR [r10+0x20]  ;*getfield param6 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@43 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.04%  ││  0x00007f0de073e271: mov    edi,DWORD PTR [r10+0x1c]  ;*getfield param5 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@36 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007f0de073e275: mov    ebx,DWORD PTR [r10+0x18]  ;*getfield param4 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@29 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.52%  ││  0x00007f0de073e279: vcvtsi2ss xmm1,xmm1,r11d
+  2.83%  ││  0x00007f0de073e27e: vaddss xmm0,xmm1,DWORD PTR [rip+0xfffffffffffffdda]        # 0x00007f0de073e060
+         ││                                                ;   {section_word}
+  0.11%  ││  0x00007f0de073e286: vcvtsi2ss xmm2,xmm2,ebx
+  2.42%  ││  0x00007f0de073e28a: vcvtsi2ss xmm1,xmm1,edx
+  0.89%  ││  0x00007f0de073e28e: vaddss xmm1,xmm1,xmm0
+  0.63%  ││  0x00007f0de073e292: vcvtsi2ss xmm0,xmm0,edi
+  2.99%  ││  0x00007f0de073e296: vcvtsi2ss xmm4,xmm4,r9d
+  0.76%  ││  0x00007f0de073e29b: vcvtsi2ss xmm3,xmm3,ecx
+  2.66%  ││  0x00007f0de073e29f: vcvtsi2ss xmm6,xmm6,r8d
+  0.50%  ││  0x00007f0de073e2a4: mov    r10d,DWORD PTR [r10+0x14]
+         ││                                                ;*getfield param3 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@22 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.26%  ││  0x00007f0de073e2a8: mov    DWORD PTR [rax+0x18],r10d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@25 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.23%  ││  0x00007f0de073e2ac: mov    DWORD PTR [rax+0x1c],ebx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@32 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007f0de073e2af: mov    DWORD PTR [rax+0x20],edi  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@39 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.52%  ││  0x00007f0de073e2b2: mov    DWORD PTR [rax+0x24],r9d  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@46 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.80%  ││  0x00007f0de073e2b6: mov    DWORD PTR [rax+0x28],ecx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@54 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.12%  ││  0x00007f0de073e2b9: mov    DWORD PTR [rax+0x2c],r8d  ;*invokevirtual average {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.02%  ││  0x00007f0de073e2bd: vcvtsi2ss xmm5,xmm5,r10d
+  1.86%  ││  0x00007f0de073e2c2: vaddss xmm5,xmm5,xmm1
+  1.43%  ││  0x00007f0de073e2c6: vaddss xmm1,xmm2,xmm5
+  0.13%  ││  0x00007f0de073e2ca: vaddss xmm1,xmm0,xmm1
+  0.95%  ││  0x00007f0de073e2ce: vaddss xmm0,xmm4,xmm1
+  3.05%  ││  0x00007f0de073e2d2: vaddss xmm1,xmm3,xmm0
+  1.86%  ││  0x00007f0de073e2d6: vaddss xmm0,xmm6,xmm1
+  1.30%  ││  0x00007f0de073e2da: vmulss xmm0,xmm0,DWORD PTR [rip+0xfffffffffffffd82]        # 0x00007f0de073e064
+         ││                                                ;*fdiv {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@27 (line 63)
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││                                                ;   {section_word}
+  6.53%  ││  0x00007f0de073e2e2: mov    rsi,QWORD PTR [rsp]
+  0.35%  ││  0x00007f0de073e2e6: nop
+  0.32%  ││  0x00007f0de073e2e7: call   0x00007f0dd8c68f00  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@20 (line 190)
+         ││                                                ;   {optimized virtual_call}
+  1.26%  ││  0x00007f0de073e2ec: mov    r9,QWORD PTR [rsp+0x48]
+  0.73%  ││  0x00007f0de073e2f1: movzx  r8d,BYTE PTR [r9+0x94]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.45%  ││  0x00007f0de073e2f9: mov    r10,QWORD PTR [r15+0x108]
+  1.08%  ││  0x00007f0de073e300: add    rbp,0x1            ; ImmutableOopMap{r9=Oop [64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+         ││  0x00007f0de073e304: test   DWORD PTR [r10],eax  ;   {poll}
+  0.52%  ││  0x00007f0de073e307: test   r8d,r8d
+         ││  0x00007f0de073e30a: jne    0x00007f0de073e34a
+  1.58%  ↘│  0x00007f0de073e30c: mov    rax,QWORD PTR [r15+0x118]
+  1.53%   │  0x00007f0de073e313: mov    r10,rax
+  0.47%   │  0x00007f0de073e316: add    r10,0x30           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+          │                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+          │                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.60%   │  0x00007f0de073e31a: cmp    r10,QWORD PTR [r15+0x128]
+          ╰  0x00007f0de073e321: jb     0x00007f0de073e1f0
+             0x00007f0de073e327: mov    QWORD PTR [rsp+0x48],r9
+             0x00007f0de073e32c: movabs rsi,0x800000c10    ;   {metadata({type array int})}
+             0x00007f0de073e336: mov    edx,0x8
+             0x00007f0de073e33b: call   0x00007f0dd8d30200  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+                                                           ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                                           ; - org.ib.benchmark.VarargsJavaBenchmark::average@3 (line 55)
+....................................................................................................
+ 69.25%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+c2, level 4, org.openjdk.jmh.infra.Blackhole::consume, version 496 (59 bytes) 
+
+                # parm0:    xmm0      = float
+                #           [sp+0x30]  (sp of caller)
+                0x00007f0de07394a0: mov    r10d,DWORD PTR [rsi+0x8]
+                0x00007f0de07394a4: movabs r12,0x800000000
+                0x00007f0de07394ae: add    r10,r12
+                0x00007f0de07394b1: xor    r12,r12
+                0x00007f0de07394b4: cmp    rax,r10
+                0x00007f0de07394b7: jne    0x00007f0dd8c68c80  ;   {runtime_call ic_miss_stub}
+                0x00007f0de07394bd: data16 xchg ax,ax
+              [Verified Entry Point]
+  2.64%         0x00007f0de07394c0: mov    DWORD PTR [rsp-0x14000],eax
+  0.80%         0x00007f0de07394c7: push   rbp
+                0x00007f0de07394c8: sub    rsp,0x20           ;*synchronization entry
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 406)
+  2.62%         0x00007f0de07394cc: vmovss xmm2,DWORD PTR [rsi+0xb4]
+                                                              ;*getfield f1 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 406)
+  0.48%         0x00007f0de07394d4: vmovss xmm1,DWORD PTR [rsi+0xbc]
+                                                              ;*getfield f2 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@6 (line 407)
+                0x00007f0de07394dc: vucomiss xmm0,xmm2
+  2.51%  ╭      0x00007f0de07394e0: jp     0x00007f0de07394e4
+  1.30%  │╭     0x00007f0de07394e2: je     0x00007f0de07394fc  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                   ; - org.openjdk.jmh.infra.Blackhole::consume@13 (line 408)
+  4.46%  ↘│     0x00007f0de07394e4: vucomiss xmm0,xmm1
+          │╭    0x00007f0de07394e8: jp     0x00007f0de07394ec
+  1.58%   ││    0x00007f0de07394ea: je     0x00007f0de0739536  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                  ; - org.openjdk.jmh.infra.Blackhole::consume@24 (line 408)
+  1.36%   │↘    0x00007f0de07394ec: add    rsp,0x20
+  1.02%   │     0x00007f0de07394f0: pop    rbp
+  0.02%   │     0x00007f0de07394f1: mov    r10,QWORD PTR [r15+0x108]
+  0.45%   │     0x00007f0de07394f8: test   DWORD PTR [r10],eax  ;   {poll_return}
+  1.73%   │     0x00007f0de07394fb: ret    
+          ↘     0x00007f0de07394fc: vucomiss xmm0,xmm2
+                0x00007f0de0739500: mov    ebp,0xffffffff
+            ╭   0x00007f0de0739505: jp     0x00007f0de0739519
+            │╭  0x00007f0de073950b: jb     0x00007f0de0739519
+            ││  0x00007f0de0739511: setne  bpl
+            ││  0x00007f0de0739515: movzx  ebp,bpl            ;*fcmpl {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 408)
+            ↘↘  0x00007f0de0739519: mov    QWORD PTR [rsp],rsi
+                0x00007f0de073951d: vmovss DWORD PTR [rsp+0x8],xmm0
+                0x00007f0de0739523: vmovss DWORD PTR [rsp+0xc],xmm1
+....................................................................................................
+ 20.98%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 69.25%         c2, level 4  org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 529 (298 bytes) 
+ 20.98%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 496 (59 bytes) 
+  1.80%           libjvm.so  SpinPause (0 bytes) 
+  1.30%              kernel  [unknown] (6 bytes) 
+  0.45%              kernel  [unknown] (13 bytes) 
+  0.22%              kernel  [unknown] (29 bytes) 
+  0.20%              kernel  [unknown] (3 bytes) 
+  0.19%              kernel  [unknown] (28 bytes) 
+  0.19%              kernel  [unknown] (24 bytes) 
+  0.15%              kernel  [unknown] (45 bytes) 
+  0.11%              kernel  [unknown] (11 bytes) 
+  0.11%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable (23 bytes) 
+  0.07%              kernel  [unknown] (3 bytes) 
+  0.07%              kernel  [unknown] (8 bytes) 
+  0.07%           libjvm.so  _ZN13CollectedHeap14array_allocateEP5KlassiibP6Thread (1 bytes) 
+  0.07%           libjvm.so  _ZN15G1FromCardCache5clearEj (8 bytes) 
+  0.07%           libjvm.so  _ZN9xmlStream10write_textEPKcm.part.15 (24 bytes) 
+  0.06%              kernel  [unknown] (9 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  4.48%  <...other 194 warm regions...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 69.25%         c2, level 4  org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 529 
+ 20.98%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 496 
+  4.87%              kernel  [unknown] 
+  1.80%           libjvm.so  SpinPause 
+  0.11%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable 
+  0.11%           libjvm.so  _ZN9xmlStream10write_textEPKcm.part.15 
+  0.09%        libc-2.28.so  __memset_avx2_unaligned_erms 
+  0.07%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion 
+  0.07%           libjvm.so  _ZN15G1FromCardCache5clearEj 
+  0.07%           libjvm.so  _ZN13CollectedHeap14array_allocateEP5KlassiibP6Thread 
+  0.07%        libc-2.28.so  _IO_default_xsputn 
+  0.06%          ld-2.28.so  __tls_get_addr 
+  0.06%           libjvm.so  _ZNK17OtherRegionsTable8occupiedEv 
+  0.06%           libjvm.so  _ZN13SharedRuntime27on_slowpath_allocation_exitEP10JavaThread 
+  0.06%           libjvm.so  _ZN11G1Allocator21unsafe_max_tlab_allocEv 
+  0.06%           libjvm.so  _ZNK17ObjArrayAllocator10initializeEP8HeapWord 
+  0.06%           libjvm.so  _ZN15G1CollectedHeap23attempt_allocation_slowEm 
+  0.04%           libjvm.so  _ZN19G1MonitoringSupport16update_eden_sizeEv 
+  0.04%           libjvm.so  _ZN15G1CollectedHeap11free_regionEP10HeapRegionP14FreeRegionListbbb 
+  0.04%  libpthread-2.28.so  __libc_write 
+  2.01%  <...other 87 warm methods...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Distribution by Source]........................................................................
+ 90.25%         c2, level 4
+  4.87%              kernel
+  4.06%           libjvm.so
+  0.58%        libc-2.28.so
+  0.06%      hsdis-amd64.so
+  0.06%  libpthread-2.28.so
+  0.06%          ld-2.28.so
+  0.04%              [vdso]
+  0.02%         interpreter
+....................................................................................................
+ 99.98%  <totals>
+
+PrintAssembly processed: 143475 total address lines.
+Perf output processed (skipped 7.049 seconds):
+ Column 1: cycles (5521 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 524 (298 bytes) 
+
+                                                           ; implicit exception: dispatches to 0x00007effdc73de42
+             0x00007effdc73dc59: test   r11d,r11d
+             0x00007effdc73dc5c: jne    0x00007effdc73ddc5  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+             0x00007effdc73dc62: mov    ebp,0x1
+         ╭   0x00007effdc73dc67: jmp    0x00007effdc73dd8c
+         │   0x00007effdc73dc6c: nop    DWORD PTR [rax+0x0]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+         │                                                 ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         │                                                 ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.29%  │↗  0x00007effdc73dc70: mov    QWORD PTR [r15+0x118],r10
+  1.05%  ││  0x00007effdc73dc77: prefetchw BYTE PTR [r10+0xc0]
+  0.54%  ││  0x00007effdc73dc7f: mov    QWORD PTR [rax],0x1
+  0.56%  ││  0x00007effdc73dc86: prefetchw BYTE PTR [r10+0x100]
+  1.43%  ││  0x00007effdc73dc8e: mov    DWORD PTR [rax+0x8],0xc10
+         ││                                                ;   {metadata({type array int})}
+  1.32%  ││  0x00007effdc73dc95: prefetchw BYTE PTR [r10+0x140]
+  1.27%  ││  0x00007effdc73dc9d: mov    DWORD PTR [rax+0xc],0x8
+  0.43%  ││  0x00007effdc73dca4: prefetchw BYTE PTR [r10+0x180]
+  2.34%  ││  0x00007effdc73dcac: mov    QWORD PTR [rax+0x10],0x0
+  1.14%  ││  0x00007effdc73dcb4: mov    QWORD PTR [rax+0x18],0x0
+  0.07%  ││  0x00007effdc73dcbc: mov    QWORD PTR [rax+0x20],0x0
+  0.45%  ││  0x00007effdc73dcc4: mov    QWORD PTR [rax+0x28],0x0
+  1.59%  ││  0x00007effdc73dccc: mov    QWORD PTR [rsp+0x48],r9  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@3 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.16%  ││  0x00007effdc73dcd1: mov    r10,QWORD PTR [rsp+0x50]
+  0.05%  ││  0x00007effdc73dcd6: mov    r11d,DWORD PTR [r10+0xc]  ;*getfield param1 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@8 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.53%  ││  0x00007effdc73dcda: mov    DWORD PTR [rax+0x10],r11d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@11 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.63%  ││  0x00007effdc73dcde: mov    edx,DWORD PTR [r10+0x10]  ;*getfield param2 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@15 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.09%  ││  0x00007effdc73dce2: mov    DWORD PTR [rax+0x14],edx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@18 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007effdc73dce5: mov    r8d,DWORD PTR [r10+0x28]  ;*getfield param8 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@59 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.47%  ││  0x00007effdc73dce9: mov    ecx,DWORD PTR [r10+0x24]  ;*getfield param7 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@51 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.39%  ││  0x00007effdc73dced: mov    r9d,DWORD PTR [r10+0x20]  ;*getfield param6 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@43 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.20%  ││  0x00007effdc73dcf1: mov    edi,DWORD PTR [r10+0x1c]  ;*getfield param5 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@36 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007effdc73dcf5: mov    ebx,DWORD PTR [r10+0x18]  ;*getfield param4 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@29 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.83%  ││  0x00007effdc73dcf9: vcvtsi2ss xmm1,xmm1,r11d
+  2.59%  ││  0x00007effdc73dcfe: vaddss xmm0,xmm1,DWORD PTR [rip+0xfffffffffffffdda]        # 0x00007effdc73dae0
+         ││                                                ;   {section_word}
+  0.07%  ││  0x00007effdc73dd06: vcvtsi2ss xmm2,xmm2,ebx
+  2.01%  ││  0x00007effdc73dd0a: vcvtsi2ss xmm1,xmm1,edx
+  1.09%  ││  0x00007effdc73dd0e: vaddss xmm1,xmm1,xmm0
+  0.69%  ││  0x00007effdc73dd12: vcvtsi2ss xmm0,xmm0,edi
+  2.57%  ││  0x00007effdc73dd16: vcvtsi2ss xmm4,xmm4,r9d
+  0.58%  ││  0x00007effdc73dd1b: vcvtsi2ss xmm3,xmm3,ecx
+  2.23%  ││  0x00007effdc73dd1f: vcvtsi2ss xmm6,xmm6,r8d
+  0.40%  ││  0x00007effdc73dd24: mov    r10d,DWORD PTR [r10+0x14]
+         ││                                                ;*getfield param3 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@22 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.78%  ││  0x00007effdc73dd28: mov    DWORD PTR [rax+0x18],r10d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@25 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.18%  ││  0x00007effdc73dd2c: mov    DWORD PTR [rax+0x1c],ebx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@32 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007effdc73dd2f: mov    DWORD PTR [rax+0x20],edi  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@39 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.60%  ││  0x00007effdc73dd32: mov    DWORD PTR [rax+0x24],r9d  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@46 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.70%  ││  0x00007effdc73dd36: mov    DWORD PTR [rax+0x28],ecx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@54 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.00%  ││  0x00007effdc73dd39: mov    DWORD PTR [rax+0x2c],r8d  ;*invokevirtual average {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.07%  ││  0x00007effdc73dd3d: vcvtsi2ss xmm5,xmm5,r10d
+  2.16%  ││  0x00007effdc73dd42: vaddss xmm5,xmm5,xmm1
+  0.98%  ││  0x00007effdc73dd46: vaddss xmm1,xmm2,xmm5
+  0.14%  ││  0x00007effdc73dd4a: vaddss xmm1,xmm0,xmm1
+  1.07%  ││  0x00007effdc73dd4e: vaddss xmm0,xmm4,xmm1
+  2.37%  ││  0x00007effdc73dd52: vaddss xmm1,xmm3,xmm0
+  1.79%  ││  0x00007effdc73dd56: vaddss xmm0,xmm6,xmm1
+  1.38%  ││  0x00007effdc73dd5a: vmulss xmm0,xmm0,DWORD PTR [rip+0xfffffffffffffd82]        # 0x00007effdc73dae4
+         ││                                                ;*fdiv {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@27 (line 63)
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││                                                ;   {section_word}
+  5.96%  ││  0x00007effdc73dd62: mov    rsi,QWORD PTR [rsp]
+  0.33%  ││  0x00007effdc73dd66: nop
+  0.29%  ││  0x00007effdc73dd67: call   0x00007effd4c68f00  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@20 (line 190)
+         ││                                                ;   {optimized virtual_call}
+  1.14%  ││  0x00007effdc73dd6c: mov    r9,QWORD PTR [rsp+0x48]
+  0.49%  ││  0x00007effdc73dd71: movzx  r8d,BYTE PTR [r9+0x94]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.30%  ││  0x00007effdc73dd79: mov    r10,QWORD PTR [r15+0x108]
+  1.18%  ││  0x00007effdc73dd80: add    rbp,0x1            ; ImmutableOopMap{r9=Oop [64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+         ││  0x00007effdc73dd84: test   DWORD PTR [r10],eax  ;   {poll}
+  0.53%  ││  0x00007effdc73dd87: test   r8d,r8d
+         ││  0x00007effdc73dd8a: jne    0x00007effdc73ddca
+  1.79%  ↘│  0x00007effdc73dd8c: mov    rax,QWORD PTR [r15+0x118]
+  1.30%   │  0x00007effdc73dd93: mov    r10,rax
+  0.49%   │  0x00007effdc73dd96: add    r10,0x30           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+          │                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+          │                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.60%   │  0x00007effdc73dd9a: cmp    r10,QWORD PTR [r15+0x128]
+          ╰  0x00007effdc73dda1: jb     0x00007effdc73dc70
+             0x00007effdc73dda7: mov    QWORD PTR [rsp+0x48],r9
+             0x00007effdc73ddac: movabs rsi,0x800000c10    ;   {metadata({type array int})}
+             0x00007effdc73ddb6: mov    edx,0x8
+             0x00007effdc73ddbb: call   0x00007effd4d2ba80  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+                                                           ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                                           ; - org.ib.benchmark.VarargsJavaBenchmark::average@3 (line 55)
+....................................................................................................
+ 65.68%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+c2, level 4, org.openjdk.jmh.infra.Blackhole::consume, version 497 (59 bytes) 
+
+                # parm0:    xmm0      = float
+                #           [sp+0x30]  (sp of caller)
+                0x00007effdc739da0: mov    r10d,DWORD PTR [rsi+0x8]
+                0x00007effdc739da4: movabs r12,0x800000000
+                0x00007effdc739dae: add    r10,r12
+                0x00007effdc739db1: xor    r12,r12
+                0x00007effdc739db4: cmp    rax,r10
+                0x00007effdc739db7: jne    0x00007effd4c68c80  ;   {runtime_call ic_miss_stub}
+                0x00007effdc739dbd: data16 xchg ax,ax
+              [Verified Entry Point]
+  2.63%         0x00007effdc739dc0: mov    DWORD PTR [rsp-0x14000],eax
+  0.58%         0x00007effdc739dc7: push   rbp
+                0x00007effdc739dc8: sub    rsp,0x20           ;*synchronization entry
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 406)
+  2.75%         0x00007effdc739dcc: vmovss xmm2,DWORD PTR [rsi+0xb4]
+                                                              ;*getfield f1 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 406)
+  0.38%         0x00007effdc739dd4: vmovss xmm1,DWORD PTR [rsi+0xbc]
+                                                              ;*getfield f2 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@6 (line 407)
+                0x00007effdc739ddc: vucomiss xmm0,xmm2
+  2.61%  ╭      0x00007effdc739de0: jp     0x00007effdc739de4
+  1.07%  │╭     0x00007effdc739de2: je     0x00007effdc739dfc  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                   ; - org.openjdk.jmh.infra.Blackhole::consume@13 (line 408)
+  5.02%  ↘│     0x00007effdc739de4: vucomiss xmm0,xmm1
+          │╭    0x00007effdc739de8: jp     0x00007effdc739dec
+  1.70%   ││    0x00007effdc739dea: je     0x00007effdc739e36  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                  ; - org.openjdk.jmh.infra.Blackhole::consume@24 (line 408)
+  1.38%   │↘    0x00007effdc739dec: add    rsp,0x20
+  1.41%   │     0x00007effdc739df0: pop    rbp
+          │     0x00007effdc739df1: mov    r10,QWORD PTR [r15+0x108]
+  0.51%   │     0x00007effdc739df8: test   DWORD PTR [r10],eax  ;   {poll_return}
+  1.39%   │     0x00007effdc739dfb: ret    
+          ↘     0x00007effdc739dfc: vucomiss xmm0,xmm2
+                0x00007effdc739e00: mov    ebp,0xffffffff
+            ╭   0x00007effdc739e05: jp     0x00007effdc739e19
+            │╭  0x00007effdc739e0b: jb     0x00007effdc739e19
+            ││  0x00007effdc739e11: setne  bpl
+            ││  0x00007effdc739e15: movzx  ebp,bpl            ;*fcmpl {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 408)
+            ↘↘  0x00007effdc739e19: mov    QWORD PTR [rsp],rsi
+                0x00007effdc739e1d: vmovss DWORD PTR [rsp+0x8],xmm0
+                0x00007effdc739e23: vmovss DWORD PTR [rsp+0xc],xmm1
+....................................................................................................
+ 21.43%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 65.68%         c2, level 4  org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 524 (298 bytes) 
+ 21.43%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 497 (59 bytes) 
+  3.31%           libjvm.so  SpinPause (2 bytes) 
+  2.54%              kernel  [unknown] (6 bytes) 
+  0.31%              kernel  [unknown] (54 bytes) 
+  0.29%              kernel  [unknown] (49 bytes) 
+  0.22%              kernel  [unknown] (1 bytes) 
+  0.20%              kernel  [unknown] (13 bytes) 
+  0.16%              kernel  [unknown] (14 bytes) 
+  0.13%              kernel  [unknown] (22 bytes) 
+  0.13%              kernel  [unknown] (5 bytes) 
+  0.11%           libjvm.so  _ZN7Monitor6unlockEv (15 bytes) 
+  0.09%              kernel  [unknown] (22 bytes) 
+  0.09%              kernel  [unknown] (0 bytes) 
+  0.07%              kernel  [unknown] (15 bytes) 
+  0.07%              kernel  [unknown] (0 bytes) 
+  0.07%              kernel  [unknown] (19 bytes) 
+  0.07%           libjvm.so  _ZN10oopFactory13new_typeArrayE9BasicTypeiP6Thread (26 bytes) 
+  0.05%              kernel  [unknown] (1 bytes) 
+  0.05%              kernel  [unknown] (0 bytes) 
+  4.89%  <...other 230 warm regions...>
+....................................................................................................
+ 99.96%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 65.68%         c2, level 4  org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 524 
+ 21.43%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 497 
+  6.38%              kernel  [unknown] 
+  3.31%           libjvm.so  SpinPause 
+  0.11%           libjvm.so  _ZN7Monitor6unlockEv 
+  0.09%        libc-2.28.so  __memset_avx2_unaligned_erms 
+  0.07%           libjvm.so  _ZN10oopFactory13new_typeArrayE9BasicTypeiP6Thread 
+  0.07%           libjvm.so  _ZN23G1FreeCollectionSetTask4workEj 
+  0.05%           libjvm.so  _ZN14HSpaceCounters11update_usedEm 
+  0.05%           libjvm.so  _ZN15G1CollectedHeap17allocate_new_tlabEmmPm 
+  0.05%           libjvm.so  _ZN13SharedRuntime27on_slowpath_allocation_exitEP10JavaThread 
+  0.05%           libjvm.so  _ZN17G1RemSetScanState20G1ClearCardTableTask4workEj 
+  0.05%           libjvm.so  _ZL13printf_to_envPvPKcz 
+  0.05%              [vdso]  [unknown] 
+  0.05%           libjvm.so  _ZNK17ObjArrayAllocator10initializeEP8HeapWord 
+  0.04%  libpthread-2.28.so  do_futex_wait.constprop.1 
+  0.04%           libjvm.so  _ZN19G1MonitoringSupport16update_eden_sizeEv 
+  0.04%           libjvm.so  _ZN12ResourceMark13reset_to_markEv 
+  0.04%           libjvm.so  _ZL12event_to_envPvPKcS_ 
+  0.04%      hsdis-amd64.so  print_insn 
+  2.26%  <...other 104 warm methods...>
+....................................................................................................
+ 99.96%  <totals>
+
+....[Distribution by Source]........................................................................
+ 87.10%         c2, level 4
+  6.38%              kernel
+  5.83%           libjvm.so
+  0.29%        libc-2.28.so
+  0.11%         interpreter
+  0.07%  libpthread-2.28.so
+  0.07%      hsdis-amd64.so
+  0.05%              [vdso]
+  0.02%        runtime stub
+  0.02%    Unknown, level 0
+  0.02%          ld-2.28.so
+....................................................................................................
+ 99.96%  <totals>
+
+PrintAssembly processed: 142002 total address lines.
+Perf output processed (skipped 7.066 seconds):
+ Column 1: cycles (5455 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 523 (298 bytes) 
+
+                                                           ; implicit exception: dispatches to 0x00007fb98473de42
+             0x00007fb98473dc59: test   r11d,r11d
+             0x00007fb98473dc5c: jne    0x00007fb98473ddc5  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+             0x00007fb98473dc62: mov    ebp,0x1
+         ╭   0x00007fb98473dc67: jmp    0x00007fb98473dd8c
+         │   0x00007fb98473dc6c: nop    DWORD PTR [rax+0x0]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+         │                                                 ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         │                                                 ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.65%  │↗  0x00007fb98473dc70: mov    QWORD PTR [r15+0x118],r10
+  1.52%  ││  0x00007fb98473dc77: prefetchw BYTE PTR [r10+0xc0]
+  0.64%  ││  0x00007fb98473dc7f: mov    QWORD PTR [rax],0x1
+  0.42%  ││  0x00007fb98473dc86: prefetchw BYTE PTR [r10+0x100]
+  1.36%  ││  0x00007fb98473dc8e: mov    DWORD PTR [rax+0x8],0xc10
+         ││                                                ;   {metadata({type array int})}
+  1.14%  ││  0x00007fb98473dc95: prefetchw BYTE PTR [r10+0x140]
+  1.03%  ││  0x00007fb98473dc9d: mov    DWORD PTR [rax+0xc],0x8
+  0.51%  ││  0x00007fb98473dca4: prefetchw BYTE PTR [r10+0x180]
+  1.89%  ││  0x00007fb98473dcac: mov    QWORD PTR [rax+0x10],0x0
+  1.45%  ││  0x00007fb98473dcb4: mov    QWORD PTR [rax+0x18],0x0
+  0.02%  ││  0x00007fb98473dcbc: mov    QWORD PTR [rax+0x20],0x0
+  0.70%  ││  0x00007fb98473dcc4: mov    QWORD PTR [rax+0x28],0x0
+  1.45%  ││  0x00007fb98473dccc: mov    QWORD PTR [rsp+0x48],r9  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@3 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.12%  ││  0x00007fb98473dcd1: mov    r10,QWORD PTR [rsp+0x50]
+  0.04%  ││  0x00007fb98473dcd6: mov    r11d,DWORD PTR [r10+0xc]  ;*getfield param1 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@8 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.66%  ││  0x00007fb98473dcda: mov    DWORD PTR [rax+0x10],r11d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@11 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.45%  ││  0x00007fb98473dcde: mov    edx,DWORD PTR [r10+0x10]  ;*getfield param2 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@15 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.26%  ││  0x00007fb98473dce2: mov    DWORD PTR [rax+0x14],edx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@18 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.02%  ││  0x00007fb98473dce5: mov    r8d,DWORD PTR [r10+0x28]  ;*getfield param8 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@59 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.60%  ││  0x00007fb98473dce9: mov    ecx,DWORD PTR [r10+0x24]  ;*getfield param7 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@51 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.37%  ││  0x00007fb98473dced: mov    r9d,DWORD PTR [r10+0x20]  ;*getfield param6 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@43 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.28%  ││  0x00007fb98473dcf1: mov    edi,DWORD PTR [r10+0x1c]  ;*getfield param5 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@36 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fb98473dcf5: mov    ebx,DWORD PTR [r10+0x18]  ;*getfield param4 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@29 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.66%  ││  0x00007fb98473dcf9: vcvtsi2ss xmm1,xmm1,r11d
+  2.31%  ││  0x00007fb98473dcfe: vaddss xmm0,xmm1,DWORD PTR [rip+0xfffffffffffffdda]        # 0x00007fb98473dae0
+         ││                                                ;   {section_word}
+  0.05%  ││  0x00007fb98473dd06: vcvtsi2ss xmm2,xmm2,ebx
+  1.80%  ││  0x00007fb98473dd0a: vcvtsi2ss xmm1,xmm1,edx
+  1.21%  ││  0x00007fb98473dd0e: vaddss xmm1,xmm1,xmm0
+  0.62%  ││  0x00007fb98473dd12: vcvtsi2ss xmm0,xmm0,edi
+  2.57%  ││  0x00007fb98473dd16: vcvtsi2ss xmm4,xmm4,r9d
+  0.79%  ││  0x00007fb98473dd1b: vcvtsi2ss xmm3,xmm3,ecx
+  2.69%  ││  0x00007fb98473dd1f: vcvtsi2ss xmm6,xmm6,r8d
+  0.59%  ││  0x00007fb98473dd24: mov    r10d,DWORD PTR [r10+0x14]
+         ││                                                ;*getfield param3 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@22 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.47%  ││  0x00007fb98473dd28: mov    DWORD PTR [rax+0x18],r10d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@25 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.17%  ││  0x00007fb98473dd2c: mov    DWORD PTR [rax+0x1c],ebx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@32 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.02%  ││  0x00007fb98473dd2f: mov    DWORD PTR [rax+0x20],edi  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@39 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.60%  ││  0x00007fb98473dd32: mov    DWORD PTR [rax+0x24],r9d  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@46 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.30%  ││  0x00007fb98473dd36: mov    DWORD PTR [rax+0x28],ecx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@54 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.26%  ││  0x00007fb98473dd39: mov    DWORD PTR [rax+0x2c],r8d  ;*invokevirtual average {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.02%  ││  0x00007fb98473dd3d: vcvtsi2ss xmm5,xmm5,r10d
+  1.91%  ││  0x00007fb98473dd42: vaddss xmm5,xmm5,xmm1
+  1.26%  ││  0x00007fb98473dd46: vaddss xmm1,xmm2,xmm5
+  0.13%  ││  0x00007fb98473dd4a: vaddss xmm1,xmm0,xmm1
+  1.08%  ││  0x00007fb98473dd4e: vaddss xmm0,xmm4,xmm1
+  2.71%  ││  0x00007fb98473dd52: vaddss xmm1,xmm3,xmm0
+  1.94%  ││  0x00007fb98473dd56: vaddss xmm0,xmm6,xmm1
+  2.09%  ││  0x00007fb98473dd5a: vmulss xmm0,xmm0,DWORD PTR [rip+0xfffffffffffffd82]        # 0x00007fb98473dae4
+         ││                                                ;*fdiv {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@27 (line 63)
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││                                                ;   {section_word}
+  6.45%  ││  0x00007fb98473dd62: mov    rsi,QWORD PTR [rsp]
+  0.48%  ││  0x00007fb98473dd66: nop
+  0.35%  ││  0x00007fb98473dd67: call   0x00007fb97cc68f00  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@20 (line 190)
+         ││                                                ;   {optimized virtual_call}
+  1.56%  ││  0x00007fb98473dd6c: mov    r9,QWORD PTR [rsp+0x48]
+  0.71%  ││  0x00007fb98473dd71: movzx  r8d,BYTE PTR [r9+0x94]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+         ││                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.15%  ││  0x00007fb98473dd79: mov    r10,QWORD PTR [r15+0x108]
+  1.21%  ││  0x00007fb98473dd80: add    rbp,0x1            ; ImmutableOopMap{r9=Oop [64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+  0.02%  ││  0x00007fb98473dd84: test   DWORD PTR [r10],eax  ;   {poll}
+  0.57%  ││  0x00007fb98473dd87: test   r8d,r8d
+         ││  0x00007fb98473dd8a: jne    0x00007fb98473ddca
+  1.28%  ↘│  0x00007fb98473dd8c: mov    rax,QWORD PTR [r15+0x118]
+  0.90%   │  0x00007fb98473dd93: mov    r10,rax
+  0.53%   │  0x00007fb98473dd96: add    r10,0x30           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.VarargsJavaBenchmark::getAverage@20 (line 60)
+          │                                                ; - org.ib.benchmark.VarargsJavaBenchmark::average@63 (line 55)
+          │                                                ; - org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.48%   │  0x00007fb98473dd9a: cmp    r10,QWORD PTR [r15+0x128]
+          ╰  0x00007fb98473dda1: jb     0x00007fb98473dc70
+             0x00007fb98473dda7: mov    QWORD PTR [rsp+0x48],r9
+             0x00007fb98473ddac: movabs rsi,0x800000c10    ;   {metadata({type array int})}
+             0x00007fb98473ddb6: mov    edx,0x8
+             0x00007fb98473ddbb: call   0x00007fb97cd30200  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+                                                           ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                                           ; - org.ib.benchmark.VarargsJavaBenchmark::average@3 (line 55)
+....................................................................................................
+ 67.53%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+c2, level 4, org.openjdk.jmh.infra.Blackhole::consume, version 487 (59 bytes) 
+
+                # parm0:    xmm0      = float
+                #           [sp+0x30]  (sp of caller)
+                0x00007fb984738d20: mov    r10d,DWORD PTR [rsi+0x8]
+                0x00007fb984738d24: movabs r12,0x800000000
+                0x00007fb984738d2e: add    r10,r12
+                0x00007fb984738d31: xor    r12,r12
+                0x00007fb984738d34: cmp    rax,r10
+                0x00007fb984738d37: jne    0x00007fb97cc68c80  ;   {runtime_call ic_miss_stub}
+                0x00007fb984738d3d: data16 xchg ax,ax
+              [Verified Entry Point]
+  2.95%         0x00007fb984738d40: mov    DWORD PTR [rsp-0x14000],eax
+  0.99%         0x00007fb984738d47: push   rbp
+                0x00007fb984738d48: sub    rsp,0x20           ;*synchronization entry
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 406)
+  2.55%         0x00007fb984738d4c: vmovss xmm2,DWORD PTR [rsi+0xb4]
+                                                              ;*getfield f1 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 406)
+  0.31%         0x00007fb984738d54: vmovss xmm1,DWORD PTR [rsi+0xbc]
+                                                              ;*getfield f2 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@6 (line 407)
+                0x00007fb984738d5c: vucomiss xmm0,xmm2
+  2.68%  ╭      0x00007fb984738d60: jp     0x00007fb984738d64
+  1.39%  │╭     0x00007fb984738d62: je     0x00007fb984738d7c  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                   ; - org.openjdk.jmh.infra.Blackhole::consume@13 (line 408)
+  4.64%  ↘│     0x00007fb984738d64: vucomiss xmm0,xmm1
+          │╭    0x00007fb984738d68: jp     0x00007fb984738d6c
+  1.43%   ││    0x00007fb984738d6a: je     0x00007fb984738db6  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                  ; - org.openjdk.jmh.infra.Blackhole::consume@24 (line 408)
+  1.34%   │↘    0x00007fb984738d6c: add    rsp,0x20
+  1.21%   │     0x00007fb984738d70: pop    rbp
+  0.05%   │     0x00007fb984738d71: mov    r10,QWORD PTR [r15+0x108]
+  0.53%   │     0x00007fb984738d78: test   DWORD PTR [r10],eax  ;   {poll_return}
+  1.37%   │     0x00007fb984738d7b: ret    
+          ↘     0x00007fb984738d7c: vucomiss xmm0,xmm2
+                0x00007fb984738d80: mov    ebp,0xffffffff
+            ╭   0x00007fb984738d85: jp     0x00007fb984738d99
+            │╭  0x00007fb984738d8b: jb     0x00007fb984738d99
+            ││  0x00007fb984738d91: setne  bpl
+            ││  0x00007fb984738d95: movzx  ebp,bpl            ;*fcmpl {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 408)
+            ↘↘  0x00007fb984738d99: mov    QWORD PTR [rsp],rsi
+                0x00007fb984738d9d: vmovss DWORD PTR [rsp+0x8],xmm0
+                0x00007fb984738da3: vmovss DWORD PTR [rsp+0xc],xmm1
+....................................................................................................
+ 21.45%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 67.53%         c2, level 4  org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 523 (298 bytes) 
+ 21.45%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 487 (59 bytes) 
+  2.57%           libjvm.so  SpinPause (2 bytes) 
+  1.08%              kernel  [unknown] (6 bytes) 
+  0.66%              kernel  [unknown] (68 bytes) 
+  0.35%              kernel  [unknown] (101 bytes) 
+  0.31%              kernel  [unknown] (37 bytes) 
+  0.27%              kernel  [unknown] (3 bytes) 
+  0.24%              kernel  [unknown] (29 bytes) 
+  0.15%              kernel  [unknown] (18 bytes) 
+  0.13%              kernel  [unknown] (30 bytes) 
+  0.13%           libjvm.so  _ZN15RSHashTableIter8has_nextERm (31 bytes) 
+  0.11%              kernel  [unknown] (1 bytes) 
+  0.11%              kernel  [unknown] (9 bytes) 
+  0.11%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable (47 bytes) 
+  0.09%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion (45 bytes) 
+  0.07%              kernel  [unknown] (2 bytes) 
+  0.07%              kernel  [unknown] (5 bytes) 
+  0.05%              kernel  [unknown] (30 bytes) 
+  0.05%              kernel  [unknown] (0 bytes) 
+  4.44%  <...other 201 warm regions...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 67.53%         c2, level 4  org.ib.benchmark.generated.VarargsJavaBenchmark_average_jmhTest::average_avgt_jmhStub, version 523 
+ 21.45%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 487 
+  5.15%              kernel  [unknown] 
+  2.57%           libjvm.so  SpinPause 
+  0.13%           libjvm.so  _ZN15RSHashTableIter8has_nextERm 
+  0.11%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion 
+  0.11%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable 
+  0.09%           libjvm.so  _ZN11G1Allocator21unsafe_max_tlab_allocEv 
+  0.09%           libjvm.so  _ZN11OptoRuntime11new_array_CEP5KlassiP10JavaThread 
+  0.07%           libjvm.so  _ZN24G1ScanRSForRegionClosure14do_heap_regionEP10HeapRegion 
+  0.07%        libc-2.28.so  vfprintf 
+  0.05%           libjvm.so  _ZN15G1FromCardCache5clearEj 
+  0.05%           libjvm.so  _ZN9xmlStream10write_textEPKcm.part.15 
+  0.05%           libjvm.so  _ZN20ClassLoaderDataGraph12roots_cld_doEP10CLDClosureS1_ 
+  0.05%           libjvm.so  _ZNK12MemAllocator8allocateEv 
+  0.05%           libjvm.so  _ZN13RelocIterator10initializeEP14CompiledMethodPhS2_ 
+  0.05%           libjvm.so  __tls_get_addr@plt 
+  0.05%        libc-2.28.so  __memset_avx2_unaligned_erms 
+  0.05%         interpreter  method entry point (kind = zerolocals)  
+  0.05%              [vdso]  [unknown] 
+  2.11%  <...other 96 warm methods...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Distribution by Source]........................................................................
+ 88.98%         c2, level 4
+  5.15%              kernel
+  5.00%           libjvm.so
+  0.49%        libc-2.28.so
+  0.13%         interpreter
+  0.09%              [vdso]
+  0.07%  libpthread-2.28.so
+  0.04%      hsdis-amd64.so
+  0.02%          ld-2.28.so
+....................................................................................................
+ 99.98%  <totals>
+
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.VarargsKtBenchmark.average
+# Parameters: (param1 = 3, param2 = 5, param3 = 7, param4 = 9, param5 = 11, param6 = 13, param7 = 15, param8 = 17)
+
+# Run progress: 50.00% complete, ETA 00:00:38
+# Fork: 1 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 11.812 ns/op
+# Warmup Iteration   2: 12.281 ns/op
+# Warmup Iteration   3: 8.308 ns/op
+# Warmup Iteration   4: 8.739 ns/op
+# Warmup Iteration   5: 7.874 ns/op
+Iteration   1: 8.641 ns/op
+Iteration   2: 7.838 ns/op
+Iteration   3: 7.861 ns/op
+Iteration   4: 8.130 ns/op
+Iteration   5: 8.186 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 66.67% complete, ETA 00:00:25
+# Fork: 2 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 12.688 ns/op
+# Warmup Iteration   2: 11.351 ns/op
+# Warmup Iteration   3: 8.115 ns/op
+# Warmup Iteration   4: 8.032 ns/op
+# Warmup Iteration   5: 9.014 ns/op
+Iteration   1: 8.124 ns/op
+Iteration   2: 8.057 ns/op
+Iteration   3: 7.798 ns/op
+Iteration   4: 8.114 ns/op
+Iteration   5: 7.906 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 83.33% complete, ETA 00:00:12
+# Fork: 3 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 12.070 ns/op
+# Warmup Iteration   2: 11.238 ns/op
+# Warmup Iteration   3: 8.255 ns/op
+# Warmup Iteration   4: 8.652 ns/op
+# Warmup Iteration   5: 8.147 ns/op
+Iteration   1: 8.441 ns/op
+Iteration   2: 7.908 ns/op
+Iteration   3: 8.067 ns/op
+Iteration   4: 8.398 ns/op
+Iteration   5: 8.010 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "org.ib.benchmark.VarargsKtBenchmark.average":
+  8.099 ±(99.9%) 0.257 ns/op [Average]
+  (min, avg, max) = (7.798, 8.099, 8.641), stdev = 0.240
+  CI (99.9%): [7.842, 8.356] (assumes normal distribution)
+
+Secondary result "org.ib.benchmark.VarargsKtBenchmark.average:·asm":
+PrintAssembly processed: 140355 total address lines.
+Perf output processed (skipped 6.991 seconds):
+ Column 1: cycles (5419 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 524 (298 bytes) 
+
+                                                           ; implicit exception: dispatches to 0x00007ff8a85212c2
+             0x00007ff8a85210d9: test   r11d,r11d
+             0x00007ff8a85210dc: jne    0x00007ff8a8521245  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+             0x00007ff8a85210e2: mov    ebp,0x1
+         ╭   0x00007ff8a85210e7: jmp    0x00007ff8a852120c
+         │   0x00007ff8a85210ec: nop    DWORD PTR [rax+0x0]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+         │                                                 ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         │                                                 ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.81%  │↗  0x00007ff8a85210f0: mov    QWORD PTR [r15+0x118],r10
+  1.11%  ││  0x00007ff8a85210f7: prefetchw BYTE PTR [r10+0xc0]
+  0.55%  ││  0x00007ff8a85210ff: mov    QWORD PTR [rax],0x1
+  0.59%  ││  0x00007ff8a8521106: prefetchw BYTE PTR [r10+0x100]
+  1.61%  ││  0x00007ff8a852110e: mov    DWORD PTR [rax+0x8],0xc10
+         ││                                                ;   {metadata({type array int})}
+  1.49%  ││  0x00007ff8a8521115: prefetchw BYTE PTR [r10+0x140]
+  0.83%  ││  0x00007ff8a852111d: mov    DWORD PTR [rax+0xc],0x8
+  0.57%  ││  0x00007ff8a8521124: prefetchw BYTE PTR [r10+0x180]
+  1.92%  ││  0x00007ff8a852112c: mov    QWORD PTR [rax+0x10],0x0
+  0.98%  ││  0x00007ff8a8521134: mov    QWORD PTR [rax+0x18],0x0
+  0.04%  ││  0x00007ff8a852113c: mov    QWORD PTR [rax+0x20],0x0
+  0.52%  ││  0x00007ff8a8521144: mov    QWORD PTR [rax+0x28],0x0
+  1.51%  ││  0x00007ff8a852114c: mov    QWORD PTR [rsp+0x48],r9  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@3 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.11%  ││  0x00007ff8a8521151: mov    r10,QWORD PTR [rsp+0x50]
+         ││  0x00007ff8a8521156: mov    r11d,DWORD PTR [r10+0xc]  ;*getfield param1 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@8 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.59%  ││  0x00007ff8a852115a: mov    DWORD PTR [rax+0x10],r11d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@11 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.42%  ││  0x00007ff8a852115e: mov    edx,DWORD PTR [r10+0x10]  ;*getfield param2 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@15 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.38%  ││  0x00007ff8a8521162: mov    DWORD PTR [rax+0x14],edx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@18 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.02%  ││  0x00007ff8a8521165: mov    r8d,DWORD PTR [r10+0x28]  ;*getfield param8 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@59 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.57%  ││  0x00007ff8a8521169: mov    ecx,DWORD PTR [r10+0x24]  ;*getfield param7 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@51 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.18%  ││  0x00007ff8a852116d: mov    r9d,DWORD PTR [r10+0x20]  ;*getfield param6 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@43 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.24%  ││  0x00007ff8a8521171: mov    edi,DWORD PTR [r10+0x1c]  ;*getfield param5 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@36 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007ff8a8521175: mov    ebx,DWORD PTR [r10+0x18]  ;*getfield param4 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@29 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.42%  ││  0x00007ff8a8521179: vcvtsi2ss xmm1,xmm1,r11d
+  2.88%  ││  0x00007ff8a852117e: vaddss xmm0,xmm1,DWORD PTR [rip+0xfffffffffffffdda]        # 0x00007ff8a8520f60
+         ││                                                ;   {section_word}
+  0.06%  ││  0x00007ff8a8521186: vcvtsi2ss xmm2,xmm2,ebx
+  2.09%  ││  0x00007ff8a852118a: vcvtsi2ss xmm1,xmm1,edx
+  1.11%  ││  0x00007ff8a852118e: vaddss xmm1,xmm1,xmm0
+  0.61%  ││  0x00007ff8a8521192: vcvtsi2ss xmm0,xmm0,edi
+  2.93%  ││  0x00007ff8a8521196: vcvtsi2ss xmm4,xmm4,r9d
+  0.44%  ││  0x00007ff8a852119b: vcvtsi2ss xmm3,xmm3,ecx
+  2.55%  ││  0x00007ff8a852119f: vcvtsi2ss xmm6,xmm6,r8d
+  0.70%  ││  0x00007ff8a85211a4: mov    r10d,DWORD PTR [r10+0x14]
+         ││                                                ;*getfield param3 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@22 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.38%  ││  0x00007ff8a85211a8: mov    DWORD PTR [rax+0x18],r10d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@25 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.09%  ││  0x00007ff8a85211ac: mov    DWORD PTR [rax+0x1c],ebx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@32 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007ff8a85211af: mov    DWORD PTR [rax+0x20],edi  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@39 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.54%  ││  0x00007ff8a85211b2: mov    DWORD PTR [rax+0x24],r9d  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@46 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.33%  ││  0x00007ff8a85211b6: mov    DWORD PTR [rax+0x28],ecx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@54 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.24%  ││  0x00007ff8a85211b9: mov    DWORD PTR [rax+0x2c],r8d  ;*invokevirtual average {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007ff8a85211bd: vcvtsi2ss xmm5,xmm5,r10d
+  2.05%  ││  0x00007ff8a85211c2: vaddss xmm5,xmm5,xmm1
+  1.16%  ││  0x00007ff8a85211c6: vaddss xmm1,xmm2,xmm5
+  0.15%  ││  0x00007ff8a85211ca: vaddss xmm1,xmm0,xmm1
+  1.09%  ││  0x00007ff8a85211ce: vaddss xmm0,xmm4,xmm1
+  3.01%  ││  0x00007ff8a85211d2: vaddss xmm1,xmm3,xmm0
+  1.62%  ││  0x00007ff8a85211d6: vaddss xmm0,xmm6,xmm1
+  1.66%  ││  0x00007ff8a85211da: vmulss xmm0,xmm0,DWORD PTR [rip+0xfffffffffffffd82]        # 0x00007ff8a8520f64
+         ││                                                ;*fdiv {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@41 (line 51)
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││                                                ;   {section_word}
+  6.44%  ││  0x00007ff8a85211e2: mov    rsi,QWORD PTR [rsp]
+  0.31%  ││  0x00007ff8a85211e6: nop
+  0.31%  ││  0x00007ff8a85211e7: call   0x00007ff8a0a4bf00  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@20 (line 190)
+         ││                                                ;   {optimized virtual_call}
+  1.07%  ││  0x00007ff8a85211ec: mov    r9,QWORD PTR [rsp+0x48]
+  0.65%  ││  0x00007ff8a85211f1: movzx  r8d,BYTE PTR [r9+0x94]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.33%  ││  0x00007ff8a85211f9: mov    r10,QWORD PTR [r15+0x108]
+  1.07%  ││  0x00007ff8a8521200: add    rbp,0x1            ; ImmutableOopMap{r9=Oop [64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+         ││  0x00007ff8a8521204: test   DWORD PTR [r10],eax  ;   {poll}
+  0.48%  ││  0x00007ff8a8521207: test   r8d,r8d
+         ││  0x00007ff8a852120a: jne    0x00007ff8a852124a
+  1.57%  ↘│  0x00007ff8a852120c: mov    rax,QWORD PTR [r15+0x118]
+  1.14%   │  0x00007ff8a8521213: mov    r10,rax
+  0.59%   │  0x00007ff8a8521216: add    r10,0x30           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+          │                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+          │                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.89%   │  0x00007ff8a852121a: cmp    r10,QWORD PTR [r15+0x128]
+          ╰  0x00007ff8a8521221: jb     0x00007ff8a85210f0
+             0x00007ff8a8521227: mov    QWORD PTR [rsp+0x48],r9
+             0x00007ff8a852122c: movabs rsi,0x800000c10    ;   {metadata({type array int})}
+             0x00007ff8a8521236: mov    edx,0x8
+             0x00007ff8a852123b: call   0x00007ff8a0b13200  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+                                                           ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                                           ; - org.ib.benchmark.VarargsKtBenchmark::average@3 (line 43)
+....................................................................................................
+ 66.99%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+c2, level 4, org.openjdk.jmh.infra.Blackhole::consume, version 487 (59 bytes) 
+
+                # parm0:    xmm0      = float
+                #           [sp+0x30]  (sp of caller)
+                0x00007ff8a851ada0: mov    r10d,DWORD PTR [rsi+0x8]
+                0x00007ff8a851ada4: movabs r12,0x800000000
+                0x00007ff8a851adae: add    r10,r12
+                0x00007ff8a851adb1: xor    r12,r12
+                0x00007ff8a851adb4: cmp    rax,r10
+                0x00007ff8a851adb7: jne    0x00007ff8a0a4bc80  ;   {runtime_call ic_miss_stub}
+                0x00007ff8a851adbd: data16 xchg ax,ax
+              [Verified Entry Point]
+  3.10%         0x00007ff8a851adc0: mov    DWORD PTR [rsp-0x14000],eax
+  0.76%         0x00007ff8a851adc7: push   rbp
+                0x00007ff8a851adc8: sub    rsp,0x20           ;*synchronization entry
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 406)
+  3.30%         0x00007ff8a851adcc: vmovss xmm2,DWORD PTR [rsi+0xb4]
+                                                              ;*getfield f1 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 406)
+  0.44%         0x00007ff8a851add4: vmovss xmm1,DWORD PTR [rsi+0xbc]
+                                                              ;*getfield f2 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@6 (line 407)
+                0x00007ff8a851addc: vucomiss xmm0,xmm2
+  2.36%  ╭      0x00007ff8a851ade0: jp     0x00007ff8a851ade4
+  1.07%  │╭     0x00007ff8a851ade2: je     0x00007ff8a851adfc  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                   ; - org.openjdk.jmh.infra.Blackhole::consume@13 (line 408)
+  4.96%  ↘│     0x00007ff8a851ade4: vucomiss xmm0,xmm1
+          │╭    0x00007ff8a851ade8: jp     0x00007ff8a851adec
+  1.51%   ││    0x00007ff8a851adea: je     0x00007ff8a851ae36  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                  ; - org.openjdk.jmh.infra.Blackhole::consume@24 (line 408)
+  1.44%   │↘    0x00007ff8a851adec: add    rsp,0x20
+  1.09%   │     0x00007ff8a851adf0: pop    rbp
+          │     0x00007ff8a851adf1: mov    r10,QWORD PTR [r15+0x108]
+  0.54%   │     0x00007ff8a851adf8: test   DWORD PTR [r10],eax  ;   {poll_return}
+  1.57%   │     0x00007ff8a851adfb: ret    
+          ↘     0x00007ff8a851adfc: vucomiss xmm0,xmm2
+                0x00007ff8a851ae00: mov    ebp,0xffffffff
+            ╭   0x00007ff8a851ae05: jp     0x00007ff8a851ae19
+            │╭  0x00007ff8a851ae0b: jb     0x00007ff8a851ae19
+            ││  0x00007ff8a851ae11: setne  bpl
+            ││  0x00007ff8a851ae15: movzx  ebp,bpl            ;*fcmpl {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 408)
+            ↘↘  0x00007ff8a851ae19: mov    QWORD PTR [rsp],rsi
+                0x00007ff8a851ae1d: vmovss DWORD PTR [rsp+0x8],xmm0
+                0x00007ff8a851ae23: vmovss DWORD PTR [rsp+0xc],xmm1
+....................................................................................................
+ 22.14%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 66.99%         c2, level 4  org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 524 (298 bytes) 
+ 22.14%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 487 (59 bytes) 
+  2.16%           libjvm.so  SpinPause (0 bytes) 
+  2.09%              kernel  [unknown] (6 bytes) 
+  0.26%              kernel  [unknown] (39 bytes) 
+  0.20%          ld-2.28.so  __tls_get_addr (32 bytes) 
+  0.13%              kernel  [unknown] (6 bytes) 
+  0.09%              kernel  [unknown] (1 bytes) 
+  0.09%              kernel  [unknown] (0 bytes) 
+  0.09%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable (24 bytes) 
+  0.09%           libjvm.so  _ZN7Monitor6unlockEv (27 bytes) 
+  0.09%        libc-2.28.so  __memset_avx2_unaligned_erms (69 bytes) 
+  0.07%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion (0 bytes) 
+  0.07%           libjvm.so  _ZN15RSHashTableIter8has_nextERm (17 bytes) 
+  0.06%              kernel  [unknown] (37 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  0.06%           libjvm.so  _ZN23G1FreeCollectionSetTask4workEj (21 bytes) 
+  5.07%  <...other 229 warm regions...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 66.99%         c2, level 4  org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 524 
+ 22.14%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 487 
+  4.74%              kernel  [unknown] 
+  2.16%           libjvm.so  SpinPause 
+  0.20%          ld-2.28.so  __tls_get_addr 
+  0.15%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion 
+  0.13%        libc-2.28.so  __memset_avx2_unaligned_erms 
+  0.13%           libjvm.so  _ZN11OptoRuntime11new_array_CEP5KlassiP10JavaThread 
+  0.09%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable 
+  0.09%           libjvm.so  _ZN7Monitor6unlockEv 
+  0.07%           libjvm.so  _ZNK17OtherRegionsTable8occupiedEv 
+  0.07%        libc-2.28.so  vfprintf 
+  0.07%           libjvm.so  _ZN15RSHashTableIter8has_nextERm 
+  0.07%              [vdso]  __vdso_clock_gettime 
+  0.06%           libjvm.so  _ZN24G1ScanRSForRegionClosure14do_heap_regionEP10HeapRegion 
+  0.06%           libjvm.so  _ZN24HeapRegionRemSetIterator8has_nextERm 
+  0.06%           libjvm.so  _ZN14TypeArrayKlass15allocate_commonEibP6Thread 
+  0.06%           libjvm.so  _ZN23G1FreeCollectionSetTask4workEj 
+  0.06%           libjvm.so  _ZN15G1FromCardCache5clearEj 
+  0.06%           libjvm.so  _ZN24HeapRegionRemSetIteratorC2EP16HeapRegionRemSet 
+  2.53%  <...other 105 warm methods...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Distribution by Source]........................................................................
+ 89.13%         c2, level 4
+  5.00%           libjvm.so
+  4.74%              kernel
+  0.52%        libc-2.28.so
+  0.20%          ld-2.28.so
+  0.13%              [vdso]
+  0.11%  libpthread-2.28.so
+  0.07%      hsdis-amd64.so
+  0.06%         interpreter
+  0.02%      libz.so.1.2.11
+....................................................................................................
+ 99.98%  <totals>
+
+PrintAssembly processed: 143536 total address lines.
+Perf output processed (skipped 7.117 seconds):
+ Column 1: cycles (5452 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 530 (298 bytes) 
+
+                                                           ; implicit exception: dispatches to 0x00007fb9d873f8c2
+             0x00007fb9d873f6d9: test   r11d,r11d
+             0x00007fb9d873f6dc: jne    0x00007fb9d873f845  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+             0x00007fb9d873f6e2: mov    ebp,0x1
+         ╭   0x00007fb9d873f6e7: jmp    0x00007fb9d873f80c
+         │   0x00007fb9d873f6ec: nop    DWORD PTR [rax+0x0]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+         │                                                 ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         │                                                 ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.27%  │↗  0x00007fb9d873f6f0: mov    QWORD PTR [r15+0x118],r10
+  1.38%  ││  0x00007fb9d873f6f7: prefetchw BYTE PTR [r10+0xc0]
+  0.44%  ││  0x00007fb9d873f6ff: mov    QWORD PTR [rax],0x1
+  0.46%  ││  0x00007fb9d873f706: prefetchw BYTE PTR [r10+0x100]
+  1.36%  ││  0x00007fb9d873f70e: mov    DWORD PTR [rax+0x8],0xc10
+         ││                                                ;   {metadata({type array int})}
+  1.28%  ││  0x00007fb9d873f715: prefetchw BYTE PTR [r10+0x140]
+  1.23%  ││  0x00007fb9d873f71d: mov    DWORD PTR [rax+0xc],0x8
+  0.66%  ││  0x00007fb9d873f724: prefetchw BYTE PTR [r10+0x180]
+  1.96%  ││  0x00007fb9d873f72c: mov    QWORD PTR [rax+0x10],0x0
+  1.49%  ││  0x00007fb9d873f734: mov    QWORD PTR [rax+0x18],0x0
+         ││  0x00007fb9d873f73c: mov    QWORD PTR [rax+0x20],0x0
+  0.59%  ││  0x00007fb9d873f744: mov    QWORD PTR [rax+0x28],0x0
+  1.41%  ││  0x00007fb9d873f74c: mov    QWORD PTR [rsp+0x48],r9  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@3 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.36%  ││  0x00007fb9d873f751: mov    r10,QWORD PTR [rsp+0x50]
+         ││  0x00007fb9d873f756: mov    r11d,DWORD PTR [r10+0xc]  ;*getfield param1 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@8 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.61%  ││  0x00007fb9d873f75a: mov    DWORD PTR [rax+0x10],r11d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@11 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.52%  ││  0x00007fb9d873f75e: mov    edx,DWORD PTR [r10+0x10]  ;*getfield param2 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@15 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.16%  ││  0x00007fb9d873f762: mov    DWORD PTR [rax+0x14],edx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@18 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fb9d873f765: mov    r8d,DWORD PTR [r10+0x28]  ;*getfield param8 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@59 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.61%  ││  0x00007fb9d873f769: mov    ecx,DWORD PTR [r10+0x24]  ;*getfield param7 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@51 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.49%  ││  0x00007fb9d873f76d: mov    r9d,DWORD PTR [r10+0x20]  ;*getfield param6 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@43 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.14%  ││  0x00007fb9d873f771: mov    edi,DWORD PTR [r10+0x1c]  ;*getfield param5 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@36 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.02%  ││  0x00007fb9d873f775: mov    ebx,DWORD PTR [r10+0x18]  ;*getfield param4 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@29 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.64%  ││  0x00007fb9d873f779: vcvtsi2ss xmm1,xmm1,r11d
+  2.81%  ││  0x00007fb9d873f77e: vaddss xmm0,xmm1,DWORD PTR [rip+0xfffffffffffffdda]        # 0x00007fb9d873f560
+         ││                                                ;   {section_word}
+  0.09%  ││  0x00007fb9d873f786: vcvtsi2ss xmm2,xmm2,ebx
+  1.82%  ││  0x00007fb9d873f78a: vcvtsi2ss xmm1,xmm1,edx
+  1.12%  ││  0x00007fb9d873f78e: vaddss xmm1,xmm1,xmm0
+  0.68%  ││  0x00007fb9d873f792: vcvtsi2ss xmm0,xmm0,edi
+  2.22%  ││  0x00007fb9d873f796: vcvtsi2ss xmm4,xmm4,r9d
+  0.62%  ││  0x00007fb9d873f79b: vcvtsi2ss xmm3,xmm3,ecx
+  2.95%  ││  0x00007fb9d873f79f: vcvtsi2ss xmm6,xmm6,r8d
+  0.53%  ││  0x00007fb9d873f7a4: mov    r10d,DWORD PTR [r10+0x14]
+         ││                                                ;*getfield param3 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@22 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.52%  ││  0x00007fb9d873f7a8: mov    DWORD PTR [rax+0x18],r10d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@25 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.25%  ││  0x00007fb9d873f7ac: mov    DWORD PTR [rax+0x1c],ebx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@32 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fb9d873f7af: mov    DWORD PTR [rax+0x20],edi  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@39 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.61%  ││  0x00007fb9d873f7b2: mov    DWORD PTR [rax+0x24],r9d  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@46 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.41%  ││  0x00007fb9d873f7b6: mov    DWORD PTR [rax+0x28],ecx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@54 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.27%  ││  0x00007fb9d873f7b9: mov    DWORD PTR [rax+0x2c],r8d  ;*invokevirtual average {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fb9d873f7bd: vcvtsi2ss xmm5,xmm5,r10d
+  2.11%  ││  0x00007fb9d873f7c2: vaddss xmm5,xmm5,xmm1
+  1.45%  ││  0x00007fb9d873f7c6: vaddss xmm1,xmm2,xmm5
+  0.24%  ││  0x00007fb9d873f7ca: vaddss xmm1,xmm0,xmm1
+  1.19%  ││  0x00007fb9d873f7ce: vaddss xmm0,xmm4,xmm1
+  3.17%  ││  0x00007fb9d873f7d2: vaddss xmm1,xmm3,xmm0
+  1.82%  ││  0x00007fb9d873f7d6: vaddss xmm0,xmm6,xmm1
+  0.97%  ││  0x00007fb9d873f7da: vmulss xmm0,xmm0,DWORD PTR [rip+0xfffffffffffffd82]        # 0x00007fb9d873f564
+         ││                                                ;*fdiv {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@41 (line 51)
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││                                                ;   {section_word}
+  5.98%  ││  0x00007fb9d873f7e2: mov    rsi,QWORD PTR [rsp]
+  0.50%  ││  0x00007fb9d873f7e6: nop
+  0.33%  ││  0x00007fb9d873f7e7: call   0x00007fb9d0c68f00  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@20 (line 190)
+         ││                                                ;   {optimized virtual_call}
+  1.10%  ││  0x00007fb9d873f7ec: mov    r9,QWORD PTR [rsp+0x48]
+  0.68%  ││  0x00007fb9d873f7f1: movzx  r8d,BYTE PTR [r9+0x94]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.45%  ││  0x00007fb9d873f7f9: mov    r10,QWORD PTR [r15+0x108]
+  1.14%  ││  0x00007fb9d873f800: add    rbp,0x1            ; ImmutableOopMap{r9=Oop [64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+         ││  0x00007fb9d873f804: test   DWORD PTR [r10],eax  ;   {poll}
+  0.51%  ││  0x00007fb9d873f807: test   r8d,r8d
+         ││  0x00007fb9d873f80a: jne    0x00007fb9d873f84a
+  1.61%  ↘│  0x00007fb9d873f80c: mov    rax,QWORD PTR [r15+0x118]
+  1.36%   │  0x00007fb9d873f813: mov    r10,rax
+  0.51%   │  0x00007fb9d873f816: add    r10,0x30           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+          │                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+          │                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.57%   │  0x00007fb9d873f81a: cmp    r10,QWORD PTR [r15+0x128]
+          ╰  0x00007fb9d873f821: jb     0x00007fb9d873f6f0
+             0x00007fb9d873f827: mov    QWORD PTR [rsp+0x48],r9
+             0x00007fb9d873f82c: movabs rsi,0x800000c10    ;   {metadata({type array int})}
+             0x00007fb9d873f836: mov    edx,0x8
+             0x00007fb9d873f83b: call   0x00007fb9d0d30200  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+                                                           ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                                           ; - org.ib.benchmark.VarargsKtBenchmark::average@3 (line 43)
+....................................................................................................
+ 67.63%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+c2, level 4, org.openjdk.jmh.infra.Blackhole::consume, version 497 (59 bytes) 
+
+                # parm0:    xmm0      = float
+                #           [sp+0x30]  (sp of caller)
+                0x00007fb9d8739da0: mov    r10d,DWORD PTR [rsi+0x8]
+                0x00007fb9d8739da4: movabs r12,0x800000000
+                0x00007fb9d8739dae: add    r10,r12
+                0x00007fb9d8739db1: xor    r12,r12
+                0x00007fb9d8739db4: cmp    rax,r10
+                0x00007fb9d8739db7: jne    0x00007fb9d0c68c80  ;   {runtime_call ic_miss_stub}
+                0x00007fb9d8739dbd: data16 xchg ax,ax
+              [Verified Entry Point]
+  2.84%         0x00007fb9d8739dc0: mov    DWORD PTR [rsp-0x14000],eax
+  0.75%         0x00007fb9d8739dc7: push   rbp
+                0x00007fb9d8739dc8: sub    rsp,0x20           ;*synchronization entry
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 406)
+  2.73%         0x00007fb9d8739dcc: vmovss xmm2,DWORD PTR [rsi+0xb4]
+                                                              ;*getfield f1 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 406)
+  0.40%         0x00007fb9d8739dd4: vmovss xmm1,DWORD PTR [rsi+0xbc]
+                                                              ;*getfield f2 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@6 (line 407)
+                0x00007fb9d8739ddc: vucomiss xmm0,xmm2
+  2.48%  ╭      0x00007fb9d8739de0: jp     0x00007fb9d8739de4
+  1.28%  │╭     0x00007fb9d8739de2: je     0x00007fb9d8739dfc  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                   ; - org.openjdk.jmh.infra.Blackhole::consume@13 (line 408)
+  4.66%  ↘│     0x00007fb9d8739de4: vucomiss xmm0,xmm1
+          │╭    0x00007fb9d8739de8: jp     0x00007fb9d8739dec
+  1.17%   ││    0x00007fb9d8739dea: je     0x00007fb9d8739e36  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                  ; - org.openjdk.jmh.infra.Blackhole::consume@24 (line 408)
+  1.52%   │↘    0x00007fb9d8739dec: add    rsp,0x20
+  1.16%   │     0x00007fb9d8739df0: pop    rbp
+  0.02%   │     0x00007fb9d8739df1: mov    r10,QWORD PTR [r15+0x108]
+  0.62%   │     0x00007fb9d8739df8: test   DWORD PTR [r10],eax  ;   {poll_return}
+  1.34%   │     0x00007fb9d8739dfb: ret    
+          ↘     0x00007fb9d8739dfc: vucomiss xmm0,xmm2
+                0x00007fb9d8739e00: mov    ebp,0xffffffff
+            ╭   0x00007fb9d8739e05: jp     0x00007fb9d8739e19
+            │╭  0x00007fb9d8739e0b: jb     0x00007fb9d8739e19
+            ││  0x00007fb9d8739e11: setne  bpl
+            ││  0x00007fb9d8739e15: movzx  ebp,bpl            ;*fcmpl {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 408)
+            ↘↘  0x00007fb9d8739e19: mov    QWORD PTR [rsp],rsi
+                0x00007fb9d8739e1d: vmovss DWORD PTR [rsp+0x8],xmm0
+                0x00007fb9d8739e23: vmovss DWORD PTR [rsp+0xc],xmm1
+....................................................................................................
+ 20.98%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 67.63%         c2, level 4  org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 530 (298 bytes) 
+ 20.98%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 497 (59 bytes) 
+  2.95%              kernel  [unknown] (6 bytes) 
+  1.91%           libjvm.so  SpinPause (0 bytes) 
+  0.26%              kernel  [unknown] (28 bytes) 
+  0.26%              kernel  [unknown] (48 bytes) 
+  0.20%              kernel  [unknown] (39 bytes) 
+  0.17%              kernel  [unknown] (30 bytes) 
+  0.15%              kernel  [unknown] (6 bytes) 
+  0.13%              kernel  [unknown] (11 bytes) 
+  0.13%              kernel  [unknown] (0 bytes) 
+  0.11%              kernel  [unknown] (0 bytes) 
+  0.11%              kernel  [unknown] (16 bytes) 
+  0.09%              kernel  [unknown] (0 bytes) 
+  0.09%           libjvm.so  _ZN11G1Allocator21unsafe_max_tlab_allocEv (4 bytes) 
+  0.09%              [vdso]  [unknown] (0 bytes) 
+  0.07%              kernel  [unknown] (30 bytes) 
+  0.07%              kernel  [unknown] (4 bytes) 
+  0.07%           libjvm.so  _ZNK17OtherRegionsTable8occupiedEv (0 bytes) 
+  0.07%           libjvm.so  _ZN15RSHashTableIter8has_nextERm (31 bytes) 
+  4.44%  <...other 192 warm regions...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 67.63%         c2, level 4  org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 530 
+ 20.98%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 497 
+  6.09%              kernel  [unknown] 
+  1.91%           libjvm.so  SpinPause 
+  0.11%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion 
+  0.09%           libjvm.so  _ZN11G1Allocator21unsafe_max_tlab_allocEv 
+  0.09%        libc-2.28.so  __memset_avx2_unaligned_erms 
+  0.09%           libjvm.so  _ZN11OptoRuntime11new_array_CEP5KlassiP10JavaThread 
+  0.09%              [vdso]  [unknown] 
+  0.07%           libjvm.so  _ZN15G1FromCardCache5clearEj 
+  0.07%           libjvm.so  _ZNK17OtherRegionsTable8occupiedEv 
+  0.07%           libjvm.so  _ZNK12MemAllocator8allocateEv 
+  0.07%        libc-2.28.so  _int_malloc 
+  0.07%           libjvm.so  _ZN15RSHashTableIter8has_nextERm 
+  0.06%           libjvm.so  _ZN7Monitor28lock_without_safepoint_checkEv 
+  0.06%  libpthread-2.28.so  __libc_write 
+  0.06%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable 
+  0.06%           libjvm.so  _ZN9xmlStream10write_textEPKcm.part.15 
+  0.06%           libjvm.so  _ZN30G1EvacPhaseWithTrimTimeTrackerD2Ev 
+  0.06%           libjvm.so  _ZNK8CodeHeap16find_blob_unsafeEPv 
+  2.20%  <...other 98 warm methods...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Distribution by Source]........................................................................
+ 88.61%         c2, level 4
+  6.09%              kernel
+  4.57%           libjvm.so
+  0.42%        libc-2.28.so
+  0.11%              [vdso]
+  0.09%         interpreter
+  0.06%  libpthread-2.28.so
+  0.02%      hsdis-amd64.so
+  0.02%          ld-2.28.so
+....................................................................................................
+ 99.98%  <totals>
+
+PrintAssembly processed: 140081 total address lines.
+Perf output processed (skipped 7.163 seconds):
+ Column 1: cycles (5330 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 518 (298 bytes) 
+
+                                                           ; implicit exception: dispatches to 0x00007fcb3473d442
+             0x00007fcb3473d259: test   r11d,r11d
+             0x00007fcb3473d25c: jne    0x00007fcb3473d3c5  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+             0x00007fcb3473d262: mov    ebp,0x1
+         ╭   0x00007fcb3473d267: jmp    0x00007fcb3473d38c
+         │   0x00007fcb3473d26c: nop    DWORD PTR [rax+0x0]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+         │                                                 ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         │                                                 ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.95%  │↗  0x00007fcb3473d270: mov    QWORD PTR [r15+0x118],r10
+  1.44%  ││  0x00007fcb3473d277: prefetchw BYTE PTR [r10+0xc0]
+  0.47%  ││  0x00007fcb3473d27f: mov    QWORD PTR [rax],0x1
+  0.71%  ││  0x00007fcb3473d286: prefetchw BYTE PTR [r10+0x100]
+  1.59%  ││  0x00007fcb3473d28e: mov    DWORD PTR [rax+0x8],0xc10
+         ││                                                ;   {metadata({type array int})}
+  1.29%  ││  0x00007fcb3473d295: prefetchw BYTE PTR [r10+0x140]
+  1.20%  ││  0x00007fcb3473d29d: mov    DWORD PTR [rax+0xc],0x8
+  0.47%  ││  0x00007fcb3473d2a4: prefetchw BYTE PTR [r10+0x180]
+  2.06%  ││  0x00007fcb3473d2ac: mov    QWORD PTR [rax+0x10],0x0
+  1.07%  ││  0x00007fcb3473d2b4: mov    QWORD PTR [rax+0x18],0x0
+  0.04%  ││  0x00007fcb3473d2bc: mov    QWORD PTR [rax+0x20],0x0
+  0.64%  ││  0x00007fcb3473d2c4: mov    QWORD PTR [rax+0x28],0x0
+  1.37%  ││  0x00007fcb3473d2cc: mov    QWORD PTR [rsp+0x48],r9  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@3 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.14%  ││  0x00007fcb3473d2d1: mov    r10,QWORD PTR [rsp+0x50]
+  0.02%  ││  0x00007fcb3473d2d6: mov    r11d,DWORD PTR [r10+0xc]  ;*getfield param1 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@8 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.68%  ││  0x00007fcb3473d2da: mov    DWORD PTR [rax+0x10],r11d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@11 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.63%  ││  0x00007fcb3473d2de: mov    edx,DWORD PTR [r10+0x10]  ;*getfield param2 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@15 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.18%  ││  0x00007fcb3473d2e2: mov    DWORD PTR [rax+0x14],edx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@18 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fcb3473d2e5: mov    r8d,DWORD PTR [r10+0x28]  ;*getfield param8 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@59 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.47%  ││  0x00007fcb3473d2e9: mov    ecx,DWORD PTR [r10+0x24]  ;*getfield param7 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@51 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.54%  ││  0x00007fcb3473d2ed: mov    r9d,DWORD PTR [r10+0x20]  ;*getfield param6 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@43 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.03%  ││  0x00007fcb3473d2f1: mov    edi,DWORD PTR [r10+0x1c]  ;*getfield param5 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@36 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fcb3473d2f5: mov    ebx,DWORD PTR [r10+0x18]  ;*getfield param4 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@29 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.60%  ││  0x00007fcb3473d2f9: vcvtsi2ss xmm1,xmm1,r11d
+  2.57%  ││  0x00007fcb3473d2fe: vaddss xmm0,xmm1,DWORD PTR [rip+0xfffffffffffffdda]        # 0x00007fcb3473d0e0
+         ││                                                ;   {section_word}
+  0.06%  ││  0x00007fcb3473d306: vcvtsi2ss xmm2,xmm2,ebx
+  2.27%  ││  0x00007fcb3473d30a: vcvtsi2ss xmm1,xmm1,edx
+  1.46%  ││  0x00007fcb3473d30e: vaddss xmm1,xmm1,xmm0
+  0.45%  ││  0x00007fcb3473d312: vcvtsi2ss xmm0,xmm0,edi
+  2.78%  ││  0x00007fcb3473d316: vcvtsi2ss xmm4,xmm4,r9d
+  0.66%  ││  0x00007fcb3473d31b: vcvtsi2ss xmm3,xmm3,ecx
+  2.46%  ││  0x00007fcb3473d31f: vcvtsi2ss xmm6,xmm6,r8d
+  0.49%  ││  0x00007fcb3473d324: mov    r10d,DWORD PTR [r10+0x14]
+         ││                                                ;*getfield param3 {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@22 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.65%  ││  0x00007fcb3473d328: mov    DWORD PTR [rax+0x18],r10d
+         ││                                                ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@25 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.29%  ││  0x00007fcb3473d32c: mov    DWORD PTR [rax+0x1c],ebx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@32 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││  0x00007fcb3473d32f: mov    DWORD PTR [rax+0x20],edi  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@39 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.58%  ││  0x00007fcb3473d332: mov    DWORD PTR [rax+0x24],r9d  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@46 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.18%  ││  0x00007fcb3473d336: mov    DWORD PTR [rax+0x28],ecx  ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@54 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.35%  ││  0x00007fcb3473d339: mov    DWORD PTR [rax+0x2c],r8d  ;*invokevirtual average {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.04%  ││  0x00007fcb3473d33d: vcvtsi2ss xmm5,xmm5,r10d
+  2.08%  ││  0x00007fcb3473d342: vaddss xmm5,xmm5,xmm1
+  1.22%  ││  0x00007fcb3473d346: vaddss xmm1,xmm2,xmm5
+  0.17%  ││  0x00007fcb3473d34a: vaddss xmm1,xmm0,xmm1
+  1.05%  ││  0x00007fcb3473d34e: vaddss xmm0,xmm4,xmm1
+  3.30%  ││  0x00007fcb3473d352: vaddss xmm1,xmm3,xmm0
+  1.59%  ││  0x00007fcb3473d356: vaddss xmm0,xmm6,xmm1
+  1.61%  ││  0x00007fcb3473d35a: vmulss xmm0,xmm0,DWORD PTR [rip+0xfffffffffffffd82]        # 0x00007fcb3473d0e4
+         ││                                                ;*fdiv {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@41 (line 51)
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+         ││                                                ;   {section_word}
+  6.92%  ││  0x00007fcb3473d362: mov    rsi,QWORD PTR [rsp]
+  0.39%  ││  0x00007fcb3473d366: nop
+  0.47%  ││  0x00007fcb3473d367: call   0x00007fcb2cc68f00  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@20 (line 190)
+         ││                                                ;   {optimized virtual_call}
+  1.01%  ││  0x00007fcb3473d36c: mov    r9,QWORD PTR [rsp+0x48]
+  0.60%  ││  0x00007fcb3473d371: movzx  r8d,BYTE PTR [r9+0x94]  ;*goto {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+         ││                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  1.44%  ││  0x00007fcb3473d379: mov    r10,QWORD PTR [r15+0x108]
+  1.22%  ││  0x00007fcb3473d380: add    rbp,0x1            ; ImmutableOopMap{r9=Oop [64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+         ││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@33 (line 192)
+  0.02%  ││  0x00007fcb3473d384: test   DWORD PTR [r10],eax  ;   {poll}
+  0.66%  ││  0x00007fcb3473d387: test   r8d,r8d
+         ││  0x00007fcb3473d38a: jne    0x00007fcb3473d3ca
+  1.88%  ↘│  0x00007fcb3473d38c: mov    rax,QWORD PTR [r15+0x118]
+  1.18%   │  0x00007fcb3473d393: mov    r10,rax
+  0.49%   │  0x00007fcb3473d396: add    r10,0x30           ;*goto {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.VarargsKtBenchmark::getAverage@34 (line 48)
+          │                                                ; - org.ib.benchmark.VarargsKtBenchmark::average@63 (line 43)
+          │                                                ; - org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub@17 (line 190)
+  0.43%   │  0x00007fcb3473d39a: cmp    r10,QWORD PTR [r15+0x128]
+          ╰  0x00007fcb3473d3a1: jb     0x00007fcb3473d270
+             0x00007fcb3473d3a7: mov    QWORD PTR [rsp+0x48],r9
+             0x00007fcb3473d3ac: movabs rsi,0x800000c10    ;   {metadata({type array int})}
+             0x00007fcb3473d3b6: mov    edx,0x8
+             0x00007fcb3473d3bb: call   0x00007fcb2cd30200  ; ImmutableOopMap{[64]=Oop [72]=Oop [80]=Oop [0]=Oop }
+                                                           ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                                           ; - org.ib.benchmark.VarargsKtBenchmark::average@3 (line 43)
+....................................................................................................
+ 69.64%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+c2, level 4, org.openjdk.jmh.infra.Blackhole::consume, version 484 (59 bytes) 
+
+                # parm0:    xmm0      = float
+                #           [sp+0x30]  (sp of caller)
+                0x00007fcb347386a0: mov    r10d,DWORD PTR [rsi+0x8]
+                0x00007fcb347386a4: movabs r12,0x800000000
+                0x00007fcb347386ae: add    r10,r12
+                0x00007fcb347386b1: xor    r12,r12
+                0x00007fcb347386b4: cmp    rax,r10
+                0x00007fcb347386b7: jne    0x00007fcb2cc68c80  ;   {runtime_call ic_miss_stub}
+                0x00007fcb347386bd: data16 xchg ax,ax
+              [Verified Entry Point]
+  2.80%         0x00007fcb347386c0: mov    DWORD PTR [rsp-0x14000],eax
+  1.01%         0x00007fcb347386c7: push   rbp
+                0x00007fcb347386c8: sub    rsp,0x20           ;*synchronization entry
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@-1 (line 406)
+  3.08%         0x00007fcb347386cc: vmovss xmm2,DWORD PTR [rsi+0xb4]
+                                                              ;*getfield f1 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 406)
+  0.23%         0x00007fcb347386d4: vmovss xmm1,DWORD PTR [rsi+0xbc]
+                                                              ;*getfield f2 {reexecute=0 rethrow=0 return_oop=0}
+                                                              ; - org.openjdk.jmh.infra.Blackhole::consume@6 (line 407)
+                0x00007fcb347386dc: vucomiss xmm0,xmm2
+  2.46%  ╭      0x00007fcb347386e0: jp     0x00007fcb347386e4
+  1.11%  │╭     0x00007fcb347386e2: je     0x00007fcb347386fc  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                   ; - org.openjdk.jmh.infra.Blackhole::consume@13 (line 408)
+  4.45%  ↘│     0x00007fcb347386e4: vucomiss xmm0,xmm1
+          │╭    0x00007fcb347386e8: jp     0x00007fcb347386ec
+  1.86%   ││    0x00007fcb347386ea: je     0x00007fcb34738736  ;*ifne {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                  ; - org.openjdk.jmh.infra.Blackhole::consume@24 (line 408)
+  1.48%   │↘    0x00007fcb347386ec: add    rsp,0x20
+  1.16%   │     0x00007fcb347386f0: pop    rbp
+  0.04%   │     0x00007fcb347386f1: mov    r10,QWORD PTR [r15+0x108]
+  0.68%   │     0x00007fcb347386f8: test   DWORD PTR [r10],eax  ;   {poll_return}
+  1.33%   │     0x00007fcb347386fb: ret    
+          ↘     0x00007fcb347386fc: vucomiss xmm0,xmm2
+                0x00007fcb34738700: mov    ebp,0xffffffff
+            ╭   0x00007fcb34738705: jp     0x00007fcb34738719
+            │╭  0x00007fcb3473870b: jb     0x00007fcb34738719
+            ││  0x00007fcb34738711: setne  bpl
+            ││  0x00007fcb34738715: movzx  ebp,bpl            ;*fcmpl {reexecute=0 rethrow=0 return_oop=0}
+            ││                                                ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 408)
+            ↘↘  0x00007fcb34738719: mov    QWORD PTR [rsp],rsi
+                0x00007fcb3473871d: vmovss DWORD PTR [rsp+0x8],xmm0
+                0x00007fcb34738723: vmovss DWORD PTR [rsp+0xc],xmm1
+....................................................................................................
+ 21.67%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 69.64%         c2, level 4  org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 518 (298 bytes) 
+ 21.67%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 484 (59 bytes) 
+  1.33%           libjvm.so  SpinPause (0 bytes) 
+  1.18%              kernel  [unknown] (6 bytes) 
+  0.32%              kernel  [unknown] (58 bytes) 
+  0.26%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable (49 bytes) 
+  0.15%              kernel  [unknown] (13 bytes) 
+  0.13%              kernel  [unknown] (1 bytes) 
+  0.11%              kernel  [unknown] (30 bytes) 
+  0.11%           libjvm.so  _ZN7Monitor28lock_without_safepoint_checkEv (0 bytes) 
+  0.09%              kernel  [unknown] (39 bytes) 
+  0.09%              kernel  [unknown] (27 bytes) 
+  0.09%              kernel  [unknown] (0 bytes) 
+  0.09%          ld-2.28.so  __tls_get_addr (42 bytes) 
+  0.06%              kernel  [unknown] (19 bytes) 
+  0.06%              kernel  [unknown] (5 bytes) 
+  0.06%              kernel  [unknown] (0 bytes) 
+  0.06%              kernel  [unknown] (14 bytes) 
+  0.06%           libjvm.so  _ZN15G1CollectedHeap17allocate_new_tlabEmmPm (0 bytes) 
+  0.06%           libjvm.so  _ZN15G1FromCardCache5clearEj (11 bytes) 
+  4.35%  <...other 197 warm regions...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 69.64%         c2, level 4  org.ib.benchmark.generated.VarargsKtBenchmark_average_jmhTest::average_avgt_jmhStub, version 518 
+ 21.67%         c2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 484 
+  3.94%              kernel  [unknown] 
+  1.33%           libjvm.so  SpinPause 
+  0.26%           libjvm.so  _ZN14ElfSymbolTable6lookupEPhPiS1_S1_P16ElfFuncDescTable 
+  0.11%           libjvm.so  _ZN7Monitor28lock_without_safepoint_checkEv 
+  0.11%           libjvm.so  _ZNK17ObjArrayAllocator10initializeEP8HeapWord 
+  0.09%          ld-2.28.so  __tls_get_addr 
+  0.09%      hsdis-amd64.so  print_insn 
+  0.09%        libc-2.28.so  __memset_avx2_unaligned_erms 
+  0.08%           libjvm.so  _ZN24G1ScanRSForRegionClosure18scan_rem_set_rootsEP10HeapRegion 
+  0.08%         interpreter  invokevirtual  182 invokevirtual  
+  0.06%        libc-2.28.so  _IO_fflush 
+  0.06%           libjvm.so  _ZN15G1CollectedHeap17allocate_new_tlabEmmPm 
+  0.06%           libjvm.so  _ZN15G1FromCardCache5clearEj 
+  0.06%           libjvm.so  _ZNK17OtherRegionsTable8occupiedEv 
+  0.06%           libjvm.so  _ZNK12MemAllocator25allocate_inside_tlab_slowERNS_10AllocationE 
+  0.06%           libjvm.so  _ZN10HeapRegion25report_region_type_changeEN21G1HeapRegionTraceType4TypeE 
+  0.06%        libc-2.28.so  syscall 
+  0.06%           libjvm.so  _ZN13RelocIterator10initializeEP14CompiledMethodPhS2_ 
+  2.03%  <...other 86 warm methods...>
+....................................................................................................
+ 99.98%  <totals>
+
+....[Distribution by Source]........................................................................
+ 91.31%         c2, level 4
+  3.94%              kernel
+  3.77%           libjvm.so
+  0.39%        libc-2.28.so
+  0.19%         interpreter
+  0.15%      hsdis-amd64.so
+  0.11%          ld-2.28.so
+  0.08%              [vdso]
+  0.02%        runtime stub
+  0.02%  libpthread-2.28.so
+....................................................................................................
+ 99.98%  <totals>
+
+
+
+# Run complete. Total time: 00:01:15
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                          (param1)  (param2)  (param3)  (param4)  (param5)  (param6)  (param7)  (param8)  Mode  Cnt  Score   Error  Units
+VarargsJavaBenchmark.average              3         5         7         9        11        13        15        17  avgt   15  8.003 ± 0.270  ns/op
+VarargsJavaBenchmark.average:·asm         3         5         7         9        11        13        15        17  avgt         NaN            ---
+VarargsKtBenchmark.average                3         5         7         9        11        13        15        17  avgt   15  8.099 ± 0.257  ns/op
+VarargsKtBenchmark.average:·asm           3         5         7         9        11        13        15        17  avgt         NaN            ---
+
+Few thoughts:
+    - same performance, no surprise! Both are compiled to the same bytecode and similarly optimized
