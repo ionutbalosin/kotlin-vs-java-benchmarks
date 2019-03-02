@@ -47,7 +47,7 @@ public class NullSafetyJavaBenchmark {
     }
 
     @Benchmark
-    public int ofNullable() {
+    public Integer ofNullable() {
         return Optional.ofNullable(outer)
                 .flatMap(o -> Optional.ofNullable(o.getNested()))
                 .flatMap(n -> Optional.ofNullable(n.getInner()))
@@ -56,23 +56,26 @@ public class NullSafetyJavaBenchmark {
     }
 
     @Benchmark
-    public int elvisEquivalent() {
-        Outer localOuter = this.outer;
+    public final Integer elvis() {
+        Outer var10000 = this.outer;
+        int var4;
 
-        Integer var3;
-        if (localOuter != null) {
-            Nested var1 = localOuter.getNested();
+        if (var10000 != null) {
+            Nested var1 = var10000.getNested();
             if (var1 != null) {
                 Inner var2 = var1.getInner();
                 if (var2 != null) {
-                    var3 = var2.getValue();
-                    return var3;
+                    Integer var3 = var2.getValue();
+                    if (var3 != null) {
+                        var4 = var3;
+                        return var4;
+                    }
                 }
             }
         }
 
-        var3 = defaultValue;
-        return var3;
+        var4 = this.defaultValue;
+        return var4;
     }
 
     class Outer {
