@@ -28,6 +28,9 @@ public class NullSafetyJavaBenchmark {
     @Param({"42"})
     private int value = 0;
 
+    @Param({"-1"})
+    private int defaultValue = 0;
+
     public static void main(String[] args) throws RunnerException {
 
         Options opt =
@@ -49,7 +52,7 @@ public class NullSafetyJavaBenchmark {
                 .flatMap(o -> Optional.ofNullable(o.getNested()))
                 .flatMap(n -> Optional.ofNullable(n.getInner()))
                 .flatMap(i -> Optional.ofNullable(i.getValue()))
-                .orElse(null);
+                .orElse(defaultValue);
     }
 
     @Benchmark
@@ -68,7 +71,7 @@ public class NullSafetyJavaBenchmark {
             }
         }
 
-        var3 = null;
+        var3 = defaultValue;
         return var3;
     }
 

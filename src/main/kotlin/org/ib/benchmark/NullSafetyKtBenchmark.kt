@@ -25,14 +25,18 @@ open class NullSafetyKtBenchmark {
     @Param("42")
     private var value: Int = 0
 
+    @Param("-1")
+    private var defaultValue: Int = 0
+
     private var notNullString: String = "conference"
+    private lateinit var lateInitString: String
+
     private var maybeNullString: String? = getString()
-    private lateinit var lateinitString: String
     private lateinit var outer: Outer
 
     @Setup
     fun setup() {
-        lateinitString = "conference"
+        lateInitString = "conference"
         outer = Outer(value)
     }
 
@@ -43,7 +47,7 @@ open class NullSafetyKtBenchmark {
     @Benchmark
     fun lateinit(): Int {
         // Compiler explicitly adds the NULL check and it throws UninitializedPropertyAccessException if variable is not initialized at the moment of usage
-        return lateinitString.length;
+        return lateInitString.length;
     }
 
     @Benchmark
@@ -66,8 +70,8 @@ open class NullSafetyKtBenchmark {
 
     @Benchmark
     fun elvis(): Int? {
-        // Compiler explicitly adds NULL checks for every nested call. It returns NULL if any of the reference is NULL or the value otherwise
-        return outer?.nested?.inner?.value;
+        // Compiler explicitly adds NULL checks for every nested call. It returns defaultValue if any of the reference is NULL or the value otherwise
+        return outer?.nested?.inner?.value ?: defaultValue;
     }
 
     companion object {
