@@ -4659,6 +4659,8 @@ NullSafetyKtBenchmark.notNull                                   -1       42  avg
 NullSafetyKtBenchmark.notNull:·asm                              -1       42  avgt         NaN            ---
 
 Few thoughts:
-    - Kotlin elvis constructor offers the "same" performance as Java ofNullable and Java elvis
-    - Kotlin lateinit and notNull are similar, even if the lateinit version have additional not null checks
+    - Kotlin::elvis constructor offers the "same" performance as Java::ofNullable and Java::elvis
+    - Kotlin::lateinit and Kotlin::notNull are similar, even if the lateinit version have additional not null checks
+    - Weired or not, Kotlin compiles Kotlin::maybeNull into a method which needs further boxing operations
+        - public final Integer maybeNull() vs. public final int notNull() !!! May be Kotlin compiler needs to fix this in the future!
     - Kotlin elvis operator keeps the code nice and cleaner than any Java alternative
