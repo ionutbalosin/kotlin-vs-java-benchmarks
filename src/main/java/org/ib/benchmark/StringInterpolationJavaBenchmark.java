@@ -58,12 +58,12 @@ public class StringInterpolationJavaBenchmark {
     }
 
     @Benchmark
-    public String concat() {
-        return quantity + " kilogram of " + fruits + " costs " + price + " " + currency;
+    public String fruitsPrice() {
+        return quantity + " kilogram of " + fruits + " costs " + price + ' ' + currency;
     }
 
     @Benchmark
-    public String concatExpression() {
+    public String shapeArea() {
         return shape + " area is " + length * width + ' ' + unit;
     }
 }

@@ -60,12 +60,12 @@ open class StringInterpolationKtBenchmark {
     }
 
     @Benchmark
-    fun concat(): String {
+    fun fruitsPrice(): String {
         return "$quantity kilogram of $fruits costs $price $currency"
     }
 
     @Benchmark
-    fun concatExpression(): String {
+    fun shapeArea(): String {
         return "${shape} area is ${length * width} $unit"
     }
 }
