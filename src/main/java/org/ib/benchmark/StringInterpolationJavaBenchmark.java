@@ -35,11 +35,17 @@ public class StringInterpolationJavaBenchmark {
     @Param("EUR")
     private String currency;
 
+    @Param("Rectangle")
+    private String shape;
+
     @Param("2")
     private double length;
 
     @Param("3")
     private double width;
+
+    @Param("m2")
+    private String unit;
 
     public static void main(String[] args) throws RunnerException {
 
@@ -52,12 +58,12 @@ public class StringInterpolationJavaBenchmark {
     }
 
     @Benchmark
-    public String concatenation() {
+    public String concat() {
         return quantity + " kilogram of " + fruits + " costs " + price + " " + currency;
     }
 
     @Benchmark
-    public String expression() {
-        return "Rectangle area is " + (length * width);
+    public String concatExpression() {
+        return shape + " area is " + length * width + ' ' + unit;
     }
 }

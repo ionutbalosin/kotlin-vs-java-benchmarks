@@ -33,11 +33,17 @@ open class StringInterpolationKtBenchmark {
     @Param("EUR")
     private var currency: String = ""
 
+    @Param("Rectangle")
+    private var shape: String = ""
+
     @Param("2")
     private var length: Double = 0.0
 
     @Param("3")
     private var width: Double = 0.0
+
+    @Param("m2")
+    private var unit: String = ""
 
     companion object {
 
@@ -54,12 +60,12 @@ open class StringInterpolationKtBenchmark {
     }
 
     @Benchmark
-    fun concatenation(): String {
+    fun concat(): String {
         return "$quantity kilogram of $fruits costs $price $currency"
     }
 
     @Benchmark
-    fun expression(): String {
-        return "Rectangle area is ${length * width}"
+    fun concatExpression(): String {
+        return "${shape} area is ${length * width} $unit"
     }
 }
