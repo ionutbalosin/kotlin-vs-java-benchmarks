@@ -245,7 +245,7 @@ StringInterpolationKtBenchmark.fruitsPrice           EUR    apples         2    
 StringInterpolationKtBenchmark.shapeArea             EUR    apples         2     1.59           1  Rectangle      m2        3  avgt   15   76.330 ± 4.574  ns/op
 
 Few thoughts:
-    - Starting JDK 9, Java uses StringConcatFactory.makeConcatWithConstants() (i.e. Indify String Concatenation) - which replaces the concatenation at byte-code level by an InvokeDynamic call
+    - Starting JDK 9 (i.e. JEP 280: Indify String Concatenation), Java changes the String-concatenation bytecode sequence generated at compile time by invokedynamic to optimize string concatenation at runtime
     - Kotlin, since it generates Java 8 bytecode, relies on StringBuilder()
     - Forcing the Java compiler to generate Java 8 bytecode the performance becomes almost the same
     - Kotlin does not benefit of new bytecode optimizations, added since Java 9!
