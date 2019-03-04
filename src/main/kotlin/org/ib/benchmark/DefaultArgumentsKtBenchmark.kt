@@ -46,23 +46,22 @@ open class DefaultArgumentsKtBenchmark {
 
     @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
-    fun defaultArguments(): Int {
+    fun default2Arguments(): Int {
         return expression(value)
     }
 
     @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
-    fun oneArgument(): Int {
+    fun default1Argument(): Int {
         return expression(value, factor = factor)
     }
 
     @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
-    fun twoArguments(): Int {
+    fun noDefault(): Int {
         return expression(value, factor = factor, delta = delta)
     }
 
-    private fun expression(value: Int, factor: Int = 1, delta: Int = 0): Int {
-        return value * factor + delta;
-    }
+    private fun expression(value: Int, factor: Int = 1, delta: Int = 0): Int =
+            value * factor + delta
 }
