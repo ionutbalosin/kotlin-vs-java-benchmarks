@@ -22,10 +22,13 @@ import java.util.concurrent.TimeUnit
 open class DefaultArgumentsKtBenchmark {
 
     @Param("8")
-    private var param: Int = 0
+    private var value: Int = 8
 
     @Param("2")
-    private var shift: Int = 0
+    private var factor: Int = 2
+
+    @Param("1")
+    private var delta: Int = 1
 
     companion object {
 
@@ -43,15 +46,20 @@ open class DefaultArgumentsKtBenchmark {
 
     @Benchmark
     fun defaultArguments(): Int {
-        return expression(param)
+        return expression(value)
     }
 
     @Benchmark
-    fun namedArguments(): Int {
-        return expression(param, shl_2 = shift)
+    fun oneArgument(): Int {
+        return expression(value, factor = factor)
     }
 
-    private fun expression(value: Int, shl_1: Int = 0, shl_2: Int = 0, shl_3: Int = 0): Int {
-        return value shl shl_1 shl shl_2 shl shl_3;
+    @Benchmark
+    fun twoArguments(): Int {
+        return expression(value, factor = factor, delta = delta)
+    }
+
+    private fun expression(value: Int, factor: Int = 1, delta: Int = 0): Int {
+        return value * factor + delta;
     }
 }

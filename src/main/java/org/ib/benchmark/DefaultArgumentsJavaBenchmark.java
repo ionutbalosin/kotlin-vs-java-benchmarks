@@ -24,10 +24,13 @@ import java.util.concurrent.TimeUnit;
 public class DefaultArgumentsJavaBenchmark {
 
     @Param("8")
-    private int param = 0;
+    private int value = 8;
 
     @Param("2")
-    private int shift = 0;
+    private int factor = 2;
+
+    @Param("1")
+    private int delta = 1;
 
     public static void main(String[] args) throws RunnerException {
 
@@ -41,16 +44,21 @@ public class DefaultArgumentsJavaBenchmark {
 
     @Benchmark
     public int defaultArguments() {
-        return expression(param, 0, 0, 0);
+        return expression(value, 1, 0);
     }
 
     @Benchmark
-    public int namedArguments() {
-        return expression(param, 0, shift, 0);
+    public int oneArgument() {
+        return expression(value, factor, 0);
     }
 
-    private int expression(int value, int shl_1, int shl_2, int shl_3) {
-        return value << shl_1 << shl_2 << shl_3;
+    @Benchmark
+    public int twoArgument() {
+        return expression(value, factor, delta);
+    }
+
+    private int expression(int value, int factor, int delta) {
+        return value * factor + delta;
     }
 
 }
