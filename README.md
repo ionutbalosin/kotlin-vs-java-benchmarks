@@ -38,7 +38,7 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*MegamorphicCall.*" -prof p
 
 #### High-order function tests
 ```
-java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*HighOrderFunction.*"  > results/HighOrderFunctionBenchmark.out
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*HighOrderFunction.*" -prof gc > results/HighOrderFunctionBenchmark.out
 ```
 
 #### Tail recursion function tests
