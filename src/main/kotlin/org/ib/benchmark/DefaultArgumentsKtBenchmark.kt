@@ -44,19 +44,16 @@ open class DefaultArgumentsKtBenchmark {
         }
     }
 
-    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
     fun default2Arguments(): Int {
         return expression(value)
     }
 
-    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
     fun default1Argument(): Int {
         return expression(value, factor = factor)
     }
 
-    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
     fun noDefault(): Int {
         return expression(value, factor = factor, delta = delta)

@@ -42,19 +42,16 @@ public class DefaultArgumentsJavaBenchmark {
         new Runner(opt).run();
     }
 
-    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
     public int default2Arguments() {
         return expression(value, 1, 0);
     }
 
-    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
     public int default1Argument() {
         return expression(value, factor, 0);
     }
 
-    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     @Benchmark
     public int noDefault() {
         return expression(value, factor, delta);
