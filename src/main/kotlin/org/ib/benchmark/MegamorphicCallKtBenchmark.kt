@@ -22,15 +22,15 @@ import java.util.concurrent.TimeUnit
 open class MegamorphicCallKtBenchmark {
 
     @Benchmark
-    @Group("Megamorphic1Kt")
-    fun megamorphic1Call(state: Megamorphic1KtState): Int {
-        return state.megamorphic1Call()
+    @Group("MonomorphicKt")
+    fun monomorphicCall(state: MonomorphicKtState): Int {
+        return state.monomorphicCall()
     }
 
     @Benchmark
-    @Group("Megamorphic2Kt")
-    fun megamorphic2Call(state: Megamorphic2KtState): Int {
-        return state.megamorphic2Call()
+    @Group("BimorphicKt")
+    fun bimorphicCall(state: BimorphicKtState): Int {
+        return state.bimorphicCall()
     }
 
     @Benchmark
@@ -46,11 +46,11 @@ open class MegamorphicCallKtBenchmark {
     }
 
     @State(Scope.Thread)
-    open class Megamorphic1KtState {
+    open class MonomorphicKtState {
 
         internal var alg1: VirtualCallKtCMath = VirtualCallKtAlg1()
 
-        internal fun megamorphic1Call(): Int {
+        internal fun monomorphicCall(): Int {
             return compute(alg1, param)
         }
 
@@ -61,12 +61,12 @@ open class MegamorphicCallKtBenchmark {
     }
 
     @State(Scope.Thread)
-    open class Megamorphic2KtState {
+    open class BimorphicKtState {
 
         internal var alg1: VirtualCallKtCMath = VirtualCallKtAlg1()
         internal var alg2: VirtualCallKtCMath = VirtualCallKtAlg2()
 
-        internal fun megamorphic2Call(): Int {
+        internal fun bimorphicCall(): Int {
             return compute(alg1, param) + compute(alg2, param)
         }
 
@@ -152,6 +152,7 @@ open class MegamorphicCallKtBenchmark {
             Runner(opt).run()
         }
 
+        @CompilerControl(CompilerControl.Mode.DONT_INLINE)
         internal inline fun compute(cmath: VirtualCallKtCMath, i: Int): Int {
             return cmath.compute(i)
         }

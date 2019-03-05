@@ -33,21 +33,21 @@ public class MegamorphicCallJavaBenchmark {
         new Runner(opt).run();
     }
 
-    //@CompilerControl(CompilerControl.Mode.DONT_INLINE)
+    @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     public static int compute(VirtualCallJavaCMath cmath, int i) {
         return cmath.compute(i);
     }
 
     @Benchmark
-    @Group("Megamorphic1Java")
-    public int megamorphic1Call(Megamorphic1JavaState state) {
-        return state.megamorphic1Call();
+    @Group("MonomorphicJava")
+    public int monomorphicCall(MonomorphicJavaState state) {
+        return state.monomorphicCall();
     }
 
     @Benchmark
-    @Group("Megamorphic3Java")
-    public int megamorphic2Call(Megamorphic2JavaState state) {
-        return state.megamorphic2Call();
+    @Group("BimorphicJava")
+    public int bimorphicCall(BimorphicJavaState state) {
+        return state.bimorphicCall();
     }
 
 
@@ -64,26 +64,26 @@ public class MegamorphicCallJavaBenchmark {
     }
 
     @State(Scope.Thread)
-    public static class Megamorphic1JavaState {
+    public static class MonomorphicJavaState {
         @Param({"3"})
         public static int param;
 
         VirtualCallJavaCMath alg1 = new VirtualCallJavaAlg1();
 
-        int megamorphic1Call() {
+        int monomorphicCall() {
             return compute(alg1, param);
         }
     }
 
     @State(Scope.Thread)
-    public static class Megamorphic2JavaState {
+    public static class BimorphicJavaState {
         @Param({"3"})
         public static int param;
 
         VirtualCallJavaCMath alg1 = new VirtualCallJavaAlg1();
         VirtualCallJavaCMath alg2 = new VirtualCallJavaAlg2();
 
-        int megamorphic2Call() {
+        int bimorphicCall() {
             return compute(alg1, param) + compute(alg2, param);
         }
     }
