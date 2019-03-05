@@ -52,18 +52,18 @@ open class HighOrderFunctionKtBenchmark {
         }
     }
 
-    private fun sumOfSquares(max: Int, body: (Int) -> Int): Long {
+    private fun sumOfSquares(max: Int, square: (Int) -> Int): Long {
         var sum = 0L
         for (i in 1..max) {
-            sum += body(i)
+            sum += square(i)
         }
         return sum
     }
 
-    private inline fun sumOfSquaresInline(max: Int, body: (Int) -> Int): Long {
+    private inline fun sumOfSquaresInline(max: Int, square: (Int) -> Int): Long {
         var sum = 0L
         for (i in 1..max) {
-            sum += body(i)
+            sum += square(i)
         }
         return sum
     }

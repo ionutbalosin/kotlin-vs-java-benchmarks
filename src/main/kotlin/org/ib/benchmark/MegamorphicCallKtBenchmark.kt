@@ -22,6 +22,18 @@ import java.util.concurrent.TimeUnit
 open class MegamorphicCallKtBenchmark {
 
     @Benchmark
+    @Group("Megamorphic1Kt")
+    fun megamorphic1Call(state: Megamorphic1KtState): Int {
+        return state.megamorphic1Call()
+    }
+
+    @Benchmark
+    @Group("Megamorphic2Kt")
+    fun megamorphic2Call(state: Megamorphic2KtState): Int {
+        return state.megamorphic2Call()
+    }
+
+    @Benchmark
     @Group("Megamorphic3Kt")
     fun megamorphic3Call(state: Megamorphic3KtState): Int {
         return state.megamorphic3Call()
@@ -31,6 +43,37 @@ open class MegamorphicCallKtBenchmark {
     @Group("Megamorphic4Kt")
     fun megamorphic4Call(state: Megamorphic4KtState): Int {
         return state.megamorphic4Call()
+    }
+
+    @State(Scope.Thread)
+    open class Megamorphic1KtState {
+
+        internal var alg1: VirtualCallKtCMath = VirtualCallKtAlg1()
+
+        internal fun megamorphic1Call(): Int {
+            return compute(alg1, param)
+        }
+
+        companion object {
+            @Param("3")
+            var param: Int = 0
+        }
+    }
+
+    @State(Scope.Thread)
+    open class Megamorphic2KtState {
+
+        internal var alg1: VirtualCallKtCMath = VirtualCallKtAlg1()
+        internal var alg2: VirtualCallKtCMath = VirtualCallKtAlg2()
+
+        internal fun megamorphic2Call(): Int {
+            return compute(alg1, param) + compute(alg2, param)
+        }
+
+        companion object {
+            @Param("3")
+            var param: Int = 0
+        }
     }
 
     @State(Scope.Thread)

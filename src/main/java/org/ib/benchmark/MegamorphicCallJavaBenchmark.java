@@ -39,6 +39,19 @@ public class MegamorphicCallJavaBenchmark {
     }
 
     @Benchmark
+    @Group("Megamorphic1Java")
+    public int megamorphic1Call(Megamorphic1JavaState state) {
+        return state.megamorphic1Call();
+    }
+
+    @Benchmark
+    @Group("Megamorphic3Java")
+    public int megamorphic2Call(Megamorphic2JavaState state) {
+        return state.megamorphic2Call();
+    }
+
+
+    @Benchmark
     @Group("Megamorphic3Java")
     public int megamorphic3Call(Megamorphic3JavaState state) {
         return state.megamorphic3Call();
@@ -48,6 +61,31 @@ public class MegamorphicCallJavaBenchmark {
     @Group("Megamorphic4Java")
     public int megamorphic4Call(Megamorphic4JavaState state) {
         return state.megamorphic4Call();
+    }
+
+    @State(Scope.Thread)
+    public static class Megamorphic1JavaState {
+        @Param({"3"})
+        public static int param;
+
+        VirtualCallJavaCMath alg1 = new VirtualCallJavaAlg1();
+
+        int megamorphic1Call() {
+            return compute(alg1, param);
+        }
+    }
+
+    @State(Scope.Thread)
+    public static class Megamorphic2JavaState {
+        @Param({"3"})
+        public static int param;
+
+        VirtualCallJavaCMath alg1 = new VirtualCallJavaAlg1();
+        VirtualCallJavaCMath alg2 = new VirtualCallJavaAlg2();
+
+        int megamorphic2Call() {
+            return compute(alg1, param) + compute(alg2, param);
+        }
     }
 
     @State(Scope.Thread)
