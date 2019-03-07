@@ -7,53 +7,53 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: org.ib.benchmark.TailRecursiveFunctionJavaBenchmark.fact
+# Benchmark: org.ib.benchmark.TailRecursiveFunctionJavaBenchmark.fibonacciRec
 # Parameters: (param = 10000)
 
-# Run progress: 0.00% complete, ETA 00:01:00
+# Run progress: 0.00% complete, ETA 00:01:30
 # Fork: 1 of 3
-# Warmup Iteration   1: 21.359 us/op
-# Warmup Iteration   2: 21.075 us/op
-# Warmup Iteration   3: 20.731 us/op
-# Warmup Iteration   4: 20.779 us/op
-# Warmup Iteration   5: 20.742 us/op
-Iteration   1: 20.802 us/op
-Iteration   2: 21.844 us/op
-Iteration   3: 21.941 us/op
-Iteration   4: 22.178 us/op
-Iteration   5: 21.920 us/op
+# Warmup Iteration   1: 20.636 us/op
+# Warmup Iteration   2: 20.722 us/op
+# Warmup Iteration   3: 23.535 us/op
+# Warmup Iteration   4: 29.889 us/op
+# Warmup Iteration   5: 29.726 us/op
+Iteration   1: 23.877 us/op
+Iteration   2: 20.426 us/op
+Iteration   3: 19.762 us/op
+Iteration   4: 20.649 us/op
+Iteration   5: 20.230 us/op
 
-# Run progress: 16.67% complete, ETA 00:00:51
+# Run progress: 11.11% complete, ETA 00:01:22
 # Fork: 2 of 3
-# Warmup Iteration   1: 18.538 us/op
-# Warmup Iteration   2: 18.576 us/op
-# Warmup Iteration   3: 18.344 us/op
-# Warmup Iteration   4: 18.318 us/op
-# Warmup Iteration   5: 18.237 us/op
-Iteration   1: 18.417 us/op
-Iteration   2: 18.381 us/op
-Iteration   3: 18.277 us/op
-Iteration   4: 18.202 us/op
-Iteration   5: 18.103 us/op
+# Warmup Iteration   1: 21.371 us/op
+# Warmup Iteration   2: 22.679 us/op
+# Warmup Iteration   3: 21.498 us/op
+# Warmup Iteration   4: 20.839 us/op
+# Warmup Iteration   5: 20.861 us/op
+Iteration   1: 20.722 us/op
+Iteration   2: 20.419 us/op
+Iteration   3: 22.946 us/op
+Iteration   4: 25.446 us/op
+Iteration   5: 21.645 us/op
 
-# Run progress: 33.33% complete, ETA 00:00:41
+# Run progress: 22.22% complete, ETA 00:01:12
 # Fork: 3 of 3
-# Warmup Iteration   1: 19.764 us/op
-# Warmup Iteration   2: 19.562 us/op
-# Warmup Iteration   3: 19.593 us/op
-# Warmup Iteration   4: 20.089 us/op
-# Warmup Iteration   5: 19.575 us/op
-Iteration   1: 19.793 us/op
-Iteration   2: 19.627 us/op
-Iteration   3: 19.522 us/op
-Iteration   4: 19.586 us/op
-Iteration   5: 18.502 us/op
+# Warmup Iteration   1: 21.739 us/op
+# Warmup Iteration   2: 22.195 us/op
+# Warmup Iteration   3: 22.478 us/op
+# Warmup Iteration   4: 23.691 us/op
+# Warmup Iteration   5: 23.249 us/op
+Iteration   1: 22.415 us/op
+Iteration   2: 21.126 us/op
+Iteration   3: 21.413 us/op
+Iteration   4: 21.927 us/op
+Iteration   5: 21.893 us/op
 
 
-Result "org.ib.benchmark.TailRecursiveFunctionJavaBenchmark.fact":
-  19.806 ±(99.9%) 1.652 us/op [Average]
-  (min, avg, max) = (18.103, 19.806, 22.178), stdev = 1.545
-  CI (99.9%): [18.154, 21.458] (assumes normal distribution)
+Result "org.ib.benchmark.TailRecursiveFunctionJavaBenchmark.fibonacciRec":
+  21.660 ±(99.9%) 1.630 us/op [Average]
+  (min, avg, max) = (19.762, 21.660, 25.446), stdev = 1.525
+  CI (99.9%): [20.030, 23.290] (assumes normal distribution)
 
 
 # JMH version: 1.21
@@ -65,56 +65,114 @@ Result "org.ib.benchmark.TailRecursiveFunctionJavaBenchmark.fact":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: org.ib.benchmark.TailRecursiveFunctionKtBenchmark.fact
+# Benchmark: org.ib.benchmark.TailRecursiveFunctionKtBenchmark.fibonacciRec
 # Parameters: (param = 10000)
 
-# Run progress: 50.00% complete, ETA 00:00:30
+# Run progress: 33.33% complete, ETA 00:01:01
 # Fork: 1 of 3
-# Warmup Iteration   1: 3.407 us/op
-# Warmup Iteration   2: 3.377 us/op
-# Warmup Iteration   3: 3.321 us/op
-# Warmup Iteration   4: 3.326 us/op
-# Warmup Iteration   5: 3.332 us/op
-Iteration   1: 3.343 us/op
-Iteration   2: 3.341 us/op
-Iteration   3: 3.326 us/op
-Iteration   4: 3.331 us/op
-Iteration   5: 3.329 us/op
+# Warmup Iteration   1: 19.188 us/op
+# Warmup Iteration   2: 18.686 us/op
+# Warmup Iteration   3: 19.403 us/op
+# Warmup Iteration   4: 19.179 us/op
+# Warmup Iteration   5: 19.660 us/op
+Iteration   1: 19.815 us/op
+Iteration   2: 19.750 us/op
+Iteration   3: 19.824 us/op
+Iteration   4: 19.590 us/op
+Iteration   5: 20.039 us/op
 
-# Run progress: 66.67% complete, ETA 00:00:20
+# Run progress: 44.44% complete, ETA 00:00:51
 # Fork: 2 of 3
-# Warmup Iteration   1: 3.453 us/op
-# Warmup Iteration   2: 3.407 us/op
-# Warmup Iteration   3: 3.353 us/op
-# Warmup Iteration   4: 3.337 us/op
-# Warmup Iteration   5: 3.337 us/op
-Iteration   1: 3.343 us/op
-Iteration   2: 3.344 us/op
-Iteration   3: 3.333 us/op
-Iteration   4: 3.381 us/op
-Iteration   5: 3.410 us/op
+# Warmup Iteration   1: 19.651 us/op
+# Warmup Iteration   2: 19.267 us/op
+# Warmup Iteration   3: 19.177 us/op
+# Warmup Iteration   4: 19.270 us/op
+# Warmup Iteration   5: 19.508 us/op
+Iteration   1: 18.980 us/op
+Iteration   2: 19.282 us/op
+Iteration   3: 19.069 us/op
+Iteration   4: 19.554 us/op
+Iteration   5: 19.319 us/op
 
-# Run progress: 83.33% complete, ETA 00:00:10
+# Run progress: 55.56% complete, ETA 00:00:41
 # Fork: 3 of 3
-# Warmup Iteration   1: 3.768 us/op
-# Warmup Iteration   2: 3.545 us/op
-# Warmup Iteration   3: 3.457 us/op
-# Warmup Iteration   4: 3.585 us/op
-# Warmup Iteration   5: 3.569 us/op
-Iteration   1: 3.582 us/op
-Iteration   2: 3.556 us/op
-Iteration   3: 3.535 us/op
-Iteration   4: 3.541 us/op
-Iteration   5: 3.555 us/op
+# Warmup Iteration   1: 20.603 us/op
+# Warmup Iteration   2: 19.841 us/op
+# Warmup Iteration   3: 19.546 us/op
+# Warmup Iteration   4: 19.896 us/op
+# Warmup Iteration   5: 19.745 us/op
+Iteration   1: 19.855 us/op
+Iteration   2: 19.856 us/op
+Iteration   3: 20.078 us/op
+Iteration   4: 19.932 us/op
+Iteration   5: 20.116 us/op
 
 
-Result "org.ib.benchmark.TailRecursiveFunctionKtBenchmark.fact":
-  3.417 ±(99.9%) 0.110 us/op [Average]
-  (min, avg, max) = (3.326, 3.417, 3.582), stdev = 0.103
-  CI (99.9%): [3.307, 3.527] (assumes normal distribution)
+Result "org.ib.benchmark.TailRecursiveFunctionKtBenchmark.fibonacciRec":
+  19.671 ±(99.9%) 0.386 us/op [Average]
+  (min, avg, max) = (18.980, 19.671, 20.116), stdev = 0.361
+  CI (99.9%): [19.285, 20.056] (assumes normal distribution)
 
 
-# Run complete. Total time: 00:01:01
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: -Xss10M
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.TailRecursiveFunctionKtBenchmark.fibonacciTailRec
+# Parameters: (param = 10000)
+
+# Run progress: 66.67% complete, ETA 00:00:30
+# Fork: 1 of 3
+# Warmup Iteration   1: 3.786 us/op
+# Warmup Iteration   2: 3.764 us/op
+# Warmup Iteration   3: 3.704 us/op
+# Warmup Iteration   4: 3.626 us/op
+# Warmup Iteration   5: 3.709 us/op
+Iteration   1: 3.651 us/op
+Iteration   2: 3.665 us/op
+Iteration   3: 3.620 us/op
+Iteration   4: 3.565 us/op
+Iteration   5: 3.683 us/op
+
+# Run progress: 77.78% complete, ETA 00:00:20
+# Fork: 2 of 3
+# Warmup Iteration   1: 3.680 us/op
+# Warmup Iteration   2: 3.763 us/op
+# Warmup Iteration   3: 3.636 us/op
+# Warmup Iteration   4: 3.673 us/op
+# Warmup Iteration   5: 3.724 us/op
+Iteration   1: 3.684 us/op
+Iteration   2: 3.701 us/op
+Iteration   3: 3.850 us/op
+Iteration   4: 3.763 us/op
+Iteration   5: 3.700 us/op
+
+# Run progress: 88.89% complete, ETA 00:00:10
+# Fork: 3 of 3
+# Warmup Iteration   1: 3.808 us/op
+# Warmup Iteration   2: 3.764 us/op
+# Warmup Iteration   3: 3.742 us/op
+# Warmup Iteration   4: 3.710 us/op
+# Warmup Iteration   5: 3.692 us/op
+Iteration   1: 3.657 us/op
+Iteration   2: 3.643 us/op
+Iteration   3: 3.609 us/op
+Iteration   4: 3.588 us/op
+Iteration   5: 3.711 us/op
+
+
+Result "org.ib.benchmark.TailRecursiveFunctionKtBenchmark.fibonacciTailRec":
+  3.673 ±(99.9%) 0.076 us/op [Average]
+  (min, avg, max) = (3.565, 3.673, 3.850), stdev = 0.071
+  CI (99.9%): [3.597, 3.749] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:32
 
 REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
 why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
@@ -122,33 +180,12 @@ experiments, perform baseline and negative tests that provide experimental contr
 the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
 Do not assume the numbers tell you what you want them to tell.
 
-Benchmark                                (param)  Mode  Cnt   Score   Error  Units
-TailRecursiveFunctionJavaBenchmark.fact    10000  avgt   15  19.806 ± 1.652  us/op
-TailRecursiveFunctionKtBenchmark.fact      10000  avgt   15   3.417 ± 0.110  us/op
+Benchmark                                          (param)  Mode  Cnt   Score   Error  Units
+TailRecursiveFunctionJavaBenchmark.fibonacciRec      10000  avgt   15  21.660 ± 1.630  us/op
+TailRecursiveFunctionKtBenchmark.fibonacciRec        10000  avgt   15  19.671 ± 0.386  us/op
+TailRecursiveFunctionKtBenchmark.fibonacciTailRec    10000  avgt   15   3.673 ± 0.076  us/op
 
 Few thoughts:
-    - Kotlin tailrec function is optimized and re-written by the Compiler as follows (completly removing the recursive calls):
-        private final int factRec(int n, int a, int b) {
-            while(true) {
-                int var10000;
-                if (n == 0) {
-                    var10000 = a;
-                } else {
-                if (n != 1) {
-                        var10000 = n - 1;
-                        int var10001 = b;
-                        b += a;
-                        a = var10001;
-                        n = var10000;
-                        continue;
-                    }
-
-                    var10000 = b;
-                }
-
-                return var10000;
-            }
-        }
     - may be an improvement for Kotlin would be to automatically detect and being optimized by the compiler
         - maybe ask Kotlin why there is an explicit keyword for that!
     - Kotlin tailrec function performance is similar to non-recursive (i.e. liniear) approach with the advantage of keeping the code more compact
