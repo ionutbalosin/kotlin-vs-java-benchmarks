@@ -25,16 +25,28 @@ open class TailRecursiveFunctionKtBenchmark {
     private var param = 0
 
     @Benchmark
-    fun fact(): Int {
-        return factRec(param, 0, 1)
+    fun fibonacciTailRec(): Int {
+        return fibonacciTailRec(param, 0, 1)
     }
 
-    private tailrec fun factRec(n: Int, a: Int, b: Int): Int =
+    @Benchmark
+    fun fibonacciRec(): Int {
+        return fibonacciRec(param, 0, 1)
+    }
+
+    private tailrec fun fibonacciTailRec(n: Int, a: Int, b: Int): Int =
             if (n == 0)
                 a;
             else if (n == 1)
                 b;
-            else factRec(n - 1, b, a + b);
+            else fibonacciTailRec(n - 1, b, a + b);
+
+    private fun fibonacciRec(n: Int, a: Int, b: Int): Int =
+            if (n == 0)
+                a;
+            else if (n == 1)
+                b;
+            else fibonacciRec(n - 1, b, a + b);
 
     companion object {
 

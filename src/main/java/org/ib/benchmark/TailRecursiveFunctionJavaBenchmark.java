@@ -37,15 +37,15 @@ public class TailRecursiveFunctionJavaBenchmark {
     }
 
     @Benchmark
-    public int fact() {
-        return factRec(param, 0, 1);
+    public int fibonacciRec() {
+        return fibonacciRec(param, 0, 1);
     }
 
-    private int factRec(int n, int a, int b) {
+    private int fibonacciRec(int n, int a, int b) {
         if (n == 0)
             return a;
         else if (n == 1)
             return b;
-        else return factRec(n - 1, b, a + b);
+        else return fibonacciRec(n - 1, b, a + b);
     }
 }
