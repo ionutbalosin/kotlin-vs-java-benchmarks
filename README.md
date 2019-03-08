@@ -66,6 +66,11 @@ java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*DefaultArguments.*" -prof 
 java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*Varargs.*" -prof perfasm:intelSyntax=true > results/VarargsBenchmark.out
 ```
 
+#### Spread operator tests
+```
+java -jar target/kotlin-vs-java-benchmarks-jmh.jar ".*SpreadOperator.*" > results/SpreadOperatorBenchmark.out
+```
+
 ## License
 
 The project is licensed under [GNU](https://www.gnu.org/licenses/). For the full copyright and license information, please check the LICENSE file included in the `src/main/resources` folder

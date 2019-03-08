@@ -1,0 +1,959 @@
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList
+# Parameters: (size = 10)
+
+# Run progress: 0.00% complete, ETA 00:08:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 6.614 ns/op
+# Warmup Iteration   2: 5.625 ns/op
+# Warmup Iteration   3: 4.811 ns/op
+# Warmup Iteration   4: 4.836 ns/op
+# Warmup Iteration   5: 4.753 ns/op
+Iteration   1: 5.219 ns/op
+Iteration   2: 5.060 ns/op
+Iteration   3: 5.041 ns/op
+Iteration   4: 4.713 ns/op
+Iteration   5: 4.823 ns/op
+
+# Run progress: 2.08% complete, ETA 00:08:05
+# Fork: 2 of 3
+# Warmup Iteration   1: 6.795 ns/op
+# Warmup Iteration   2: 5.503 ns/op
+# Warmup Iteration   3: 4.854 ns/op
+# Warmup Iteration   4: 4.756 ns/op
+# Warmup Iteration   5: 4.619 ns/op
+Iteration   1: 4.712 ns/op
+Iteration   2: 4.919 ns/op
+Iteration   3: 5.288 ns/op
+Iteration   4: 5.232 ns/op
+Iteration   5: 5.226 ns/op
+
+# Run progress: 4.17% complete, ETA 00:07:53
+# Fork: 3 of 3
+# Warmup Iteration   1: 6.118 ns/op
+# Warmup Iteration   2: 5.588 ns/op
+# Warmup Iteration   3: 4.949 ns/op
+# Warmup Iteration   4: 4.837 ns/op
+# Warmup Iteration   5: 4.735 ns/op
+Iteration   1: 4.970 ns/op
+Iteration   2: 5.018 ns/op
+Iteration   3: 4.689 ns/op
+Iteration   4: 5.062 ns/op
+Iteration   5: 5.004 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList":
+  4.998 ±(99.9%) 0.211 ns/op [Average]
+  (min, avg, max) = (4.689, 4.998, 5.288), stdev = 0.198
+  CI (99.9%): [4.787, 5.210] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList
+# Parameters: (size = 100)
+
+# Run progress: 6.25% complete, ETA 00:07:42
+# Fork: 1 of 3
+# Warmup Iteration   1: 6.193 ns/op
+# Warmup Iteration   2: 5.497 ns/op
+# Warmup Iteration   3: 4.627 ns/op
+# Warmup Iteration   4: 4.805 ns/op
+# Warmup Iteration   5: 4.847 ns/op
+Iteration   1: 4.809 ns/op
+Iteration   2: 5.135 ns/op
+Iteration   3: 4.923 ns/op
+Iteration   4: 4.604 ns/op
+Iteration   5: 5.190 ns/op
+
+# Run progress: 8.33% complete, ETA 00:07:32
+# Fork: 2 of 3
+# Warmup Iteration   1: 6.293 ns/op
+# Warmup Iteration   2: 5.940 ns/op
+# Warmup Iteration   3: 4.814 ns/op
+# Warmup Iteration   4: 4.962 ns/op
+# Warmup Iteration   5: 5.171 ns/op
+Iteration   1: 5.091 ns/op
+Iteration   2: 4.946 ns/op
+Iteration   3: 5.006 ns/op
+Iteration   4: 5.068 ns/op
+Iteration   5: 4.983 ns/op
+
+# Run progress: 10.42% complete, ETA 00:07:21
+# Fork: 3 of 3
+# Warmup Iteration   1: 6.223 ns/op
+# Warmup Iteration   2: 5.582 ns/op
+# Warmup Iteration   3: 4.714 ns/op
+# Warmup Iteration   4: 4.938 ns/op
+# Warmup Iteration   5: 5.280 ns/op
+Iteration   1: 4.776 ns/op
+Iteration   2: 4.692 ns/op
+Iteration   3: 4.742 ns/op
+Iteration   4: 4.912 ns/op
+Iteration   5: 4.925 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList":
+  4.920 ±(99.9%) 0.180 ns/op [Average]
+  (min, avg, max) = (4.604, 4.920, 5.190), stdev = 0.169
+  CI (99.9%): [4.740, 5.101] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList
+# Parameters: (size = 1000)
+
+# Run progress: 12.50% complete, ETA 00:07:11
+# Fork: 1 of 3
+# Warmup Iteration   1: 6.800 ns/op
+# Warmup Iteration   2: 6.029 ns/op
+# Warmup Iteration   3: 4.976 ns/op
+# Warmup Iteration   4: 5.119 ns/op
+# Warmup Iteration   5: 4.934 ns/op
+Iteration   1: 5.160 ns/op
+Iteration   2: 4.958 ns/op
+Iteration   3: 5.140 ns/op
+Iteration   4: 4.756 ns/op
+Iteration   5: 4.805 ns/op
+
+# Run progress: 14.58% complete, ETA 00:07:00
+# Fork: 2 of 3
+# Warmup Iteration   1: 6.265 ns/op
+# Warmup Iteration   2: 5.756 ns/op
+# Warmup Iteration   3: 4.788 ns/op
+# Warmup Iteration   4: 4.799 ns/op
+# Warmup Iteration   5: 4.867 ns/op
+Iteration   1: 4.824 ns/op
+Iteration   2: 5.297 ns/op
+Iteration   3: 4.869 ns/op
+Iteration   4: 5.344 ns/op
+Iteration   5: 4.738 ns/op
+
+# Run progress: 16.67% complete, ETA 00:06:50
+# Fork: 3 of 3
+# Warmup Iteration   1: 6.713 ns/op
+# Warmup Iteration   2: 6.191 ns/op
+# Warmup Iteration   3: 4.896 ns/op
+# Warmup Iteration   4: 5.182 ns/op
+# Warmup Iteration   5: 9.608 ns/op
+Iteration   1: 6.526 ns/op
+Iteration   2: 5.909 ns/op
+Iteration   3: 4.947 ns/op
+Iteration   4: 5.492 ns/op
+Iteration   5: 6.834 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList":
+  5.307 ±(99.9%) 0.689 ns/op [Average]
+  (min, avg, max) = (4.738, 5.307, 6.834), stdev = 0.645
+  CI (99.9%): [4.617, 5.996] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList
+# Parameters: (size = 10000)
+
+# Run progress: 18.75% complete, ETA 00:06:40
+# Fork: 1 of 3
+# Warmup Iteration   1: 7.168 ns/op
+# Warmup Iteration   2: 6.813 ns/op
+# Warmup Iteration   3: 5.617 ns/op
+# Warmup Iteration   4: 5.557 ns/op
+# Warmup Iteration   5: 4.884 ns/op
+Iteration   1: 5.008 ns/op
+Iteration   2: 4.883 ns/op
+Iteration   3: 7.263 ns/op
+Iteration   4: 9.729 ns/op
+Iteration   5: 7.650 ns/op
+
+# Run progress: 20.83% complete, ETA 00:06:30
+# Fork: 2 of 3
+# Warmup Iteration   1: 6.923 ns/op
+# Warmup Iteration   2: 6.265 ns/op
+# Warmup Iteration   3: 4.878 ns/op
+# Warmup Iteration   4: 5.346 ns/op
+# Warmup Iteration   5: 5.076 ns/op
+Iteration   1: 4.856 ns/op
+Iteration   2: 5.000 ns/op
+Iteration   3: 4.866 ns/op
+Iteration   4: 5.944 ns/op
+Iteration   5: 5.807 ns/op
+
+# Run progress: 22.92% complete, ETA 00:06:20
+# Fork: 3 of 3
+# Warmup Iteration   1: 7.134 ns/op
+# Warmup Iteration   2: 6.630 ns/op
+# Warmup Iteration   3: 4.964 ns/op
+# Warmup Iteration   4: 4.735 ns/op
+# Warmup Iteration   5: 5.149 ns/op
+Iteration   1: 5.388 ns/op
+Iteration   2: 5.034 ns/op
+Iteration   3: 5.150 ns/op
+Iteration   4: 5.090 ns/op
+Iteration   5: 4.894 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorAsList":
+  5.771 ±(99.9%) 1.495 ns/op [Average]
+  (min, avg, max) = (4.856, 5.771, 9.729), stdev = 1.399
+  CI (99.9%): [4.276, 7.266] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 10)
+
+# Run progress: 25.00% complete, ETA 00:06:10
+# Fork: 1 of 3
+# Warmup Iteration   1: 3.333 ns/op
+# Warmup Iteration   2: 3.556 ns/op
+# Warmup Iteration   3: 3.187 ns/op
+# Warmup Iteration   4: 3.046 ns/op
+# Warmup Iteration   5: 3.100 ns/op
+Iteration   1: 2.989 ns/op
+Iteration   2: 3.128 ns/op
+Iteration   3: 3.080 ns/op
+Iteration   4: 2.969 ns/op
+Iteration   5: 2.955 ns/op
+
+# Run progress: 27.08% complete, ETA 00:05:59
+# Fork: 2 of 3
+# Warmup Iteration   1: 3.115 ns/op
+# Warmup Iteration   2: 3.171 ns/op
+# Warmup Iteration   3: 2.668 ns/op
+# Warmup Iteration   4: 2.653 ns/op
+# Warmup Iteration   5: 2.699 ns/op
+Iteration   1: 2.637 ns/op
+Iteration   2: 2.603 ns/op
+Iteration   3: 2.670 ns/op
+Iteration   4: 2.783 ns/op
+Iteration   5: 2.659 ns/op
+
+# Run progress: 29.17% complete, ETA 00:05:49
+# Fork: 3 of 3
+# Warmup Iteration   1: 2.978 ns/op
+# Warmup Iteration   2: 2.917 ns/op
+# Warmup Iteration   3: 2.809 ns/op
+# Warmup Iteration   4: 2.756 ns/op
+# Warmup Iteration   5: 2.864 ns/op
+Iteration   1: 2.724 ns/op
+Iteration   2: 2.682 ns/op
+Iteration   3: 2.686 ns/op
+Iteration   4: 2.982 ns/op
+Iteration   5: 3.010 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs":
+  2.837 ±(99.9%) 0.195 ns/op [Average]
+  (min, avg, max) = (2.603, 2.837, 3.128), stdev = 0.182
+  CI (99.9%): [2.642, 3.032] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 100)
+
+# Run progress: 31.25% complete, ETA 00:05:39
+# Fork: 1 of 3
+# Warmup Iteration   1: 3.327 ns/op
+# Warmup Iteration   2: 3.257 ns/op
+# Warmup Iteration   3: 2.998 ns/op
+# Warmup Iteration   4: 3.003 ns/op
+# Warmup Iteration   5: 2.992 ns/op
+Iteration   1: 3.003 ns/op
+Iteration   2: 2.974 ns/op
+Iteration   3: 2.961 ns/op
+Iteration   4: 2.959 ns/op
+Iteration   5: 2.950 ns/op
+
+# Run progress: 33.33% complete, ETA 00:05:28
+# Fork: 2 of 3
+# Warmup Iteration   1: 3.213 ns/op
+# Warmup Iteration   2: 3.148 ns/op
+# Warmup Iteration   3: 2.911 ns/op
+# Warmup Iteration   4: 2.906 ns/op
+# Warmup Iteration   5: 2.578 ns/op
+Iteration   1: 2.580 ns/op
+Iteration   2: 2.583 ns/op
+Iteration   3: 2.592 ns/op
+Iteration   4: 2.592 ns/op
+Iteration   5: 2.591 ns/op
+
+# Run progress: 35.42% complete, ETA 00:05:18
+# Fork: 3 of 3
+# Warmup Iteration   1: 3.272 ns/op
+# Warmup Iteration   2: 3.221 ns/op
+# Warmup Iteration   3: 2.964 ns/op
+# Warmup Iteration   4: 2.958 ns/op
+# Warmup Iteration   5: 2.953 ns/op
+Iteration   1: 2.943 ns/op
+Iteration   2: 2.940 ns/op
+Iteration   3: 2.937 ns/op
+Iteration   4: 2.945 ns/op
+Iteration   5: 2.935 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs":
+  2.832 ±(99.9%) 0.192 ns/op [Average]
+  (min, avg, max) = (2.580, 2.832, 3.003), stdev = 0.180
+  CI (99.9%): [2.640, 3.025] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 1000)
+
+# Run progress: 37.50% complete, ETA 00:05:08
+# Fork: 1 of 3
+# Warmup Iteration   1: 2.921 ns/op
+# Warmup Iteration   2: 2.886 ns/op
+# Warmup Iteration   3: 2.641 ns/op
+# Warmup Iteration   4: 2.637 ns/op
+# Warmup Iteration   5: 2.680 ns/op
+Iteration   1: 2.643 ns/op
+Iteration   2: 2.656 ns/op
+Iteration   3: 2.658 ns/op
+Iteration   4: 2.655 ns/op
+Iteration   5: 2.652 ns/op
+
+# Run progress: 39.58% complete, ETA 00:04:57
+# Fork: 2 of 3
+# Warmup Iteration   1: 3.226 ns/op
+# Warmup Iteration   2: 3.146 ns/op
+# Warmup Iteration   3: 2.894 ns/op
+# Warmup Iteration   4: 2.904 ns/op
+# Warmup Iteration   5: 2.904 ns/op
+Iteration   1: 2.898 ns/op
+Iteration   2: 2.882 ns/op
+Iteration   3: 2.890 ns/op
+Iteration   4: 2.877 ns/op
+Iteration   5: 2.891 ns/op
+
+# Run progress: 41.67% complete, ETA 00:04:47
+# Fork: 3 of 3
+# Warmup Iteration   1: 2.840 ns/op
+# Warmup Iteration   2: 2.784 ns/op
+# Warmup Iteration   3: 2.579 ns/op
+# Warmup Iteration   4: 2.589 ns/op
+# Warmup Iteration   5: 2.587 ns/op
+Iteration   1: 2.595 ns/op
+Iteration   2: 2.590 ns/op
+Iteration   3: 2.592 ns/op
+Iteration   4: 2.594 ns/op
+Iteration   5: 2.571 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs":
+  2.710 ±(99.9%) 0.142 ns/op [Average]
+  (min, avg, max) = (2.571, 2.710, 2.898), stdev = 0.133
+  CI (99.9%): [2.567, 2.852] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 10000)
+
+# Run progress: 43.75% complete, ETA 00:04:37
+# Fork: 1 of 3
+# Warmup Iteration   1: 3.283 ns/op
+# Warmup Iteration   2: 3.229 ns/op
+# Warmup Iteration   3: 2.979 ns/op
+# Warmup Iteration   4: 2.990 ns/op
+# Warmup Iteration   5: 2.968 ns/op
+Iteration   1: 2.966 ns/op
+Iteration   2: 2.964 ns/op
+Iteration   3: 2.960 ns/op
+Iteration   4: 2.952 ns/op
+Iteration   5: 2.937 ns/op
+
+# Run progress: 45.83% complete, ETA 00:04:27
+# Fork: 2 of 3
+# Warmup Iteration   1: 2.888 ns/op
+# Warmup Iteration   2: 2.845 ns/op
+# Warmup Iteration   3: 2.631 ns/op
+# Warmup Iteration   4: 2.657 ns/op
+# Warmup Iteration   5: 2.635 ns/op
+Iteration   1: 2.635 ns/op
+Iteration   2: 2.648 ns/op
+Iteration   3: 2.652 ns/op
+Iteration   4: 2.650 ns/op
+Iteration   5: 2.650 ns/op
+
+# Run progress: 47.92% complete, ETA 00:04:16
+# Fork: 3 of 3
+# Warmup Iteration   1: 2.925 ns/op
+# Warmup Iteration   2: 2.863 ns/op
+# Warmup Iteration   3: 2.658 ns/op
+# Warmup Iteration   4: 2.661 ns/op
+# Warmup Iteration   5: 2.665 ns/op
+Iteration   1: 2.658 ns/op
+Iteration   2: 2.665 ns/op
+Iteration   3: 2.658 ns/op
+Iteration   4: 2.658 ns/op
+Iteration   5: 2.643 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorJavaBenchmark.spreadOperatorVarArgs":
+  2.753 ±(99.9%) 0.159 ns/op [Average]
+  (min, avg, max) = (2.635, 2.753, 2.966), stdev = 0.149
+  CI (99.9%): [2.594, 2.912] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList
+# Parameters: (size = 10)
+
+# Run progress: 50.00% complete, ETA 00:04:06
+# Fork: 1 of 3
+# Warmup Iteration   1: 15.233 ns/op
+# Warmup Iteration   2: 11.883 ns/op
+# Warmup Iteration   3: 10.716 ns/op
+# Warmup Iteration   4: 10.815 ns/op
+# Warmup Iteration   5: 11.032 ns/op
+Iteration   1: 10.984 ns/op
+Iteration   2: 10.743 ns/op
+Iteration   3: 10.909 ns/op
+Iteration   4: 10.878 ns/op
+Iteration   5: 11.076 ns/op
+
+# Run progress: 52.08% complete, ETA 00:03:56
+# Fork: 2 of 3
+# Warmup Iteration   1: 18.671 ns/op
+# Warmup Iteration   2: 15.481 ns/op
+# Warmup Iteration   3: 12.767 ns/op
+# Warmup Iteration   4: 13.466 ns/op
+# Warmup Iteration   5: 12.759 ns/op
+Iteration   1: 12.881 ns/op
+Iteration   2: 13.223 ns/op
+Iteration   3: 13.109 ns/op
+Iteration   4: 12.614 ns/op
+Iteration   5: 12.543 ns/op
+
+# Run progress: 54.17% complete, ETA 00:03:45
+# Fork: 3 of 3
+# Warmup Iteration   1: 14.826 ns/op
+# Warmup Iteration   2: 12.193 ns/op
+# Warmup Iteration   3: 11.125 ns/op
+# Warmup Iteration   4: 10.925 ns/op
+# Warmup Iteration   5: 11.035 ns/op
+Iteration   1: 11.056 ns/op
+Iteration   2: 10.770 ns/op
+Iteration   3: 11.061 ns/op
+Iteration   4: 11.330 ns/op
+Iteration   5: 10.952 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList":
+  11.609 ±(99.9%) 1.015 ns/op [Average]
+  (min, avg, max) = (10.743, 11.609, 13.223), stdev = 0.950
+  CI (99.9%): [10.593, 12.624] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList
+# Parameters: (size = 100)
+
+# Run progress: 56.25% complete, ETA 00:03:35
+# Fork: 1 of 3
+# Warmup Iteration   1: 66.542 ns/op
+# Warmup Iteration   2: 56.738 ns/op
+# Warmup Iteration   3: 56.578 ns/op
+# Warmup Iteration   4: 56.678 ns/op
+# Warmup Iteration   5: 57.064 ns/op
+Iteration   1: 56.467 ns/op
+Iteration   2: 56.551 ns/op
+Iteration   3: 56.488 ns/op
+Iteration   4: 56.325 ns/op
+Iteration   5: 56.678 ns/op
+
+# Run progress: 58.33% complete, ETA 00:03:25
+# Fork: 2 of 3
+# Warmup Iteration   1: 69.209 ns/op
+# Warmup Iteration   2: 56.682 ns/op
+# Warmup Iteration   3: 55.914 ns/op
+# Warmup Iteration   4: 56.169 ns/op
+# Warmup Iteration   5: 56.290 ns/op
+Iteration   1: 55.932 ns/op
+Iteration   2: 56.642 ns/op
+Iteration   3: 56.107 ns/op
+Iteration   4: 56.658 ns/op
+Iteration   5: 56.441 ns/op
+
+# Run progress: 60.42% complete, ETA 00:03:15
+# Fork: 3 of 3
+# Warmup Iteration   1: 66.217 ns/op
+# Warmup Iteration   2: 56.988 ns/op
+# Warmup Iteration   3: 56.656 ns/op
+# Warmup Iteration   4: 58.071 ns/op
+# Warmup Iteration   5: 55.979 ns/op
+Iteration   1: 56.401 ns/op
+Iteration   2: 56.262 ns/op
+Iteration   3: 56.061 ns/op
+Iteration   4: 55.802 ns/op
+Iteration   5: 56.284 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList":
+  56.340 ±(99.9%) 0.286 ns/op [Average]
+  (min, avg, max) = (55.802, 56.340, 56.678), stdev = 0.267
+  CI (99.9%): [56.054, 56.626] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList
+# Parameters: (size = 1000)
+
+# Run progress: 62.50% complete, ETA 00:03:04
+# Fork: 1 of 3
+# Warmup Iteration   1: 594.297 ns/op
+# Warmup Iteration   2: 525.571 ns/op
+# Warmup Iteration   3: 525.909 ns/op
+# Warmup Iteration   4: 526.842 ns/op
+# Warmup Iteration   5: 523.926 ns/op
+Iteration   1: 523.327 ns/op
+Iteration   2: 525.160 ns/op
+Iteration   3: 521.821 ns/op
+Iteration   4: 527.023 ns/op
+Iteration   5: 523.574 ns/op
+
+# Run progress: 64.58% complete, ETA 00:02:54
+# Fork: 2 of 3
+# Warmup Iteration   1: 593.056 ns/op
+# Warmup Iteration   2: 519.409 ns/op
+# Warmup Iteration   3: 524.213 ns/op
+# Warmup Iteration   4: 524.038 ns/op
+# Warmup Iteration   5: 523.451 ns/op
+Iteration   1: 520.174 ns/op
+Iteration   2: 521.611 ns/op
+Iteration   3: 528.844 ns/op
+Iteration   4: 524.069 ns/op
+Iteration   5: 524.125 ns/op
+
+# Run progress: 66.67% complete, ETA 00:02:44
+# Fork: 3 of 3
+# Warmup Iteration   1: 599.600 ns/op
+# Warmup Iteration   2: 521.935 ns/op
+# Warmup Iteration   3: 521.845 ns/op
+# Warmup Iteration   4: 521.064 ns/op
+# Warmup Iteration   5: 522.961 ns/op
+Iteration   1: 524.150 ns/op
+Iteration   2: 520.591 ns/op
+Iteration   3: 519.301 ns/op
+Iteration   4: 523.276 ns/op
+Iteration   5: 521.112 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList":
+  523.211 ±(99.9%) 2.755 ns/op [Average]
+  (min, avg, max) = (519.301, 523.211, 528.844), stdev = 2.577
+  CI (99.9%): [520.456, 525.965] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList
+# Parameters: (size = 10000)
+
+# Run progress: 68.75% complete, ETA 00:02:34
+# Fork: 1 of 3
+# Warmup Iteration   1: 5816.107 ns/op
+# Warmup Iteration   2: 4805.987 ns/op
+# Warmup Iteration   3: 5179.572 ns/op
+# Warmup Iteration   4: 5106.008 ns/op
+# Warmup Iteration   5: 5122.855 ns/op
+Iteration   1: 5103.460 ns/op
+Iteration   2: 5118.504 ns/op
+Iteration   3: 5128.568 ns/op
+Iteration   4: 5145.108 ns/op
+Iteration   5: 5145.527 ns/op
+
+# Run progress: 70.83% complete, ETA 00:02:23
+# Fork: 2 of 3
+# Warmup Iteration   1: 5861.731 ns/op
+# Warmup Iteration   2: 4793.988 ns/op
+# Warmup Iteration   3: 5086.265 ns/op
+# Warmup Iteration   4: 5104.329 ns/op
+# Warmup Iteration   5: 5107.472 ns/op
+Iteration   1: 5091.726 ns/op
+Iteration   2: 5097.631 ns/op
+Iteration   3: 5094.404 ns/op
+Iteration   4: 5113.073 ns/op
+Iteration   5: 5088.618 ns/op
+
+# Run progress: 72.92% complete, ETA 00:02:13
+# Fork: 3 of 3
+# Warmup Iteration   1: 6196.326 ns/op
+# Warmup Iteration   2: 4782.040 ns/op
+# Warmup Iteration   3: 5189.698 ns/op
+# Warmup Iteration   4: 5168.957 ns/op
+# Warmup Iteration   5: 5918.933 ns/op
+Iteration   1: 5187.278 ns/op
+Iteration   2: 7051.706 ns/op
+Iteration   3: 5341.157 ns/op
+Iteration   4: 5228.090 ns/op
+Iteration   5: 5099.388 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorAsList":
+  5268.949 ±(99.9%) 532.147 ns/op [Average]
+  (min, avg, max) = (5088.618, 5268.949, 7051.706), stdev = 497.771
+  CI (99.9%): [4736.802, 5801.097] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 10)
+
+# Run progress: 75.00% complete, ETA 00:02:03
+# Fork: 1 of 3
+# Warmup Iteration   1: 11.091 ns/op
+# Warmup Iteration   2: 9.854 ns/op
+# Warmup Iteration   3: 8.612 ns/op
+# Warmup Iteration   4: 8.900 ns/op
+# Warmup Iteration   5: 8.661 ns/op
+Iteration   1: 9.370 ns/op
+Iteration   2: 8.753 ns/op
+Iteration   3: 9.337 ns/op
+Iteration   4: 8.602 ns/op
+Iteration   5: 8.695 ns/op
+
+# Run progress: 77.08% complete, ETA 00:01:52
+# Fork: 2 of 3
+# Warmup Iteration   1: 11.511 ns/op
+# Warmup Iteration   2: 9.614 ns/op
+# Warmup Iteration   3: 8.437 ns/op
+# Warmup Iteration   4: 8.587 ns/op
+# Warmup Iteration   5: 8.716 ns/op
+Iteration   1: 9.273 ns/op
+Iteration   2: 8.975 ns/op
+Iteration   3: 8.542 ns/op
+Iteration   4: 8.585 ns/op
+Iteration   5: 9.298 ns/op
+
+# Run progress: 79.17% complete, ETA 00:01:42
+# Fork: 3 of 3
+# Warmup Iteration   1: 12.036 ns/op
+# Warmup Iteration   2: 9.497 ns/op
+# Warmup Iteration   3: 8.380 ns/op
+# Warmup Iteration   4: 8.772 ns/op
+# Warmup Iteration   5: 8.190 ns/op
+Iteration   1: 8.616 ns/op
+Iteration   2: 9.323 ns/op
+Iteration   3: 9.273 ns/op
+Iteration   4: 9.218 ns/op
+Iteration   5: 8.868 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs":
+  8.982 ±(99.9%) 0.349 ns/op [Average]
+  (min, avg, max) = (8.542, 8.982, 9.370), stdev = 0.327
+  CI (99.9%): [8.633, 9.331] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 100)
+
+# Run progress: 81.25% complete, ETA 00:01:32
+# Fork: 1 of 3
+# Warmup Iteration   1: 62.208 ns/op
+# Warmup Iteration   2: 53.870 ns/op
+# Warmup Iteration   3: 53.667 ns/op
+# Warmup Iteration   4: 53.668 ns/op
+# Warmup Iteration   5: 53.437 ns/op
+Iteration   1: 53.650 ns/op
+Iteration   2: 53.580 ns/op
+Iteration   3: 53.613 ns/op
+Iteration   4: 53.641 ns/op
+Iteration   5: 53.669 ns/op
+
+# Run progress: 83.33% complete, ETA 00:01:22
+# Fork: 2 of 3
+# Warmup Iteration   1: 64.983 ns/op
+# Warmup Iteration   2: 53.335 ns/op
+# Warmup Iteration   3: 53.439 ns/op
+# Warmup Iteration   4: 53.109 ns/op
+# Warmup Iteration   5: 53.075 ns/op
+Iteration   1: 53.660 ns/op
+Iteration   2: 52.760 ns/op
+Iteration   3: 52.623 ns/op
+Iteration   4: 53.193 ns/op
+Iteration   5: 52.561 ns/op
+
+# Run progress: 85.42% complete, ETA 00:01:11
+# Fork: 3 of 3
+# Warmup Iteration   1: 62.705 ns/op
+# Warmup Iteration   2: 53.694 ns/op
+# Warmup Iteration   3: 53.635 ns/op
+# Warmup Iteration   4: 53.850 ns/op
+# Warmup Iteration   5: 53.634 ns/op
+Iteration   1: 53.692 ns/op
+Iteration   2: 53.854 ns/op
+Iteration   3: 53.682 ns/op
+Iteration   4: 53.332 ns/op
+Iteration   5: 53.350 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs":
+  53.391 ±(99.9%) 0.450 ns/op [Average]
+  (min, avg, max) = (52.561, 53.391, 53.854), stdev = 0.420
+  CI (99.9%): [52.941, 53.840] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 1000)
+
+# Run progress: 87.50% complete, ETA 00:01:01
+# Fork: 1 of 3
+# Warmup Iteration   1: 593.618 ns/op
+# Warmup Iteration   2: 523.071 ns/op
+# Warmup Iteration   3: 519.140 ns/op
+# Warmup Iteration   4: 520.402 ns/op
+# Warmup Iteration   5: 520.360 ns/op
+Iteration   1: 520.094 ns/op
+Iteration   2: 538.182 ns/op
+Iteration   3: 534.780 ns/op
+Iteration   4: 520.731 ns/op
+Iteration   5: 522.452 ns/op
+
+# Run progress: 89.58% complete, ETA 00:00:51
+# Fork: 2 of 3
+# Warmup Iteration   1: 622.926 ns/op
+# Warmup Iteration   2: 521.495 ns/op
+# Warmup Iteration   3: 519.210 ns/op
+# Warmup Iteration   4: 519.001 ns/op
+# Warmup Iteration   5: 521.171 ns/op
+Iteration   1: 519.426 ns/op
+Iteration   2: 518.745 ns/op
+Iteration   3: 519.013 ns/op
+Iteration   4: 518.601 ns/op
+Iteration   5: 518.261 ns/op
+
+# Run progress: 91.67% complete, ETA 00:00:41
+# Fork: 3 of 3
+# Warmup Iteration   1: 597.082 ns/op
+# Warmup Iteration   2: 523.654 ns/op
+# Warmup Iteration   3: 522.261 ns/op
+# Warmup Iteration   4: 521.127 ns/op
+# Warmup Iteration   5: 521.523 ns/op
+Iteration   1: 523.542 ns/op
+Iteration   2: 522.069 ns/op
+Iteration   3: 524.623 ns/op
+Iteration   4: 524.906 ns/op
+Iteration   5: 523.815 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs":
+  523.283 ±(99.9%) 6.251 ns/op [Average]
+  (min, avg, max) = (518.261, 523.283, 538.182), stdev = 5.847
+  CI (99.9%): [517.032, 529.534] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 11.0.2, Java HotSpot(TM) 64-Bit Server VM, 11.0.2+9-LTS
+# VM invoker: /usr/lib/jvm/jdk-11.0.2/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs
+# Parameters: (size = 10000)
+
+# Run progress: 93.75% complete, ETA 00:00:30
+# Fork: 1 of 3
+# Warmup Iteration   1: 6607.901 ns/op
+# Warmup Iteration   2: 5392.926 ns/op
+# Warmup Iteration   3: 5211.964 ns/op
+# Warmup Iteration   4: 5202.547 ns/op
+# Warmup Iteration   5: 5206.073 ns/op
+Iteration   1: 5195.073 ns/op
+Iteration   2: 5181.078 ns/op
+Iteration   3: 5203.016 ns/op
+Iteration   4: 5193.883 ns/op
+Iteration   5: 5170.902 ns/op
+
+# Run progress: 95.83% complete, ETA 00:00:20
+# Fork: 2 of 3
+# Warmup Iteration   1: 6339.669 ns/op
+# Warmup Iteration   2: 5408.982 ns/op
+# Warmup Iteration   3: 5240.993 ns/op
+# Warmup Iteration   4: 5209.496 ns/op
+# Warmup Iteration   5: 5237.286 ns/op
+Iteration   1: 5226.567 ns/op
+Iteration   2: 5235.929 ns/op
+Iteration   3: 5237.118 ns/op
+Iteration   4: 5217.039 ns/op
+Iteration   5: 5229.526 ns/op
+
+# Run progress: 97.92% complete, ETA 00:00:10
+# Fork: 3 of 3
+# Warmup Iteration   1: 6251.349 ns/op
+# Warmup Iteration   2: 5406.394 ns/op
+# Warmup Iteration   3: 5227.087 ns/op
+# Warmup Iteration   4: 5215.967 ns/op
+# Warmup Iteration   5: 5226.204 ns/op
+Iteration   1: 5242.497 ns/op
+Iteration   2: 5192.809 ns/op
+Iteration   3: 5225.188 ns/op
+Iteration   4: 5189.281 ns/op
+Iteration   5: 5241.950 ns/op
+
+
+Result "org.ib.benchmark.SpreadOperatorKtBenchmark.spreadOperatorVarArgs":
+  5212.124 ±(99.9%) 25.514 ns/op [Average]
+  (min, avg, max) = (5170.902, 5212.124, 5242.497), stdev = 23.866
+  CI (99.9%): [5186.610, 5237.638] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:12
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                          (size)  Mode  Cnt     Score     Error  Units
+SpreadOperatorJavaBenchmark.spreadOperatorAsList       10  avgt   15     4.998 ±   0.211  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorAsList      100  avgt   15     4.920 ±   0.180  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorAsList     1000  avgt   15     5.307 ±   0.689  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorAsList    10000  avgt   15     5.771 ±   1.495  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorVarArgs      10  avgt   15     2.837 ±   0.195  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorVarArgs     100  avgt   15     2.832 ±   0.192  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorVarArgs    1000  avgt   15     2.710 ±   0.142  ns/op
+SpreadOperatorJavaBenchmark.spreadOperatorVarArgs   10000  avgt   15     2.753 ±   0.159  ns/op
+
+SpreadOperatorKtBenchmark.spreadOperatorAsList         10  avgt   15    11.609 ±   1.015  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorAsList        100  avgt   15    56.340 ±   0.286  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorAsList       1000  avgt   15   523.211 ±   2.755  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorAsList      10000  avgt   15  5268.949 ± 532.147  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorVarArgs        10  avgt   15     8.982 ±   0.349  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorVarArgs       100  avgt   15    53.391 ±   0.450  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorVarArgs      1000  avgt   15   523.283 ±   6.251  ns/op
+SpreadOperatorKtBenchmark.spreadOperatorVarArgs     10000  avgt   15  5212.124 ±  25.514  ns/op
+
+Few thoughts:
+    - spread operator has a major impact on the performance! It copies the array every time!
+    - it is proportional to array size, bigger the array is slower the performance
+    - better to avoid using it!
