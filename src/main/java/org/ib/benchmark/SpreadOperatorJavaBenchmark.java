@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Benchmark)
 public class SpreadOperatorJavaBenchmark {
 
-    @Param({"10", "100", "1000", "10000"})
+    @Param({"0", "10", "100", "1000", "10000"})
     private int size;
 
     private Integer[] arrayOfInteger;

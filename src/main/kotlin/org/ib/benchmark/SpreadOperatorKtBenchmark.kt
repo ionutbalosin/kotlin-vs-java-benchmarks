@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit
 @State(Scope.Benchmark)
 open class SpreadOperatorKtBenchmark {
 
-    @Param("10", "100", "1000", "10000")
+    @Param("0", "10", "100", "1000", "10000")
     private var size: Int = 0
 
     private lateinit var arrayOfInteger: Array<Int> // Integer[] arrayOfInteger
