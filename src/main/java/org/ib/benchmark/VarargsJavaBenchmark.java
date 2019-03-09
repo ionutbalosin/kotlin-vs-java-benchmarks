@@ -56,7 +56,7 @@ public class VarargsJavaBenchmark {
     }
 
     private float getAverage(int... input) {
-        var sum = 0.0f;
+        float sum = 0.0f;
         for (int i = 0; i < input.length; i++) {
             sum += input[i];
         }

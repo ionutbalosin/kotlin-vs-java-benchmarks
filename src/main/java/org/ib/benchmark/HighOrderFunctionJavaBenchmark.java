@@ -43,7 +43,7 @@ public class HighOrderFunctionJavaBenchmark {
     }
 
     private Long sumOfSquares(Integer max, ToIntFunction<Integer> body) {
-        var sum = 0L;
+        Long sum = 0L;
         for (int i = 1; i < max; i++) {
             sum += body.applyAsInt(i);
         }

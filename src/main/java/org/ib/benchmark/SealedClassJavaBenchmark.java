@@ -6,6 +6,7 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -39,7 +40,7 @@ public class SealedClassJavaBenchmark {
 
     @Setup
     public void setup() {
-        shapes = List.of(new Shape.Circle(4.5), new Shape.Square(4.0), new Shape.Rectangle(4.0, 5.0));
+        shapes = Arrays.asList(new Shape.Circle(4.5), new Shape.Square(4.0), new Shape.Rectangle(4.0, 5.0));
     }
 
     @Benchmark

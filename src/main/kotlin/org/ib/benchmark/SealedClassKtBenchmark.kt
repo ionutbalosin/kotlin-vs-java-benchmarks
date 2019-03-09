@@ -4,6 +4,7 @@ import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.runner.Runner
 import org.openjdk.jmh.runner.RunnerException
 import org.openjdk.jmh.runner.options.OptionsBuilder
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 /**
@@ -31,7 +32,7 @@ open class SealedClassKtBenchmark {
 
     @Setup
     fun setup() {
-        shapes = java.util.List.of(Shape.Circle(4.5), Shape.Square(4.0), Shape.Rectangle(4.0, 5.0))
+        shapes = Arrays.asList(Shape.Circle(4.5), Shape.Square(4.0), Shape.Rectangle(4.0, 5.0))
     }
 
     @Benchmark
