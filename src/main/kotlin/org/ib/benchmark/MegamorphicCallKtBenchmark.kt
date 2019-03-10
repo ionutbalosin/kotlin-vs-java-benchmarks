@@ -51,7 +51,7 @@ open class MegamorphicCallKtBenchmark {
         internal var alg1: VirtualCallKtCMath = VirtualCallKtAlg1()
 
         internal fun monomorphicCall(): Int {
-            return compute(alg1, param)
+            return execute(alg1, param)
         }
 
         companion object {
@@ -67,7 +67,7 @@ open class MegamorphicCallKtBenchmark {
         internal var alg2: VirtualCallKtCMath = VirtualCallKtAlg2()
 
         internal fun bimorphicCall(): Int {
-            return compute(alg1, param) + compute(alg2, param)
+            return execute(alg1, param) + execute(alg2, param)
         }
 
         companion object {
@@ -84,7 +84,7 @@ open class MegamorphicCallKtBenchmark {
         internal var alg3: VirtualCallKtCMath = VirtualCallKtAlg3()
 
         internal fun megamorphic3Call(): Int {
-            return compute(alg1, param) + compute(alg2, param) + compute(alg3, param)
+            return execute(alg1, param) + execute(alg2, param) + execute(alg3, param)
         }
 
         companion object {
@@ -102,7 +102,7 @@ open class MegamorphicCallKtBenchmark {
         internal var alg4: VirtualCallKtCMath = VirtualCallKtAlg4()
 
         internal fun megamorphic4Call(): Int {
-            return compute(alg1, param) + compute(alg2, param) + compute(alg3, param) + compute(alg4, param)
+            return execute(alg1, param) + execute(alg2, param) + execute(alg3, param) + execute(alg4, param)
         }
 
         companion object {
@@ -116,25 +116,25 @@ open class MegamorphicCallKtBenchmark {
     }
 
     internal class VirtualCallKtAlg1 : VirtualCallKtCMath() {
-        override inline fun compute(i: Int): Int {
+        override fun compute(i: Int): Int {
             return i * 17
         }
     }
 
     internal class VirtualCallKtAlg2 : VirtualCallKtCMath() {
-        override inline fun compute(i: Int): Int {
+        override fun compute(i: Int): Int {
             return i * 19
         }
     }
 
     internal class VirtualCallKtAlg3 : VirtualCallKtCMath() {
-        override inline fun compute(i: Int): Int {
+        override fun compute(i: Int): Int {
             return i * 23
         }
     }
 
     internal class VirtualCallKtAlg4 : VirtualCallKtCMath() {
-        override inline fun compute(i: Int): Int {
+        override fun compute(i: Int): Int {
             return i * 29
         }
     }
@@ -153,7 +153,7 @@ open class MegamorphicCallKtBenchmark {
         }
 
         @CompilerControl(CompilerControl.Mode.DONT_INLINE)
-        internal inline fun compute(cmath: VirtualCallKtCMath, i: Int): Int {
+        internal fun execute(cmath: VirtualCallKtCMath, i: Int): Int {
             return cmath.compute(i)
         }
     }

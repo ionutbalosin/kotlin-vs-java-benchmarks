@@ -1,0 +1,1011 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_202, Java HotSpot(TM) GraalVM EE 1.0.0-rc13, 25.202-b08-jvmci-0.55
+# VM invoker: /usr/lib/jvm/graalvm-ee-1.0.0-rc13/jre/bin/java
+# VM options: -XX:-TieredCompilation -Xbatch
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.MegamorphicCallKtBenchmark.Megamorphic4Kt
+# Parameters: (param = 3)
+
+# Run progress: 0.00% complete, ETA 00:00:30
+# Fork: 1 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 14573.099 ns/op
+# Warmup Iteration   2: 26.902 ns/op
+# Warmup Iteration   3: 14.616 ns/op
+# Warmup Iteration   4: 14.440 ns/op
+# Warmup Iteration   5: 14.537 ns/op
+Iteration   1: 14.720 ns/op
+Iteration   2: 14.667 ns/op
+Iteration   3: 16.125 ns/op
+Iteration   4: 16.666 ns/op
+Iteration   5: 15.866 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 33.33% complete, ETA 00:01:08
+# Fork: 2 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 18619.297 ns/op
+# Warmup Iteration   2: 26.246 ns/op
+# Warmup Iteration   3: 16.592 ns/op
+# Warmup Iteration   4: 16.108 ns/op
+# Warmup Iteration   5: 17.042 ns/op
+Iteration   1: 16.638 ns/op
+Iteration   2: 17.360 ns/op
+Iteration   3: 17.226 ns/op
+Iteration   4: 16.243 ns/op
+Iteration   5: 15.406 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 66.67% complete, ETA 00:00:34
+# Fork: 3 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 13059.331 ns/op
+# Warmup Iteration   2: 26.849 ns/op
+# Warmup Iteration   3: 18.139 ns/op
+# Warmup Iteration   4: 17.479 ns/op
+# Warmup Iteration   5: 15.820 ns/op
+Iteration   1: 15.714 ns/op
+Iteration   2: 18.309 ns/op
+Iteration   3: 15.741 ns/op
+Iteration   4: 15.746 ns/op
+Iteration   5: 16.189 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "org.ib.benchmark.MegamorphicCallKtBenchmark.Megamorphic4Kt":
+  16.175 ±(99.9%) 1.038 ns/op [Average]
+  (min, avg, max) = (14.667, 16.175, 18.309), stdev = 0.971
+  CI (99.9%): [15.137, 17.212] (assumes normal distribution)
+
+Secondary result "org.ib.benchmark.MegamorphicCallKtBenchmark.Megamorphic4Kt:·asm":
+PrintAssembly processed: 91686 total address lines.
+Perf output processed (skipped 27.198 seconds):
+ Column 1: cycles (15474 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+JVMCI, org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2130 (161 bytes) 
+
+              # parm1:    rcx       = int
+              #           [sp+0x20]  (sp of caller)
+              0x00007f9bfbed7b60: mov    r10d,DWORD PTR [rsi+0x8]
+              0x00007f9bfbed7b64: shl    r10,0x3
+              0x00007f9bfbed7b68: cmp    rax,r10
+              0x00007f9bfbed7b6b: jne    0x00007f9bfbe2be60  ;   {runtime_call}
+              0x00007f9bfbed7b71: nop
+              0x00007f9bfbed7b72: nop    DWORD PTR [rax+0x0]
+              0x00007f9bfbed7b79: nop    DWORD PTR [rax+0x0]
+            [Verified Entry Point]
+  1.65%       0x00007f9bfbed7b80: mov    DWORD PTR [rsp-0x14000],eax
+  1.18%       0x00007f9bfbed7b87: sub    rsp,0x18
+  0.96%       0x00007f9bfbed7b8b: mov    QWORD PTR [rsp+0x10],rbp  ;*aload_1 {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@0
+  0.78%       0x00007f9bfbed7b90: mov    esi,DWORD PTR [rdx+0x8]  ; implicit exception: deoptimizes
+                                                            ; OopMap{rdx=Oop off=48}
+  0.61%       0x00007f9bfbed7b93: cmp    esi,0xf8066267     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg4&apos;)}
+         ╭    0x00007f9bfbed7b99: je     0x00007f9bfbed7be0
+  1.07%  │    0x00007f9bfbed7b9f: cmp    esi,0xf80661e9     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg2&apos;)}
+         │╭   0x00007f9bfbed7ba5: je     0x00007f9bfbed7bf6
+  0.67%  ││   0x00007f9bfbed7bab: cmp    esi,0xf8066228     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg3&apos;)}
+         ││╭  0x00007f9bfbed7bb1: je     0x00007f9bfbed7c0c
+  0.45%  │││  0x00007f9bfbed7bb7: mov    rsi,rdx            ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%  │││  0x00007f9bfbed7bba: mov    edx,ecx
+  0.01%  │││  0x00007f9bfbed7bbc: movabs rax,0xffffffffffffffff
+  0.12%  │││  0x00007f9bfbed7bc6: nop
+  0.57%  │││  0x00007f9bfbed7bc7: call   0x00007f9bfbe2c2e0  ; OopMap{off=108}
+         │││                                                ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+         │││                                                ;   {virtual_call}
+  0.01%  │││  0x00007f9bfbed7bcc: nop
+  0.22%  │││  0x00007f9bfbed7bcd: mov    rbp,QWORD PTR [rsp+0x10]
+  0.32%  │││  0x00007f9bfbed7bd2: add    rsp,0x18
+  0.01%  │││  0x00007f9bfbed7bd6: test   DWORD PTR [rip+0x9f3442a],eax        # 0x00007f9c05e0c006
+         │││                                                ;   {poll_return}
+  0.19%  │││  0x00007f9bfbed7bdc: vzeroupper 
+  0.68%  │││  0x00007f9bfbed7bdf: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.34%  ↘││  0x00007f9bfbed7be0: imul   eax,ecx,0x1d       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg4::compute@3 (line 138)
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.02%   ││  0x00007f9bfbed7be3: mov    rbp,QWORD PTR [rsp+0x10]
+  0.33%   ││  0x00007f9bfbed7be8: add    rsp,0x18
+  0.20%   ││  0x00007f9bfbed7bec: test   DWORD PTR [rip+0x9f34414],eax        # 0x00007f9c05e0c006
+          ││                                                ;   {poll_return}
+  0.18%   ││  0x00007f9bfbed7bf2: vzeroupper 
+  0.79%   ││  0x00007f9bfbed7bf5: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.54%   ↘│  0x00007f9bfbed7bf6: imul   eax,ecx,0x13       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg2::compute@3 (line 126)
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%    │  0x00007f9bfbed7bf9: mov    rbp,QWORD PTR [rsp+0x10]
+  0.01%    │  0x00007f9bfbed7bfe: add    rsp,0x18
+  0.21%    │  0x00007f9bfbed7c02: test   DWORD PTR [rip+0x9f343fe],eax        # 0x00007f9c05e0c006
+           │                                                ;   {poll_return}
+  0.52%    │  0x00007f9bfbed7c08: vzeroupper 
+  0.72%    │  0x00007f9bfbed7c0b: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.04%    ↘  0x00007f9bfbed7c0c: imul   eax,ecx,0x17       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg3::compute@3 (line 132)
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.17%       0x00007f9bfbed7c0f: mov    rbp,QWORD PTR [rsp+0x10]
+  0.16%       0x00007f9bfbed7c14: add    rsp,0x18
+  0.21%       0x00007f9bfbed7c18: test   DWORD PTR [rip+0x9f343e8],eax        # 0x00007f9c05e0c006
+                                                            ;   {poll_return}
+  0.06%       0x00007f9bfbed7c1e: vzeroupper 
+  0.75%       0x00007f9bfbed7c21: ret    
+            [Exception Handler]
+              0x00007f9bfbed7c22: call   0x00007f9bfbe8a620  ;   {runtime_call}
+              0x00007f9bfbed7c27: nop
+            [Deopt Handler Code]
+              0x00007f9bfbed7c28: call   0x00007f9bfbe2d500  ;   {runtime_call}
+              0x00007f9bfbed7c2d: nop
+            [Stub Code]
+              0x00007f9bfbed7c2e: hlt    
+              0x00007f9bfbed7c2f: hlt    
+            <nmethod compile_id='2130' compiler='JVMCI' entry='0x00007f9bfbed7b60' size='864' address='0x00007f9bfbed7a10' relocation_offset='304' insts_offset='336' stub_offset='542' scopes_data_offset='608' scopes_pcs_offset='664' dependencies_offset='840' nul_chk_table_offset='848' oops_offset='544' metadata_offset='552' method='org/ib/benchmark/MegamorphicCallKtBenchmark$Companion execute$kotlin_vs_java_benchmarks (Lorg/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtCMath;I)I' bytes='12' count='5000' backedge_count='1' iicount='10000' stamp='21,974'/>
+....................................................................................................
+ 14.74%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+JVMCI, org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2218 (250 bytes) 
+
+             0x00007f9bfbe94df1: mov    QWORD PTR [rdx+0x28],rax
+             0x00007f9bfbe94df5: movabs r10,0x7728f9158    ;   {oop(a &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Companion&apos;)}
+             0x00007f9bfbe94dff: mov    QWORD PTR [rsp+0x18],r10
+             0x00007f9bfbe94e04: movabs r11,0x77296b5c0    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+             0x00007f9bfbe94e0e: mov    QWORD PTR [rsp+0x10],0x0
+         ╭   0x00007f9bfbe94e17: jmp    0x00007f9bfbe94e3a  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@13 (line 195)
+         │   0x00007f9bfbe94e1c: nop    DWORD PTR [rax+0x0]  ; OopMap{rsi=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=128}
+         │                                                 ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@35 (line 197)
+  0.20%  │↗  0x00007f9bfbe94e20: test   DWORD PTR [rip+0x9f771e0],eax        # 0x00007f9c05e0c006
+         ││                                                ;   {poll}
+  0.47%  ││  0x00007f9bfbe94e26: mov    QWORD PTR [rsp+0x10],r11
+  0.04%  ││  0x00007f9bfbe94e2b: movabs r11,0x77296b5c0    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+         ││  0x00007f9bfbe94e35: mov    r10,QWORD PTR [rsp+0x18]  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@13 (line 195)
+  0.20%  ↘│  0x00007f9bfbe94e3a: mov    r8,QWORD PTR [rsp+0x28]
+  0.42%   │  0x00007f9bfbe94e3f: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@7 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.05%   │  0x00007f9bfbe94e43: mov    ebx,DWORD PTR [r8+0xc]
+  0.02%   │  0x00007f9bfbe94e47: shl    rbx,0x3            ;*getfield alg1 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@4 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.21%   │  0x00007f9bfbe94e4b: mov    rsi,r10            ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@10 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.43%   │  0x00007f9bfbe94e4e: mov    rdx,rbx
+  0.04%   │  0x00007f9bfbe94e51: nop    WORD PTR [rax+rax*1+0x0]
+  0.02%   │  0x00007f9bfbe94e57: call   0x00007f9bfbe2c0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=188}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@10 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.55%   │  0x00007f9bfbe94e5c: nop
+  0.03%   │  0x00007f9bfbe94e5d: movabs r11,0x77296b5c0    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+          │  0x00007f9bfbe94e67: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@20 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.19%   │  0x00007f9bfbe94e6b: mov    r10,QWORD PTR [rsp+0x28]
+  0.39%   │  0x00007f9bfbe94e70: mov    esi,DWORD PTR [r10+0x10]
+  0.06%   │  0x00007f9bfbe94e74: mov    edx,esi
+  0.17%   │  0x00007f9bfbe94e76: shl    rdx,0x3            ;*getfield alg2 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@17 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.41%   │  0x00007f9bfbe94e7a: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@23 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │  0x00007f9bfbe94e7f: mov    DWORD PTR [rsp+0xc],eax
+  0.01%   │  0x00007f9bfbe94e83: nop    DWORD PTR [rax+0x0]
+  0.21%   │  0x00007f9bfbe94e87: call   0x00007f9bfbe2c0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=236}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@23 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.10%   │  0x00007f9bfbe94e8c: nop
+          │  0x00007f9bfbe94e8d: movabs r11,0x77296b5c0    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.22%   │  0x00007f9bfbe94e97: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@34 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.47%   │  0x00007f9bfbe94e9b: mov    r10,QWORD PTR [rsp+0x28]
+  0.01%   │  0x00007f9bfbe94ea0: mov    esi,DWORD PTR [r10+0x14]
+  0.22%   │  0x00007f9bfbe94ea4: mov    edx,esi
+  0.38%   │  0x00007f9bfbe94ea6: shl    rdx,0x3            ;*getfield alg3 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@31 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.03%   │  0x00007f9bfbe94eaa: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@26 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │  0x00007f9bfbe94eae: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@37 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.23%   │  0x00007f9bfbe94eb3: mov    DWORD PTR [rsp+0xc],eax
+  0.47%   │  0x00007f9bfbe94eb7: call   0x00007f9bfbe2c0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=284}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@37 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.30%   │  0x00007f9bfbe94ebc: nop
+  0.29%   │  0x00007f9bfbe94ebd: movabs r11,0x77296b5c0    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.19%   │  0x00007f9bfbe94ec7: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@48 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.08%   │  0x00007f9bfbe94ecb: mov    r10,QWORD PTR [rsp+0x28]
+  0.33%   │  0x00007f9bfbe94ed0: mov    esi,DWORD PTR [r10+0x18]
+  0.19%   │  0x00007f9bfbe94ed4: mov    edx,esi
+  0.08%   │  0x00007f9bfbe94ed6: shl    rdx,0x3            ;*getfield alg4 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@45 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.14%   │  0x00007f9bfbe94eda: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@40 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.23%   │  0x00007f9bfbe94ede: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@51 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.15%   │  0x00007f9bfbe94ee3: mov    DWORD PTR [rsp+0xc],eax
+  0.10%   │  0x00007f9bfbe94ee7: call   0x00007f9bfbe2c0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=332}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@51 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.09%   │  0x00007f9bfbe94eec: nop
+  0.21%   │  0x00007f9bfbe94eed: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@54 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.45%   │  0x00007f9bfbe94ef1: mov    rsi,QWORD PTR [rsp+0x30]  ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@22 (line 195)
+  0.02%   │  0x00007f9bfbe94ef6: mov    edx,eax
+  0.21%   │  0x00007f9bfbe94ef8: nop    DWORD PTR [rax+0x0]
+  0.15%   │  0x00007f9bfbe94eff: call   0x00007f9bfbe2c0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=356}
+          │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@22 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.74%   │  0x00007f9bfbe94f04: nop
+  0.07%   │  0x00007f9bfbe94f05: mov    rsi,QWORD PTR [rsp+0x40]
+  0.21%   │  0x00007f9bfbe94f0a: movsx  r10d,BYTE PTR [rsi+0x94]  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@32 (line 197)
+  0.36%   │  0x00007f9bfbe94f12: mov    r11,QWORD PTR [rsp+0x10]
+  0.02%   │  0x00007f9bfbe94f17: inc    r11                ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@28 (line 196)
+  0.01%   │  0x00007f9bfbe94f1a: test   r10b,r10b
+          ╰  0x00007f9bfbe94f1d: je     0x00007f9bfbe94e20  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@35 (line 197)
+             0x00007f9bfbe94f23: mov    QWORD PTR [rsp+0x30],r11
+             0x00007f9bfbe94f28: call   0x00007f9c052b54b0  ;   {runtime_call}
+             0x00007f9bfbe94f2d: nop
+             0x00007f9bfbe94f2e: mov    rdx,QWORD PTR [rsp+0x38]
+             0x00007f9bfbe94f33: mov    QWORD PTR [rdx+0x30],rax  ;*putfield stopTime {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@42 (line 198)
+             0x00007f9bfbe94f37: mov    QWORD PTR [rdx+0x20],r12  ;*putfield realTime {reexecute=0 rethrow=0 return_oop=0}
+....................................................................................................
+ 10.83%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 14.74%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2130 (161 bytes) 
+ 10.83%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2218 (250 bytes) 
+  3.39%         interpreter  method entry point (kind = zerolocals)  (14 bytes) 
+  3.30%         interpreter  method entry point (kind = zerolocals)  (165 bytes) 
+  3.26%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2143 (66 bytes) 
+  3.01%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute, version 2141 (49 bytes) 
+  2.65%         interpreter  invokevirtual  182 invokevirtual  (77 bytes) 
+  1.93%         interpreter  fast_aaccess_0  222 fast_aaccess_0  (56 bytes) 
+  1.90%         interpreter  method entry point (kind = zerolocals)  (211 bytes) 
+  1.62%         interpreter  invokevirtual  182 invokevirtual  (121 bytes) 
+  1.20%         interpreter  getstatic  178 getstatic  (94 bytes) 
+  1.15%         interpreter  ireturn  172 ireturn  (4 bytes) 
+  1.09%         interpreter  areturn  176 areturn  (8 bytes) 
+  1.03%         interpreter  fast_aload_0  220 fast_aload_0  (35 bytes) 
+  1.01%         interpreter  invokeinterface  185 invokeinterface  (132 bytes) 
+  0.93%         interpreter  invokevirtual  182 invokevirtual  (156 bytes) 
+  0.80%         interpreter  ireturn  172 ireturn  (37 bytes) 
+  0.79%         interpreter  method entry point (kind = accessor)  (14 bytes) 
+  0.74%         interpreter  areturn  176 areturn  (23 bytes) 
+  0.72%              kernel  [unknown] (6 bytes) 
+ 43.91%  <...other 896 warm regions...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 14.74%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2130 
+ 10.92%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2218 
+  8.84%         interpreter  method entry point (kind = zerolocals)  
+  5.79%         interpreter  invokevirtual  182 invokevirtual  
+  3.26%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2143 
+  3.15%              kernel  [unknown] 
+  3.01%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute, version 2141 
+  2.99%         interpreter  invoke return entry points  
+  2.20%         interpreter  ireturn  172 ireturn  
+  2.16%         interpreter  invokeinterface  185 invokeinterface  
+  2.02%         interpreter  fast_aaccess_0  222 fast_aaccess_0  
+  1.99%         interpreter  areturn  176 areturn  
+  1.89%         interpreter  getstatic  178 getstatic  
+  1.88%         interpreter  invokespecial  183 invokespecial  
+  1.87%         interpreter  method entry point (kind = accessor)  
+  1.25%         interpreter  instanceof  193 instanceof  
+  1.23%         interpreter  checkcast  192 checkcast  
+  1.17%         interpreter  fast_aload_0  220 fast_aload_0  
+  1.10%         interpreter  aload_1  43 aload_1  
+  0.94%         interpreter  invokestatic  184 invokestatic  
+ 27.59%  <...other 375 warm methods...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Distribution by Source]........................................................................
+ 55.68%         interpreter
+ 32.99%               JVMCI
+  6.77%           libjvm.so
+  3.15%              kernel
+  0.39%        libc-2.28.so
+  0.32%      perf-31809.map
+  0.23%             Unknown
+  0.23%  libpthread-2.28.so
+  0.17%      hsdis-amd64.so
+  0.03%          libjava.so
+  0.01%           libzip.so
+  0.01%        runtime stub
+....................................................................................................
+ 99.99%  <totals>
+
+PrintAssembly processed: 86988 total address lines.
+Perf output processed (skipped 28.684 seconds):
+ Column 1: cycles (14701 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+JVMCI, org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2123 (161 bytes) 
+
+              # parm1:    rcx       = int
+              #           [sp+0x20]  (sp of caller)
+              0x00007f3fd40f5060: mov    r10d,DWORD PTR [rsi+0x8]
+              0x00007f3fd40f5064: shl    r10,0x3
+              0x00007f3fd40f5068: cmp    rax,r10
+              0x00007f3fd40f506b: jne    0x00007f3fd4047e60  ;   {runtime_call}
+              0x00007f3fd40f5071: nop
+              0x00007f3fd40f5072: nop    DWORD PTR [rax+0x0]
+              0x00007f3fd40f5079: nop    DWORD PTR [rax+0x0]
+            [Verified Entry Point]
+  1.77%       0x00007f3fd40f5080: mov    DWORD PTR [rsp-0x14000],eax
+  1.20%       0x00007f3fd40f5087: sub    rsp,0x18
+  0.99%       0x00007f3fd40f508b: mov    QWORD PTR [rsp+0x10],rbp  ;*aload_1 {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@0
+  0.90%       0x00007f3fd40f5090: mov    esi,DWORD PTR [rdx+0x8]  ; implicit exception: deoptimizes
+                                                            ; OopMap{rdx=Oop off=48}
+  0.75%       0x00007f3fd40f5093: cmp    esi,0xf8066267     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg4&apos;)}
+         ╭    0x00007f3fd40f5099: je     0x00007f3fd40f50e0
+  1.07%  │    0x00007f3fd40f509f: cmp    esi,0xf80661e9     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg2&apos;)}
+         │╭   0x00007f3fd40f50a5: je     0x00007f3fd40f50f6
+  0.59%  ││   0x00007f3fd40f50ab: cmp    esi,0xf8066228     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg3&apos;)}
+         ││╭  0x00007f3fd40f50b1: je     0x00007f3fd40f510c
+  0.54%  │││  0x00007f3fd40f50b7: mov    rsi,rdx            ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%  │││  0x00007f3fd40f50ba: mov    edx,ecx
+         │││  0x00007f3fd40f50bc: movabs rax,0xffffffffffffffff
+  0.22%  │││  0x00007f3fd40f50c6: nop
+  0.68%  │││  0x00007f3fd40f50c7: call   0x00007f3fd40482e0  ; OopMap{off=108}
+         │││                                                ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+         │││                                                ;   {virtual_call}
+  0.01%  │││  0x00007f3fd40f50cc: nop
+  0.12%  │││  0x00007f3fd40f50cd: mov    rbp,QWORD PTR [rsp+0x10]
+  0.35%  │││  0x00007f3fd40f50d2: add    rsp,0x18
+  0.01%  │││  0x00007f3fd40f50d6: test   DWORD PTR [rip+0xaf9cf2a],eax        # 0x00007f3fdf092006
+         │││                                                ;   {poll_return}
+  0.16%  │││  0x00007f3fd40f50dc: vzeroupper 
+  0.55%  │││  0x00007f3fd40f50df: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.22%  ↘││  0x00007f3fd40f50e0: imul   eax,ecx,0x1d       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg4::compute@3 (line 138)
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%   ││  0x00007f3fd40f50e3: mov    rbp,QWORD PTR [rsp+0x10]
+  0.14%   ││  0x00007f3fd40f50e8: add    rsp,0x18
+  0.22%   ││  0x00007f3fd40f50ec: test   DWORD PTR [rip+0xaf9cf14],eax        # 0x00007f3fdf092006
+          ││                                                ;   {poll_return}
+  0.26%   ││  0x00007f3fd40f50f2: vzeroupper 
+  0.67%   ││  0x00007f3fd40f50f5: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.54%   ↘│  0x00007f3fd40f50f6: imul   eax,ecx,0x13       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg2::compute@3 (line 126)
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%    │  0x00007f3fd40f50f9: mov    rbp,QWORD PTR [rsp+0x10]
+  0.01%    │  0x00007f3fd40f50fe: add    rsp,0x18
+  0.18%    │  0x00007f3fd40f5102: test   DWORD PTR [rip+0xaf9cefe],eax        # 0x00007f3fdf092006
+           │                                                ;   {poll_return}
+  0.46%    │  0x00007f3fd40f5108: vzeroupper 
+  0.70%    │  0x00007f3fd40f510b: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.08%    ↘  0x00007f3fd40f510c: imul   eax,ecx,0x17       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg3::compute@3 (line 132)
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.22%       0x00007f3fd40f510f: mov    rbp,QWORD PTR [rsp+0x10]
+  0.35%       0x00007f3fd40f5114: add    rsp,0x18
+  0.20%       0x00007f3fd40f5118: test   DWORD PTR [rip+0xaf9cee8],eax        # 0x00007f3fdf092006
+                                                            ;   {poll_return}
+  0.06%       0x00007f3fd40f511e: vzeroupper 
+  0.80%       0x00007f3fd40f5121: ret    
+            [Exception Handler]
+              0x00007f3fd40f5122: call   0x00007f3fd40a6620  ;   {runtime_call}
+              0x00007f3fd40f5127: nop
+            [Deopt Handler Code]
+              0x00007f3fd40f5128: call   0x00007f3fd4049500  ;   {runtime_call}
+              0x00007f3fd40f512d: nop
+            [Stub Code]
+              0x00007f3fd40f512e: hlt    
+              0x00007f3fd40f512f: hlt    
+            <nmethod compile_id='2123' compiler='JVMCI' entry='0x00007f3fd40f5060' size='864' address='0x00007f3fd40f4f10' relocation_offset='304' insts_offset='336' stub_offset='542' scopes_data_offset='608' scopes_pcs_offset='664' dependencies_offset='840' nul_chk_table_offset='848' oops_offset='544' metadata_offset='552' method='org/ib/benchmark/MegamorphicCallKtBenchmark$Companion execute$kotlin_vs_java_benchmarks (Lorg/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtCMath;I)I' bytes='12' count='5000' backedge_count='1' iicount='10000' stamp='23,160'/>
+....................................................................................................
+ 15.02%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+JVMCI, org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2224 (250 bytes) 
+
+             0x00007f3fd4109571: mov    QWORD PTR [rdx+0x28],rax
+             0x00007f3fd4109575: movabs r10,0x6cd14b318    ;   {oop(a &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Companion&apos;)}
+             0x00007f3fd410957f: mov    QWORD PTR [rsp+0x18],r10
+             0x00007f3fd4109584: movabs r11,0x6cd14b2a8    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+             0x00007f3fd410958e: mov    QWORD PTR [rsp+0x10],0x0
+         ╭   0x00007f3fd4109597: jmp    0x00007f3fd41095ba  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@13 (line 195)
+         │   0x00007f3fd410959c: nop    DWORD PTR [rax+0x0]  ; OopMap{rsi=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=128}
+         │                                                 ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@35 (line 197)
+  0.22%  │↗  0x00007f3fd41095a0: test   DWORD PTR [rip+0xaf88a60],eax        # 0x00007f3fdf092006
+         ││                                                ;   {poll}
+  0.46%  ││  0x00007f3fd41095a6: mov    QWORD PTR [rsp+0x10],r11
+  0.01%  ││  0x00007f3fd41095ab: movabs r11,0x6cd14b2a8    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.01%  ││  0x00007f3fd41095b5: mov    r10,QWORD PTR [rsp+0x18]  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@13 (line 195)
+  0.20%  ↘│  0x00007f3fd41095ba: mov    r8,QWORD PTR [rsp+0x28]
+  0.56%   │  0x00007f3fd41095bf: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@7 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.03%   │  0x00007f3fd41095c3: mov    ebx,DWORD PTR [r8+0xc]
+  0.01%   │  0x00007f3fd41095c7: shl    rbx,0x3            ;*getfield alg1 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@4 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.26%   │  0x00007f3fd41095cb: mov    rsi,r10            ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@10 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.56%   │  0x00007f3fd41095ce: mov    rdx,rbx
+  0.03%   │  0x00007f3fd41095d1: nop    WORD PTR [rax+rax*1+0x0]
+  0.01%   │  0x00007f3fd41095d7: call   0x00007f3fd40480a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=188}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@10 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.59%   │  0x00007f3fd41095dc: nop
+  0.02%   │  0x00007f3fd41095dd: movabs r11,0x6cd14b2a8    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.01%   │  0x00007f3fd41095e7: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@20 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.19%   │  0x00007f3fd41095eb: mov    r10,QWORD PTR [rsp+0x28]
+  0.56%   │  0x00007f3fd41095f0: mov    esi,DWORD PTR [r10+0x10]
+  0.05%   │  0x00007f3fd41095f4: mov    edx,esi
+  0.19%   │  0x00007f3fd41095f6: shl    rdx,0x3            ;*getfield alg2 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@17 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.42%   │  0x00007f3fd41095fa: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@23 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │  0x00007f3fd41095ff: mov    DWORD PTR [rsp+0xc],eax
+  0.01%   │  0x00007f3fd4109603: nop    DWORD PTR [rax+0x0]
+  0.28%   │  0x00007f3fd4109607: call   0x00007f3fd40480a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=236}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@23 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.12%   │  0x00007f3fd410960c: nop
+  0.01%   │  0x00007f3fd410960d: movabs r11,0x6cd14b2a8    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.15%   │  0x00007f3fd4109617: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@34 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.46%   │  0x00007f3fd410961b: mov    r10,QWORD PTR [rsp+0x28]
+  0.03%   │  0x00007f3fd4109620: mov    esi,DWORD PTR [r10+0x14]
+  0.20%   │  0x00007f3fd4109624: mov    edx,esi
+  0.50%   │  0x00007f3fd4109626: shl    rdx,0x3            ;*getfield alg3 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@31 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.03%   │  0x00007f3fd410962a: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@26 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │  0x00007f3fd410962e: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@37 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.20%   │  0x00007f3fd4109633: mov    DWORD PTR [rsp+0xc],eax
+  0.44%   │  0x00007f3fd4109637: call   0x00007f3fd40480a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=284}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@37 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.24%   │  0x00007f3fd410963c: nop
+  0.31%   │  0x00007f3fd410963d: movabs r11,0x6cd14b2a8    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.21%   │  0x00007f3fd4109647: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@48 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.06%   │  0x00007f3fd410964b: mov    r10,QWORD PTR [rsp+0x28]
+  0.48%   │  0x00007f3fd4109650: mov    esi,DWORD PTR [r10+0x18]
+  0.22%   │  0x00007f3fd4109654: mov    edx,esi
+  0.16%   │  0x00007f3fd4109656: shl    rdx,0x3            ;*getfield alg4 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@45 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.19%   │  0x00007f3fd410965a: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@40 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.30%   │  0x00007f3fd410965e: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@51 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.20%   │  0x00007f3fd4109663: mov    DWORD PTR [rsp+0xc],eax
+  0.09%   │  0x00007f3fd4109667: call   0x00007f3fd40480a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=332}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@51 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.15%   │  0x00007f3fd410966c: nop
+  0.22%   │  0x00007f3fd410966d: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@54 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.53%   │  0x00007f3fd4109671: mov    rsi,QWORD PTR [rsp+0x30]  ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@22 (line 195)
+  0.02%   │  0x00007f3fd4109676: mov    edx,eax
+  0.19%   │  0x00007f3fd4109678: nop    DWORD PTR [rax+0x0]
+  0.18%   │  0x00007f3fd410967f: call   0x00007f3fd40480a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=356}
+          │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@22 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.81%   │  0x00007f3fd4109684: nop
+  0.05%   │  0x00007f3fd4109685: mov    rsi,QWORD PTR [rsp+0x40]
+  0.18%   │  0x00007f3fd410968a: movsx  r10d,BYTE PTR [rsi+0x94]  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@32 (line 197)
+  0.41%   │  0x00007f3fd4109692: mov    r11,QWORD PTR [rsp+0x10]
+  0.04%   │  0x00007f3fd4109697: inc    r11                ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@28 (line 196)
+  0.01%   │  0x00007f3fd410969a: test   r10b,r10b
+          ╰  0x00007f3fd410969d: je     0x00007f3fd41095a0  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@35 (line 197)
+             0x00007f3fd41096a3: mov    QWORD PTR [rsp+0x30],r11
+             0x00007f3fd41096a8: call   0x00007f3fde53b4b0  ;   {runtime_call}
+             0x00007f3fd41096ad: nop
+             0x00007f3fd41096ae: mov    rdx,QWORD PTR [rsp+0x38]
+             0x00007f3fd41096b3: mov    QWORD PTR [rdx+0x30],rax  ;*putfield stopTime {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@42 (line 198)
+             0x00007f3fd41096b7: mov    QWORD PTR [rdx+0x20],r12  ;*putfield realTime {reexecute=0 rethrow=0 return_oop=0}
+....................................................................................................
+ 12.09%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 15.02%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2123 (161 bytes) 
+ 12.09%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2224 (250 bytes) 
+  3.46%         interpreter  method entry point (kind = zerolocals)  (14 bytes) 
+  3.30%         interpreter  method entry point (kind = zerolocals)  (115 bytes) 
+  3.02%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2158 (66 bytes) 
+  2.83%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute, version 2154 (53 bytes) 
+  2.03%         interpreter  method entry point (kind = zerolocals)  (211 bytes) 
+  1.95%         interpreter  fast_aaccess_0  222 fast_aaccess_0  (56 bytes) 
+  1.54%         interpreter  invokevirtual  182 invokevirtual  (121 bytes) 
+  1.50%         interpreter  invokevirtual  182 invokevirtual  (43 bytes) 
+  1.29%         interpreter  areturn  176 areturn  (8 bytes) 
+  1.20%         interpreter  ireturn  172 ireturn  (0 bytes) 
+  1.15%         interpreter  getstatic  178 getstatic  (76 bytes) 
+  1.11%         interpreter  invokevirtual  182 invokevirtual  (1 bytes) 
+  1.08%         interpreter  invokeinterface  185 invokeinterface  (95 bytes) 
+  1.05%         interpreter  aload_1  43 aload_1  (70 bytes) 
+  0.91%         interpreter  fast_aload_0  220 fast_aload_0  (69 bytes) 
+  0.88%         interpreter  invokevirtual  182 invokevirtual  (142 bytes) 
+  0.82%         interpreter  aload  25 aload  (60 bytes) 
+  0.81%         interpreter  ireturn  172 ireturn  (37 bytes) 
+ 42.94%  <...other 792 warm regions...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 15.02%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2123 
+ 12.09%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2224 
+  9.01%         interpreter  method entry point (kind = zerolocals)  
+  6.91%               JVMCI  org.graalvm.compiler.graph.iterators.NodePredicates$PositiveTypePredicate::apply, version 304 
+  5.65%         interpreter  invokevirtual  182 invokevirtual  
+  3.02%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2158 
+  2.83%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute, version 2154 
+  2.57%         interpreter  invoke return entry points  
+  2.48%              kernel  [unknown] 
+  2.24%         interpreter  areturn  176 areturn  
+  2.20%         interpreter  ireturn  172 ireturn  
+  2.19%         interpreter  fast_aaccess_0  222 fast_aaccess_0  
+  2.13%         interpreter  invokeinterface  185 invokeinterface  
+  1.91%         interpreter  getstatic  178 getstatic  
+  1.86%         interpreter  invokespecial  183 invokespecial  
+  1.63%         interpreter  method entry point (kind = accessor)  
+  1.30%         interpreter  checkcast  192 checkcast  
+  1.14%         interpreter  instanceof  193 instanceof  
+  1.05%         interpreter  aload_1  43 aload_1  
+  1.05%         interpreter  goto  167 goto  
+ 21.71%  <...other 198 warm methods...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Distribution by Source]........................................................................
+ 55.45%         interpreter
+ 40.90%               JVMCI
+  2.48%              kernel
+  0.31%        libc-2.28.so
+  0.29%      perf-31896.map
+  0.29%             Unknown
+  0.26%  libpthread-2.28.so
+  0.01%        runtime stub
+  0.01%              [vdso]
+....................................................................................................
+ 99.99%  <totals>
+
+PrintAssembly processed: 91568 total address lines.
+Perf output processed (skipped 29.800 seconds):
+ Column 1: cycles (15966 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+JVMCI, org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2180 (161 bytes) 
+
+              # parm1:    rcx       = int
+              #           [sp+0x20]  (sp of caller)
+              0x00007f747fcb32a0: mov    r10d,DWORD PTR [rsi+0x8]
+              0x00007f747fcb32a4: shl    r10,0x3
+              0x00007f747fcb32a8: cmp    rax,r10
+              0x00007f747fcb32ab: jne    0x00007f747fbfde60  ;   {runtime_call}
+              0x00007f747fcb32b1: nop
+              0x00007f747fcb32b2: nop    DWORD PTR [rax+0x0]
+              0x00007f747fcb32b9: nop    DWORD PTR [rax+0x0]
+            [Verified Entry Point]
+  1.42%       0x00007f747fcb32c0: mov    DWORD PTR [rsp-0x14000],eax
+  1.37%       0x00007f747fcb32c7: sub    rsp,0x18
+  0.91%       0x00007f747fcb32cb: mov    QWORD PTR [rsp+0x10],rbp  ;*aload_1 {reexecute=1 rethrow=0 return_oop=0}
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@0
+  0.69%       0x00007f747fcb32d0: mov    esi,DWORD PTR [rdx+0x8]  ; implicit exception: deoptimizes
+                                                            ; OopMap{rdx=Oop off=48}
+  0.79%       0x00007f747fcb32d3: cmp    esi,0xf8067367     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg4&apos;)}
+         ╭    0x00007f747fcb32d9: je     0x00007f747fcb3320
+  0.90%  │    0x00007f747fcb32df: cmp    esi,0xf80672e9     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg2&apos;)}
+         │╭   0x00007f747fcb32e5: je     0x00007f747fcb3336
+  0.49%  ││   0x00007f747fcb32eb: cmp    esi,0xf8067328     ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg3&apos;)}
+         ││╭  0x00007f747fcb32f1: je     0x00007f747fcb334c
+  0.51%  │││  0x00007f747fcb32f7: mov    rsi,rdx            ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+         │││  0x00007f747fcb32fa: mov    edx,ecx
+  0.01%  │││  0x00007f747fcb32fc: movabs rax,0xffffffffffffffff
+  0.16%  │││  0x00007f747fcb3306: nop
+  0.49%  │││  0x00007f747fcb3307: call   0x00007f747fbfe2e0  ; OopMap{off=108}
+         │││                                                ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+         │││                                                ;   {virtual_call}
+  0.04%  │││  0x00007f747fcb330c: nop
+  0.19%  │││  0x00007f747fcb330d: mov    rbp,QWORD PTR [rsp+0x10]
+  0.48%  │││  0x00007f747fcb3312: add    rsp,0x18
+  0.03%  │││  0x00007f747fcb3316: test   DWORD PTR [rip+0x9eb8cea],eax        # 0x00007f7489b6c006
+         │││                                                ;   {poll_return}
+  0.19%  │││  0x00007f747fcb331c: vzeroupper 
+  0.63%  │││  0x00007f747fcb331f: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.23%  ↘││  0x00007f747fcb3320: imul   eax,ecx,0x1d       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg4::compute@3 (line 138)
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%   ││  0x00007f747fcb3323: mov    rbp,QWORD PTR [rsp+0x10]
+  0.23%   ││  0x00007f747fcb3328: add    rsp,0x18
+  0.11%   ││  0x00007f747fcb332c: test   DWORD PTR [rip+0x9eb8cd4],eax        # 0x00007f7489b6c006
+          ││                                                ;   {poll_return}
+  0.27%   ││  0x00007f747fcb3332: vzeroupper 
+  0.61%   ││  0x00007f747fcb3335: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.48%   ↘│  0x00007f747fcb3336: imul   eax,ecx,0x13       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg2::compute@3 (line 126)
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.01%    │  0x00007f747fcb3339: mov    rbp,QWORD PTR [rsp+0x10]
+           │  0x00007f747fcb333e: add    rsp,0x18
+  0.19%    │  0x00007f747fcb3342: test   DWORD PTR [rip+0x9eb8cbe],eax        # 0x00007f7489b6c006
+           │                                                ;   {poll_return}
+  0.48%    │  0x00007f747fcb3348: vzeroupper 
+  0.66%    │  0x00007f747fcb334b: ret                       ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+           │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.08%    ↘  0x00007f747fcb334c: imul   eax,ecx,0x17       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg3::compute@3 (line 132)
+                                                            ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks@8 (line 157)
+  0.10%       0x00007f747fcb334f: mov    rbp,QWORD PTR [rsp+0x10]
+  0.34%       0x00007f747fcb3354: add    rsp,0x18
+  0.20%       0x00007f747fcb3358: test   DWORD PTR [rip+0x9eb8ca8],eax        # 0x00007f7489b6c006
+                                                            ;   {poll_return}
+  0.08%       0x00007f747fcb335e: vzeroupper 
+  0.63%       0x00007f747fcb3361: ret    
+            [Exception Handler]
+              0x00007f747fcb3362: call   0x00007f747fc5c220  ;   {runtime_call}
+              0x00007f747fcb3367: nop
+            [Deopt Handler Code]
+              0x00007f747fcb3368: call   0x00007f747fbff500  ;   {runtime_call}
+              0x00007f747fcb336d: nop
+            [Stub Code]
+              0x00007f747fcb336e: hlt    
+              0x00007f747fcb336f: hlt    
+            <nmethod compile_id='2180' compiler='JVMCI' entry='0x00007f747fcb32a0' size='864' address='0x00007f747fcb3150' relocation_offset='304' insts_offset='336' stub_offset='542' scopes_data_offset='608' scopes_pcs_offset='664' dependencies_offset='840' nul_chk_table_offset='848' oops_offset='544' metadata_offset='552' method='org/ib/benchmark/MegamorphicCallKtBenchmark$Companion execute$kotlin_vs_java_benchmarks (Lorg/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtCMath;I)I' bytes='12' count='5000' backedge_count='1' iicount='10000' stamp='24,634'/>
+....................................................................................................
+ 14.02%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+JVMCI, org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2255 (250 bytes) 
+
+             0x00007f747fc99ab1: mov    QWORD PTR [rdx+0x28],rax
+             0x00007f747fc99ab5: movabs r10,0x76f39dc18    ;   {oop(a &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Companion&apos;)}
+             0x00007f747fc99abf: mov    QWORD PTR [rsp+0x18],r10
+             0x00007f747fc99ac4: movabs r11,0x772898400    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+             0x00007f747fc99ace: mov    QWORD PTR [rsp+0x10],0x0
+         ╭   0x00007f747fc99ad7: jmp    0x00007f747fc99afa  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@13 (line 195)
+         │   0x00007f747fc99adc: nop    DWORD PTR [rax+0x0]  ; OopMap{rsi=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=128}
+         │                                                 ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@35 (line 197)
+  0.21%  │↗  0x00007f747fc99ae0: test   DWORD PTR [rip+0x9ed2520],eax        # 0x00007f7489b6c006
+         ││                                                ;   {poll}
+  0.44%  ││  0x00007f747fc99ae6: mov    QWORD PTR [rsp+0x10],r11
+  0.05%  ││  0x00007f747fc99aeb: movabs r11,0x772898400    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+         ││  0x00007f747fc99af5: mov    r10,QWORD PTR [rsp+0x18]  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         ││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@13 (line 195)
+  0.19%  ↘│  0x00007f747fc99afa: mov    r8,QWORD PTR [rsp+0x28]
+  0.36%   │  0x00007f747fc99aff: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@7 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.03%   │  0x00007f747fc99b03: mov    ebx,DWORD PTR [r8+0xc]
+  0.02%   │  0x00007f747fc99b07: shl    rbx,0x3            ;*getfield alg1 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@4 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.16%   │  0x00007f747fc99b0b: mov    rsi,r10            ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@10 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.41%   │  0x00007f747fc99b0e: mov    rdx,rbx
+  0.01%   │  0x00007f747fc99b11: nop    WORD PTR [rax+rax*1+0x0]
+          │  0x00007f747fc99b17: call   0x00007f747fbfe0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=188}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@10 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.60%   │  0x00007f747fc99b1c: nop
+  0.02%   │  0x00007f747fc99b1d: movabs r11,0x772898400    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.01%   │  0x00007f747fc99b27: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@20 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.20%   │  0x00007f747fc99b2b: mov    r10,QWORD PTR [rsp+0x28]
+  0.53%   │  0x00007f747fc99b30: mov    esi,DWORD PTR [r10+0x10]
+  0.09%   │  0x00007f747fc99b34: mov    edx,esi
+  0.16%   │  0x00007f747fc99b36: shl    rdx,0x3            ;*getfield alg2 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@17 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.40%   │  0x00007f747fc99b3a: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@23 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.02%   │  0x00007f747fc99b3f: mov    DWORD PTR [rsp+0xc],eax
+          │  0x00007f747fc99b43: nop    DWORD PTR [rax+0x0]
+  0.26%   │  0x00007f747fc99b47: call   0x00007f747fbfe0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=236}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@23 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.13%   │  0x00007f747fc99b4c: nop
+          │  0x00007f747fc99b4d: movabs r11,0x772898400    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.17%   │  0x00007f747fc99b57: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@34 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.43%   │  0x00007f747fc99b5b: mov    r10,QWORD PTR [rsp+0x28]
+  0.06%   │  0x00007f747fc99b60: mov    esi,DWORD PTR [r10+0x14]
+  0.23%   │  0x00007f747fc99b64: mov    edx,esi
+  0.44%   │  0x00007f747fc99b66: shl    rdx,0x3            ;*getfield alg3 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@31 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.03%   │  0x00007f747fc99b6a: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@26 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.01%   │  0x00007f747fc99b6e: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@37 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.18%   │  0x00007f747fc99b73: mov    DWORD PTR [rsp+0xc],eax
+  0.38%   │  0x00007f747fc99b77: call   0x00007f747fbfe0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=284}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@37 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.23%   │  0x00007f747fc99b7c: nop
+  0.28%   │  0x00007f747fc99b7d: movabs r11,0x772898400    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic4KtState&apos;)}
+  0.16%   │  0x00007f747fc99b87: mov    ecx,DWORD PTR [r11+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@48 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.06%   │  0x00007f747fc99b8b: mov    r10,QWORD PTR [rsp+0x28]
+  0.38%   │  0x00007f747fc99b90: mov    esi,DWORD PTR [r10+0x18]
+  0.16%   │  0x00007f747fc99b94: mov    edx,esi
+  0.11%   │  0x00007f747fc99b96: shl    rdx,0x3            ;*getfield alg4 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@45 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.13%   │  0x00007f747fc99b9a: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@40 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.21%   │  0x00007f747fc99b9e: mov    rsi,QWORD PTR [rsp+0x18]  ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@51 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.19%   │  0x00007f747fc99ba3: mov    DWORD PTR [rsp+0xc],eax
+  0.11%   │  0x00007f747fc99ba7: call   0x00007f747fbfe0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=332}
+          │                                                ;*invokevirtual execute$kotlin_vs_java_benchmarks {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@51 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.13%   │  0x00007f747fc99bac: nop
+  0.20%   │  0x00007f747fc99bad: add    eax,DWORD PTR [rsp+0xc]  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic4KtState::megamorphic4Call$kotlin_vs_java_benchmarks@54 (line 105)
+          │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic4Call@7 (line 45)
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@19 (line 195)
+  0.40%   │  0x00007f747fc99bb1: mov    rsi,QWORD PTR [rsp+0x30]  ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@22 (line 195)
+  0.02%   │  0x00007f747fc99bb6: mov    edx,eax
+  0.25%   │  0x00007f747fc99bb8: nop    DWORD PTR [rax+0x0]
+  0.23%   │  0x00007f747fc99bbf: call   0x00007f747fbfe0a0  ; OopMap{[24]=Oop [32]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Oop off=356}
+          │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@22 (line 195)
+          │                                                ;   {optimized virtual_call}
+  0.86%   │  0x00007f747fc99bc4: nop
+  0.05%   │  0x00007f747fc99bc5: mov    rsi,QWORD PTR [rsp+0x40]
+  0.16%   │  0x00007f747fc99bca: movsx  r10d,BYTE PTR [rsi+0x94]  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@32 (line 197)
+  0.54%   │  0x00007f747fc99bd2: mov    r11,QWORD PTR [rsp+0x10]
+  0.03%   │  0x00007f747fc99bd7: inc    r11                ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+          │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@28 (line 196)
+  0.02%   │  0x00007f747fc99bda: test   r10b,r10b
+          ╰  0x00007f747fc99bdd: je     0x00007f747fc99ae0  ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@35 (line 197)
+             0x00007f747fc99be3: mov    QWORD PTR [rsp+0x30],r11
+             0x00007f747fc99be8: call   0x00007f74890154b0  ;   {runtime_call}
+             0x00007f747fc99bed: nop
+             0x00007f747fc99bee: mov    rdx,QWORD PTR [rsp+0x38]
+             0x00007f747fc99bf3: mov    QWORD PTR [rdx+0x30],rax  ;*putfield stopTime {reexecute=0 rethrow=0 return_oop=0}
+                                                           ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub@42 (line 198)
+             0x00007f747fc99bf7: mov    QWORD PTR [rdx+0x20],r12  ;*putfield realTime {reexecute=0 rethrow=0 return_oop=0}
+....................................................................................................
+ 11.09%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 14.02%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2180 (161 bytes) 
+ 11.09%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2255 (250 bytes) 
+  3.68%         interpreter  method entry point (kind = zerolocals)  (165 bytes) 
+  3.56%         interpreter  method entry point (kind = zerolocals)  (14 bytes) 
+  2.75%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2229 (66 bytes) 
+  2.69%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute, version 2206 (53 bytes) 
+  2.36%         interpreter  invokevirtual  182 invokevirtual  (77 bytes) 
+  2.09%         interpreter  method entry point (kind = zerolocals)  (211 bytes) 
+  1.99%         interpreter  fast_aaccess_0  222 fast_aaccess_0  (56 bytes) 
+  1.45%         interpreter  invokevirtual  182 invokevirtual  (121 bytes) 
+  1.20%         interpreter  getstatic  178 getstatic  (93 bytes) 
+  1.09%         interpreter  ireturn  172 ireturn  (8 bytes) 
+  1.08%              kernel  [unknown] (6 bytes) 
+  1.05%         interpreter  areturn  176 areturn  (4 bytes) 
+  1.02%         interpreter  invokeinterface  185 invokeinterface  (95 bytes) 
+  0.91%         interpreter  invokevirtual  182 invokevirtual  (147 bytes) 
+  0.81%         interpreter  fast_aload_0  220 fast_aload_0  (35 bytes) 
+  0.78%         interpreter  ireturn  172 ireturn  (37 bytes) 
+  0.76%         interpreter  areturn  176 areturn  (23 bytes) 
+  0.74%         interpreter  invokespecial  183 invokespecial  (91 bytes) 
+ 44.86%  <...other 904 warm regions...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 14.02%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$Companion::execute$kotlin_vs_java_benchmarks, version 2180 
+ 11.09%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic4Kt_jmhTest::megamorphic4Call_avgt_jmhStub, version 2255 
+  9.56%         interpreter  method entry point (kind = zerolocals)  
+  5.46%         interpreter  invokevirtual  182 invokevirtual  
+  3.15%              kernel  [unknown] 
+  2.89%         interpreter  invoke return entry points  
+  2.75%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2229 
+  2.69%               JVMCI  org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute, version 2206 
+  2.18%         interpreter  fast_aaccess_0  222 fast_aaccess_0  
+  2.10%         interpreter  ireturn  172 ireturn  
+  2.09%         interpreter  invokeinterface  185 invokeinterface  
+  2.04%         interpreter  areturn  176 areturn  
+  2.00%         interpreter  getstatic  178 getstatic  
+  1.80%         interpreter  invokespecial  183 invokespecial  
+  1.73%         interpreter  method entry point (kind = accessor)  
+  1.50%         interpreter  checkcast  192 checkcast  
+  1.16%         interpreter  instanceof  193 instanceof  
+  1.10%         interpreter  aload_1  43 aload_1  
+  1.06%         interpreter  fast_aload_0  220 fast_aload_0  
+  0.91%         interpreter  invokestatic  184 invokestatic  
+ 28.71%  <...other 384 warm methods...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Distribution by Source]........................................................................
+ 56.26%         interpreter
+ 32.02%               JVMCI
+  7.37%           libjvm.so
+  3.15%              kernel
+  0.41%        libc-2.28.so
+  0.28%             Unknown
+  0.18%      perf-31946.map
+  0.17%  libpthread-2.28.so
+  0.09%      hsdis-amd64.so
+  0.04%          libjava.so
+  0.02%              [vdso]
+  0.01%                    
+  0.01%        runtime stub
+....................................................................................................
+ 99.99%  <totals>
+
+
+
+# Run complete. Total time: 00:01:45
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                       (param)  Mode  Cnt   Score   Error  Units
+MegamorphicCallKtBenchmark.Megamorphic4Kt             3  avgt   15  16.175 ± 1.038  ns/op
+MegamorphicCallKtBenchmark.Megamorphic4Kt:·asm        3  avgt          NaN            ---

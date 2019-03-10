@@ -34,7 +34,7 @@ public class MegamorphicCallJavaBenchmark {
     }
 
     @CompilerControl(CompilerControl.Mode.DONT_INLINE)
-    public static int compute(VirtualCallJavaCMath cmath, int i) {
+    public static int execute(VirtualCallJavaCMath cmath, int i) {
         return cmath.compute(i);
     }
 
@@ -71,7 +71,7 @@ public class MegamorphicCallJavaBenchmark {
         VirtualCallJavaCMath alg1 = new VirtualCallJavaAlg1();
 
         int monomorphicCall() {
-            return compute(alg1, param);
+            return execute(alg1, param);
         }
     }
 
@@ -84,7 +84,7 @@ public class MegamorphicCallJavaBenchmark {
         VirtualCallJavaCMath alg2 = new VirtualCallJavaAlg2();
 
         int bimorphicCall() {
-            return compute(alg1, param) + compute(alg2, param);
+            return execute(alg1, param) + execute(alg2, param);
         }
     }
 
@@ -98,7 +98,7 @@ public class MegamorphicCallJavaBenchmark {
         VirtualCallJavaCMath alg3 = new VirtualCallJavaAlg3();
 
         int megamorphic3Call() {
-            return compute(alg1, param) + compute(alg2, param) + compute(alg3, param);
+            return execute(alg1, param) + execute(alg2, param) + execute(alg3, param);
         }
     }
 
@@ -113,7 +113,7 @@ public class MegamorphicCallJavaBenchmark {
         VirtualCallJavaCMath alg4 = new VirtualCallJavaAlg4();
 
         int megamorphic4Call() {
-            return compute(alg1, param) + compute(alg2, param) + compute(alg3, param) + compute(alg4, param);
+            return execute(alg1, param) + execute(alg2, param) + execute(alg3, param) + execute(alg4, param);
         }
     }
 

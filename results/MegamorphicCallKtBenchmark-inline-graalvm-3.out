@@ -1,0 +1,755 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_202, Java HotSpot(TM) GraalVM EE 1.0.0-rc13, 25.202-b08-jvmci-0.55
+# VM invoker: /usr/lib/jvm/graalvm-ee-1.0.0-rc13/jre/bin/java
+# VM options: -XX:-TieredCompilation -Xbatch
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.ib.benchmark.MegamorphicCallKtBenchmark.Megamorphic3Kt
+# Parameters: (param = 3)
+
+# Run progress: 0.00% complete, ETA 00:00:30
+# Fork: 1 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 11058.070 ns/op
+# Warmup Iteration   2: 6.969 ns/op
+# Warmup Iteration   3: 4.579 ns/op
+# Warmup Iteration   4: 4.684 ns/op
+# Warmup Iteration   5: 4.651 ns/op
+Iteration   1: 4.854 ns/op
+Iteration   2: 4.798 ns/op
+Iteration   3: 4.788 ns/op
+Iteration   4: 4.711 ns/op
+Iteration   5: 4.844 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 33.33% complete, ETA 00:01:09
+# Fork: 2 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 12842.671 ns/op
+# Warmup Iteration   2: 7.756 ns/op
+# Warmup Iteration   3: 5.144 ns/op
+# Warmup Iteration   4: 5.002 ns/op
+# Warmup Iteration   5: 4.890 ns/op
+Iteration   1: 5.154 ns/op
+Iteration   2: 5.220 ns/op
+Iteration   3: 5.405 ns/op
+Iteration   4: 5.285 ns/op
+Iteration   5: 5.289 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+# Run progress: 66.67% complete, ETA 00:00:33
+# Fork: 3 of 3
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 65.427 ns/op
+# Warmup Iteration   2: 7.436 ns/op
+# Warmup Iteration   3: 5.047 ns/op
+# Warmup Iteration   4: 5.180 ns/op
+# Warmup Iteration   5: 5.192 ns/op
+Iteration   1: 4.944 ns/op
+Iteration   2: 4.850 ns/op
+Iteration   3: 5.136 ns/op
+Iteration   4: 5.310 ns/op
+Iteration   5: 5.380 ns/op
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "org.ib.benchmark.MegamorphicCallKtBenchmark.Megamorphic3Kt":
+  5.064 ±(99.9%) 0.262 ns/op [Average]
+  (min, avg, max) = (4.711, 5.064, 5.405), stdev = 0.245
+  CI (99.9%): [4.803, 5.326] (assumes normal distribution)
+
+Secondary result "org.ib.benchmark.MegamorphicCallKtBenchmark.Megamorphic3Kt:·asm":
+PrintAssembly processed: 92012 total address lines.
+Perf output processed (skipped 27.991 seconds):
+ Column 1: cycles (14884 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+JVMCI, org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2247 (162 bytes) 
+
+              0x00007f98b00e064c: mov    rdx,QWORD PTR [rsp+0x28]
+              0x00007f98b00e0651: mov    QWORD PTR [rdx+0x28],rax
+              0x00007f98b00e0655: movabs r10,0x772a12e40    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic3KtState&apos;)}
+              0x00007f98b00e065f: mov    QWORD PTR [rsp+0x8],0x0
+         ╭    0x00007f98b00e0668: jmp    0x00007f98b00e06f8  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │                                                  ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+         │    0x00007f98b00e066d: data16 xchg ax,ax         ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │                                                  ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+         │                                                  ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │                                                  ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.52%  │ ↗  0x00007f98b00e0670: mov    r9d,DWORD PTR [r11+0x10]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  1.29%  │ │  0x00007f98b00e0674: cmp    DWORD PTR [r9*8+0x8],0xf80672e9
+         │ │                                                ; implicit exception: deoptimizes
+         │ │                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=116}
+         │ │                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg2&apos;)}
+  0.84%  │ │  0x00007f98b00e0680: jne    0x00007f98b00e0751  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@41 (line 163)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.07%  │ │  0x00007f98b00e0686: mov    r9d,DWORD PTR [r11+0x14]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  0.46%  │ │  0x00007f98b00e068a: cmp    DWORD PTR [r9*8+0x8],0xf8067328
+         │ │                                                ; implicit exception: deoptimizes
+         │ │                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=138}
+         │ │                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg3&apos;)}
+  0.62%  │ │  0x00007f98b00e0696: jne    0x00007f98b00e0751  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@71 (line 164)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.38%  │ │  0x00007f98b00e069c: mov    r9d,DWORD PTR [r10+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@9 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.37%  │ │  0x00007f98b00e06a0: mov    ecx,r9d
+  0.26%  │ │  0x00007f98b00e06a3: shl    ecx,0x4
+  0.17%  │ │  0x00007f98b00e06a6: add    ecx,r9d            ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute@3 (line 120)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.34%  │ │  0x00007f98b00e06a9: imul   ebx,r9d,0x13       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg2::compute@3 (line 126)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@41 (line 163)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.39%  │ │  0x00007f98b00e06ad: add    ecx,ebx            ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@50 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.19%  │ │  0x00007f98b00e06af: imul   r9d,r9d,0x17       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg3::compute@3 (line 132)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@71 (line 164)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.24%  │ │  0x00007f98b00e06b3: add    ecx,r9d            ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@80 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.17%  │ │  0x00007f98b00e06b6: mov    rsi,rdi            ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@22 (line 195)
+  0.42%  │ │  0x00007f98b00e06b9: mov    edx,ecx
+  0.34%  │ │  0x00007f98b00e06bb: nop    DWORD PTR [rax+0x0]
+  0.21%  │ │  0x00007f98b00e06bf: call   0x00007f98b00480a0  ; OopMap{[16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=196}
+         │ │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@22 (line 195)
+         │ │                                                ;   {optimized virtual_call}
+  0.61%  │ │  0x00007f98b00e06c4: nop
+  1.28%  │ │  0x00007f98b00e06c5: mov    rsi,QWORD PTR [rsp+0x30]
+  0.83%  │ │  0x00007f98b00e06ca: movsx  r10d,BYTE PTR [rsi+0x94]  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@32 (line 197)
+  0.36%  │ │  0x00007f98b00e06d2: mov    r11,QWORD PTR [rsp+0x8]
+  1.28%  │ │  0x00007f98b00e06d7: inc    r11                ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@28 (line 196)
+  0.47%  │ │  0x00007f98b00e06da: test   r10b,r10b          ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@35 (line 197)
+         │╭│  0x00007f98b00e06dd: jne    0x00007f98b00e071d  ; OopMap{rsi=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=227}
+         │││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@35 (line 197)
+  0.34%  │││  0x00007f98b00e06e3: test   DWORD PTR [rip+0xd23e91d],eax        # 0x00007f98bd31f006
+         │││                                                ;   {poll}
+  0.33%  │││  0x00007f98b00e06e9: mov    QWORD PTR [rsp+0x8],r11
+  1.25%  │││  0x00007f98b00e06ee: movabs r10,0x772a12e40    ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+         │││                                                ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic3KtState&apos;)}
+  0.47%  ↘││  0x00007f98b00e06f8: mov    r11,QWORD PTR [rsp+0x18]
+  0.30%   ││  0x00007f98b00e06fd: mov    rdi,QWORD PTR [rsp+0x20]
+  0.32%   ││  0x00007f98b00e0702: mov    r9d,DWORD PTR [r11+0xc]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  1.32%   ││  0x00007f98b00e0706: cmp    DWORD PTR [r9*8+0x8],0xf80672aa
+          ││                                                ; implicit exception: deoptimizes
+          ││                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=262}
+          ││                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg1&apos;)}
+  1.11%   │╰  0x00007f98b00e0712: je     0x00007f98b00e0670
+          │   0x00007f98b00e0718: jmp    0x00007f98b00e0751  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+          │                                                 ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+          │                                                 ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+          │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+          ↘   0x00007f98b00e071d: mov    QWORD PTR [rsp+0x18],r11
+              0x00007f98b00e0722: call   0x00007f98bc7c84b0  ;   {runtime_call}
+              0x00007f98b00e0727: nop
+....................................................................................................
+ 21.56%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+JVMCI, org.openjdk.jmh.infra.Blackhole::consume, version 2224 (66 bytes) 
+
+            # parm0:    rdx       = int
+            #           [sp+0x20]  (sp of caller)
+            0x00007f98b00f8360: mov    r10d,DWORD PTR [rsi+0x8]
+            0x00007f98b00f8364: shl    r10,0x3
+            0x00007f98b00f8368: cmp    rax,r10
+            0x00007f98b00f836b: jne    0x00007f98b0047e60  ;   {runtime_call}
+            0x00007f98b00f8371: nop
+            0x00007f98b00f8372: nop    DWORD PTR [rax+0x0]
+            0x00007f98b00f8379: nop    DWORD PTR [rax+0x0]
+          [Verified Entry Point]
+  1.84%     0x00007f98b00f8380: mov    DWORD PTR [rsp-0x14000],eax
+  0.46%     0x00007f98b00f8387: sub    rsp,0x18
+  1.43%     0x00007f98b00f838b: mov    QWORD PTR [rsp+0x10],rbp
+  0.54%     0x00007f98b00f8390: mov    r10d,DWORD PTR [rsi+0xb0]
+                                                          ;*getfield i1 {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 378)
+  0.24%     0x00007f98b00f8397: mov    r11d,edx
+  0.19%     0x00007f98b00f839a: xor    r11d,r10d          ;*ixor {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 380)
+  1.43%     0x00007f98b00f839d: mov    r8d,edx
+  0.56%     0x00007f98b00f83a0: xor    r8d,DWORD PTR [rsi+0xb8]  ;*ixor {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@15 (line 380)
+  0.27%     0x00007f98b00f83a7: cmp    r8d,r11d
+         ╭  0x00007f98b00f83aa: je     0x00007f98b00f83c3
+  0.24%  │  0x00007f98b00f83b0: mov    rbp,QWORD PTR [rsp+0x10]
+  1.44%  │  0x00007f98b00f83b5: add    rsp,0x18
+  0.54%  │  0x00007f98b00f83b9: test   DWORD PTR [rip+0xd226c47],eax        # 0x00007f98bd31f006
+         │                                                ;   {poll_return}
+  0.19%  │  0x00007f98b00f83bf: vzeroupper 
+  2.14%  │  0x00007f98b00f83c2: ret    
+         ↘  0x00007f98b00f83c3: mov    DWORD PTR [r15+0x29c],0xffffffed
+                                                          ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@16 (line 380)
+            0x00007f98b00f83ce: mov    QWORD PTR [r15+0x2a8],r12
+            0x00007f98b00f83d5: call   0x00007f98b00495fe  ; OopMap{rsi=Oop off=122}
+                                                          ;*istore_2 {reexecute=1 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@4 (line 378)
+                                                          ;   {runtime_call}
+            0x00007f98b00f83da: nop
+          [Exception Handler]
+....................................................................................................
+ 11.53%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 21.56%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2247 (162 bytes) 
+ 11.53%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2224 (66 bytes) 
+  3.22%         interpreter  method entry point (kind = zerolocals)  (14 bytes) 
+  3.16%         interpreter  method entry point (kind = zerolocals)  (130 bytes) 
+  2.52%         interpreter  invokevirtual  182 invokevirtual  (77 bytes) 
+  2.00%         interpreter  fast_aaccess_0  222 fast_aaccess_0  (69 bytes) 
+  1.98%         interpreter  method entry point (kind = zerolocals)  (211 bytes) 
+  1.62%         interpreter  invokevirtual  182 invokevirtual  (121 bytes) 
+  1.12%         interpreter  ireturn  172 ireturn  (4 bytes) 
+  1.11%         interpreter  areturn  176 areturn  (8 bytes) 
+  1.03%              kernel  [unknown] (6 bytes) 
+  0.97%         interpreter  getstatic  178 getstatic  (93 bytes) 
+  0.95%         interpreter  invokevirtual  182 invokevirtual  (235 bytes) 
+  0.93%         interpreter  invokeinterface  185 invokeinterface  (113 bytes) 
+  0.91%         interpreter  fast_aload_0  220 fast_aload_0  (35 bytes) 
+  0.84%         interpreter  method entry point (kind = accessor)  (14 bytes) 
+  0.82%         interpreter  aload  25 aload  (65 bytes) 
+  0.77%         interpreter  ireturn  172 ireturn  (37 bytes) 
+  0.74%         interpreter  checkcast  192 checkcast  (40 bytes) 
+  0.73%         interpreter  invoke return entry points  (132 bytes) 
+ 41.49%  <...other 863 warm regions...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 21.56%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2247 
+ 11.53%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2224 
+  8.67%         interpreter  method entry point (kind = zerolocals)  
+  5.72%         interpreter  invokevirtual  182 invokevirtual  
+  3.25%              kernel  [unknown] 
+  2.94%         interpreter  invoke return entry points  
+  2.18%         interpreter  fast_aaccess_0  222 fast_aaccess_0  
+  2.06%         interpreter  ireturn  172 ireturn  
+  1.99%         interpreter  areturn  176 areturn  
+  1.92%         interpreter  invokeinterface  185 invokeinterface  
+  1.88%         interpreter  method entry point (kind = accessor)  
+  1.72%         interpreter  getstatic  178 getstatic  
+  1.68%         interpreter  invokespecial  183 invokespecial  
+  1.42%         interpreter  checkcast  192 checkcast  
+  1.09%         interpreter  instanceof  193 instanceof  
+  1.06%         interpreter  fast_aload_0  220 fast_aload_0  
+  1.03%         interpreter  aload_1  43 aload_1  
+  0.96%         interpreter  invokestatic  184 invokestatic  
+  0.93%         interpreter  _shouldnotreachhere  234 _shouldnotreachhere  
+  0.92%         interpreter  goto  167 goto  
+ 25.47%  <...other 378 warm methods...>
+....................................................................................................
+ 99.99%  <totals>
+
+....[Distribution by Source]........................................................................
+ 54.63%         interpreter
+ 34.43%               JVMCI
+  6.37%           libjvm.so
+  3.25%              kernel
+  0.34%      perf-30468.map
+  0.32%        libc-2.28.so
+  0.28%  libpthread-2.28.so
+  0.23%             Unknown
+  0.09%      hsdis-amd64.so
+  0.03%           libzip.so
+  0.02%          libjava.so
+  0.01%              [vdso]
+  0.01%        runtime stub
+....................................................................................................
+ 99.99%  <totals>
+
+PrintAssembly processed: 87547 total address lines.
+Perf output processed (skipped 26.931 seconds):
+ Column 1: cycles (15494 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+JVMCI, org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2213 (162 bytes) 
+
+              0x00007f0a800dd58c: mov    rdx,QWORD PTR [rsp+0x28]
+              0x00007f0a800dd591: mov    QWORD PTR [rdx+0x28],rax
+              0x00007f0a800dd595: movabs r10,0x772899ca0    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic3KtState&apos;)}
+              0x00007f0a800dd59f: mov    QWORD PTR [rsp+0x8],0x0
+         ╭    0x00007f0a800dd5a8: jmp    0x00007f0a800dd638  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │                                                  ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+         │    0x00007f0a800dd5ad: data16 xchg ax,ax         ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │                                                  ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+         │                                                  ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │                                                  ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.35%  │ ↗  0x00007f0a800dd5b0: mov    r9d,DWORD PTR [r11+0x10]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  1.28%  │ │  0x00007f0a800dd5b4: cmp    DWORD PTR [r9*8+0x8],0xf8066269
+         │ │                                                ; implicit exception: deoptimizes
+         │ │                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=116}
+         │ │                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg2&apos;)}
+  0.83%  │ │  0x00007f0a800dd5c0: jne    0x00007f0a800dd691  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@41 (line 163)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.16%  │ │  0x00007f0a800dd5c6: mov    r9d,DWORD PTR [r11+0x14]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  0.52%  │ │  0x00007f0a800dd5ca: cmp    DWORD PTR [r9*8+0x8],0xf80662a8
+         │ │                                                ; implicit exception: deoptimizes
+         │ │                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=138}
+         │ │                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg3&apos;)}
+  0.53%  │ │  0x00007f0a800dd5d6: jne    0x00007f0a800dd691  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@71 (line 164)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.28%  │ │  0x00007f0a800dd5dc: mov    r9d,DWORD PTR [r10+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@9 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.38%  │ │  0x00007f0a800dd5e0: mov    ecx,r9d
+  0.27%  │ │  0x00007f0a800dd5e3: shl    ecx,0x4
+  0.28%  │ │  0x00007f0a800dd5e6: add    ecx,r9d            ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute@3 (line 120)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.23%  │ │  0x00007f0a800dd5e9: imul   ebx,r9d,0x13       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg2::compute@3 (line 126)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@41 (line 163)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.40%  │ │  0x00007f0a800dd5ed: add    ecx,ebx            ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@50 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.24%  │ │  0x00007f0a800dd5ef: imul   r9d,r9d,0x17       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg3::compute@3 (line 132)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@71 (line 164)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.24%  │ │  0x00007f0a800dd5f3: add    ecx,r9d            ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@80 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.22%  │ │  0x00007f0a800dd5f6: mov    rsi,rdi            ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@22 (line 195)
+  0.42%  │ │  0x00007f0a800dd5f9: mov    edx,ecx
+  0.22%  │ │  0x00007f0a800dd5fb: nop    DWORD PTR [rax+0x0]
+  0.21%  │ │  0x00007f0a800dd5ff: call   0x00007f0a800480a0  ; OopMap{[16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=196}
+         │ │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@22 (line 195)
+         │ │                                                ;   {optimized virtual_call}
+  0.65%  │ │  0x00007f0a800dd604: nop
+  1.37%  │ │  0x00007f0a800dd605: mov    rsi,QWORD PTR [rsp+0x30]
+  0.63%  │ │  0x00007f0a800dd60a: movsx  r10d,BYTE PTR [rsi+0x94]  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@32 (line 197)
+  0.34%  │ │  0x00007f0a800dd612: mov    r11,QWORD PTR [rsp+0x8]
+  1.16%  │ │  0x00007f0a800dd617: inc    r11                ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@28 (line 196)
+  0.40%  │ │  0x00007f0a800dd61a: test   r10b,r10b          ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@35 (line 197)
+         │╭│  0x00007f0a800dd61d: jne    0x00007f0a800dd65d  ; OopMap{rsi=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=227}
+         │││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@35 (line 197)
+  0.27%  │││  0x00007f0a800dd623: test   DWORD PTR [rip+0xc7df9dd],eax        # 0x00007f0a8c8bd006
+         │││                                                ;   {poll}
+  0.28%  │││  0x00007f0a800dd629: mov    QWORD PTR [rsp+0x8],r11
+  1.08%  │││  0x00007f0a800dd62e: movabs r10,0x772899ca0    ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+         │││                                                ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic3KtState&apos;)}
+  0.35%  ↘││  0x00007f0a800dd638: mov    r11,QWORD PTR [rsp+0x18]
+  0.17%   ││  0x00007f0a800dd63d: mov    rdi,QWORD PTR [rsp+0x20]
+  0.38%   ││  0x00007f0a800dd642: mov    r9d,DWORD PTR [r11+0xc]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  1.28%   ││  0x00007f0a800dd646: cmp    DWORD PTR [r9*8+0x8],0xf806622a
+          ││                                                ; implicit exception: deoptimizes
+          ││                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=262}
+          ││                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg1&apos;)}
+  1.14%   │╰  0x00007f0a800dd652: je     0x00007f0a800dd5b0
+          │   0x00007f0a800dd658: jmp    0x00007f0a800dd691  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+          │                                                 ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+          │                                                 ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+          │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+          ↘   0x00007f0a800dd65d: mov    QWORD PTR [rsp+0x18],r11
+              0x00007f0a800dd662: call   0x00007f0a8bd664b0  ;   {runtime_call}
+              0x00007f0a800dd667: nop
+....................................................................................................
+ 20.58%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+JVMCI, org.openjdk.jmh.infra.Blackhole::consume, version 2181 (66 bytes) 
+
+            # parm0:    rdx       = int
+            #           [sp+0x20]  (sp of caller)
+            0x00007f0a800f22e0: mov    r10d,DWORD PTR [rsi+0x8]
+            0x00007f0a800f22e4: shl    r10,0x3
+            0x00007f0a800f22e8: cmp    rax,r10
+            0x00007f0a800f22eb: jne    0x00007f0a80047e60  ;   {runtime_call}
+            0x00007f0a800f22f1: nop
+            0x00007f0a800f22f2: nop    DWORD PTR [rax+0x0]
+            0x00007f0a800f22f9: nop    DWORD PTR [rax+0x0]
+          [Verified Entry Point]
+  1.65%     0x00007f0a800f2300: mov    DWORD PTR [rsp-0x14000],eax
+  0.57%     0x00007f0a800f2307: sub    rsp,0x18
+  1.32%     0x00007f0a800f230b: mov    QWORD PTR [rsp+0x10],rbp
+  0.48%     0x00007f0a800f2310: mov    r10d,DWORD PTR [rsi+0xb0]
+                                                          ;*getfield i1 {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 378)
+  0.27%     0x00007f0a800f2317: mov    r11d,edx
+  0.26%     0x00007f0a800f231a: xor    r11d,r10d          ;*ixor {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 380)
+  1.41%     0x00007f0a800f231d: mov    r8d,edx
+  0.39%     0x00007f0a800f2320: xor    r8d,DWORD PTR [rsi+0xb8]  ;*ixor {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@15 (line 380)
+  0.29%     0x00007f0a800f2327: cmp    r8d,r11d
+         ╭  0x00007f0a800f232a: je     0x00007f0a800f2343
+  0.24%  │  0x00007f0a800f2330: mov    rbp,QWORD PTR [rsp+0x10]
+  1.22%  │  0x00007f0a800f2335: add    rsp,0x18
+  0.34%  │  0x00007f0a800f2339: test   DWORD PTR [rip+0xc7cacc7],eax        # 0x00007f0a8c8bd006
+         │                                                ;   {poll_return}
+  0.25%  │  0x00007f0a800f233f: vzeroupper 
+  2.33%  │  0x00007f0a800f2342: ret    
+         ↘  0x00007f0a800f2343: mov    DWORD PTR [r15+0x29c],0xffffffed
+                                                          ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@16 (line 380)
+            0x00007f0a800f234e: mov    QWORD PTR [r15+0x2a8],r12
+            0x00007f0a800f2355: call   0x00007f0a800495fe  ; OopMap{rsi=Oop off=122}
+                                                          ;*istore_2 {reexecute=1 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@4 (line 378)
+                                                          ;   {runtime_call}
+            0x00007f0a800f235a: nop
+          [Exception Handler]
+....................................................................................................
+ 11.02%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 20.58%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2213 (162 bytes) 
+ 11.02%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2181 (66 bytes) 
+  3.61%         interpreter  method entry point (kind = zerolocals)  (14 bytes) 
+  3.49%         interpreter  method entry point (kind = zerolocals)  (115 bytes) 
+  2.27%         interpreter  invokevirtual  182 invokevirtual  (77 bytes) 
+  2.18%         interpreter  fast_aaccess_0  222 fast_aaccess_0  (56 bytes) 
+  2.12%         interpreter  method entry point (kind = zerolocals)  (211 bytes) 
+  1.70%         interpreter  invokevirtual  182 invokevirtual  (121 bytes) 
+  1.21%         interpreter  ireturn  172 ireturn  (4 bytes) 
+  1.19%         interpreter  getstatic  178 getstatic  (94 bytes) 
+  1.14%         interpreter  invokespecial  183 invokespecial  (77 bytes) 
+  1.09%         interpreter  areturn  176 areturn  (8 bytes) 
+  0.95%         interpreter  invokevirtual  182 invokevirtual  (124 bytes) 
+  0.92%         interpreter  fast_aload_0  220 fast_aload_0  (35 bytes) 
+  0.89%         interpreter  invokeinterface  185 invokeinterface  (90 bytes) 
+  0.86%              kernel  [unknown] (6 bytes) 
+  0.84%         interpreter  method entry point (kind = accessor)  (115 bytes) 
+  0.82%         interpreter  ireturn  172 ireturn  (37 bytes) 
+  0.75%         interpreter  invoke return entry points  (101 bytes) 
+  0.74%         interpreter  method entry point (kind = accessor)  (14 bytes) 
+ 41.64%  <...other 803 warm regions...>
+....................................................................................................
+100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 20.58%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2213 
+ 11.02%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2181 
+  9.50%         interpreter  method entry point (kind = zerolocals)  
+  5.57%         interpreter  invokevirtual  182 invokevirtual  
+  3.11%         interpreter  invoke return entry points  
+  2.65%              kernel  [unknown] 
+  2.37%         interpreter  fast_aaccess_0  222 fast_aaccess_0  
+  2.25%         interpreter  ireturn  172 ireturn  
+  2.03%         interpreter  areturn  176 areturn  
+  2.02%         interpreter  method entry point (kind = accessor)  
+  1.93%         interpreter  invokeinterface  185 invokeinterface  
+  1.90%         interpreter  getstatic  178 getstatic  
+  1.77%         interpreter  invokespecial  183 invokespecial  
+  1.34%         interpreter  checkcast  192 checkcast  
+  1.14%         interpreter  fast_aload_0  220 fast_aload_0  
+  1.10%         interpreter  instanceof  193 instanceof  
+  1.02%         interpreter  aload_1  43 aload_1  
+  0.99%         interpreter  invokestatic  184 invokestatic  
+  0.91%         interpreter  _shouldnotreachhere  234 _shouldnotreachhere  
+  0.87%         interpreter  ifeq  153 ifeq  
+ 25.94%  <...other 343 warm methods...>
+....................................................................................................
+100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+ 56.43%         interpreter
+ 32.40%               JVMCI
+  7.33%           libjvm.so
+  2.65%              kernel
+  0.32%        libc-2.28.so
+  0.25%             Unknown
+  0.25%      perf-30515.map
+  0.22%  libpthread-2.28.so
+  0.12%      hsdis-amd64.so
+  0.03%        runtime stub
+  0.02%          libjava.so
+....................................................................................................
+100.00%  <totals>
+
+PrintAssembly processed: 90235 total address lines.
+Perf output processed (skipped 27.519 seconds):
+ Column 1: cycles (14928 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+JVMCI, org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2233 (162 bytes) 
+
+              0x00007fe5500e23cc: mov    rdx,QWORD PTR [rsp+0x28]
+              0x00007fe5500e23d1: mov    QWORD PTR [rdx+0x28],rax
+              0x00007fe5500e23d5: movabs r10,0x7729074d8    ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic3KtState&apos;)}
+              0x00007fe5500e23df: mov    QWORD PTR [rsp+0x8],0x0
+         ╭    0x00007fe5500e23e8: jmp    0x00007fe5500e2478  ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │                                                  ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+         │    0x00007fe5500e23ed: data16 xchg ax,ax         ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │                                                  ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+         │                                                  ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │                                                  ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.40%  │ ↗  0x00007fe5500e23f0: mov    r9d,DWORD PTR [r11+0x10]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  1.26%  │ │  0x00007fe5500e23f4: cmp    DWORD PTR [r9*8+0x8],0xf80661e9
+         │ │                                                ; implicit exception: deoptimizes
+         │ │                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=116}
+         │ │                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg2&apos;)}
+  0.82%  │ │  0x00007fe5500e2400: jne    0x00007fe5500e24d1  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@41 (line 163)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.32%  │ │  0x00007fe5500e2406: mov    r9d,DWORD PTR [r11+0x14]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  0.42%  │ │  0x00007fe5500e240a: cmp    DWORD PTR [r9*8+0x8],0xf8066228
+         │ │                                                ; implicit exception: deoptimizes
+         │ │                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=138}
+         │ │                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg3&apos;)}
+  0.60%  │ │  0x00007fe5500e2416: jne    0x00007fe5500e24d1  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@71 (line 164)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.29%  │ │  0x00007fe5500e241c: mov    r9d,DWORD PTR [r10+0x6c]  ;*getstatic param {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@9 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.39%  │ │  0x00007fe5500e2420: mov    ecx,r9d
+  0.31%  │ │  0x00007fe5500e2423: shl    ecx,0x4
+  0.21%  │ │  0x00007fe5500e2426: add    ecx,r9d            ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg1::compute@3 (line 120)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.44%  │ │  0x00007fe5500e2429: imul   ebx,r9d,0x13       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg2::compute@3 (line 126)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@41 (line 163)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.46%  │ │  0x00007fe5500e242d: add    ecx,ebx            ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@50 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.24%  │ │  0x00007fe5500e242f: imul   r9d,r9d,0x17       ;*imul {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$VirtualCallKtAlg3::compute@3 (line 132)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@71 (line 164)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  0.23%  │ │  0x00007fe5500e2433: add    ecx,r9d            ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@80 (line 87)
+         │ │                                                ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+  1.23%  │ │  0x00007fe5500e2436: mov    rsi,rdi            ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@22 (line 195)
+  0.44%  │ │  0x00007fe5500e2439: mov    edx,ecx
+  0.38%  │ │  0x00007fe5500e243b: nop    DWORD PTR [rax+0x0]
+  0.27%  │ │  0x00007fe5500e243f: call   0x00007fe5500480a0  ; OopMap{[16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=196}
+         │ │                                                ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@22 (line 195)
+         │ │                                                ;   {optimized virtual_call}
+  0.43%  │ │  0x00007fe5500e2444: nop
+  1.33%  │ │  0x00007fe5500e2445: mov    rsi,QWORD PTR [rsp+0x30]
+  0.66%  │ │  0x00007fe5500e244a: movsx  r10d,BYTE PTR [rsi+0x94]  ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@32 (line 197)
+  0.30%  │ │  0x00007fe5500e2452: mov    r11,QWORD PTR [rsp+0x8]
+  1.30%  │ │  0x00007fe5500e2457: inc    r11                ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@28 (line 196)
+  0.43%  │ │  0x00007fe5500e245a: test   r10b,r10b          ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+         │ │                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@35 (line 197)
+         │╭│  0x00007fe5500e245d: jne    0x00007fe5500e249d  ; OopMap{rsi=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=227}
+         │││                                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@35 (line 197)
+  0.25%  │││  0x00007fe5500e2463: test   DWORD PTR [rip+0xa7b1b9d],eax        # 0x00007fe55a894006
+         │││                                                ;   {poll}
+  0.25%  │││  0x00007fe5500e2469: mov    QWORD PTR [rsp+0x8],r11
+  1.41%  │││  0x00007fe5500e246e: movabs r10,0x7729074d8    ;*aload {reexecute=0 rethrow=0 return_oop=0}
+         │││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+         │││                                                ;   {oop(a &apos;java/lang/Class&apos; = &apos;org/ib/benchmark/MegamorphicCallKtBenchmark$Megamorphic3KtState&apos;)}
+  0.48%  ↘││  0x00007fe5500e2478: mov    r11,QWORD PTR [rsp+0x18]
+  0.26%   ││  0x00007fe5500e247d: mov    rdi,QWORD PTR [rsp+0x20]
+  0.25%   ││  0x00007fe5500e2482: mov    r9d,DWORD PTR [r11+0xc]  ;*aload {reexecute=1 rethrow=0 return_oop=0}
+          ││                                                ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@13 (line 195)
+  1.45%   ││  0x00007fe5500e2486: cmp    DWORD PTR [r9*8+0x8],0xf80661aa
+          ││                                                ; implicit exception: deoptimizes
+          ││                                                ; OopMap{rdi=Oop r10=Oop r11=Oop [16]=Oop [24]=Oop [32]=Oop [40]=Oop [48]=Oop off=262}
+          ││                                                ;   {metadata(&apos;org/ib/benchmark/MegamorphicCallKtBenchmark$VirtualCallKtAlg1&apos;)}
+  0.97%   │╰  0x00007fe5500e2492: je     0x00007fe5500e23f0
+          │   0x00007fe5500e2498: jmp    0x00007fe5500e24d1  ;*invokevirtual compute {reexecute=0 rethrow=0 return_oop=0}
+          │                                                 ; - org.ib.benchmark.MegamorphicCallKtBenchmark$Megamorphic3KtState::megamorphic3Call$kotlin_vs_java_benchmarks@18 (line 162)
+          │                                                 ; - org.ib.benchmark.MegamorphicCallKtBenchmark::megamorphic3Call@7 (line 39)
+          │                                                 ; - org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub@19 (line 195)
+          ↘   0x00007fe5500e249d: mov    QWORD PTR [rsp+0x18],r11
+              0x00007fe5500e24a2: call   0x00007fe559d3d4b0  ;   {runtime_call}
+              0x00007fe5500e24a7: nop
+....................................................................................................
+ 21.49%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+JVMCI, org.openjdk.jmh.infra.Blackhole::consume, version 2202 (66 bytes) 
+
+            # parm0:    rdx       = int
+            #           [sp+0x20]  (sp of caller)
+            0x00007fe5500f7ee0: mov    r10d,DWORD PTR [rsi+0x8]
+            0x00007fe5500f7ee4: shl    r10,0x3
+            0x00007fe5500f7ee8: cmp    rax,r10
+            0x00007fe5500f7eeb: jne    0x00007fe550047e60  ;   {runtime_call}
+            0x00007fe5500f7ef1: nop
+            0x00007fe5500f7ef2: nop    DWORD PTR [rax+0x0]
+            0x00007fe5500f7ef9: nop    DWORD PTR [rax+0x0]
+          [Verified Entry Point]
+  1.84%     0x00007fe5500f7f00: mov    DWORD PTR [rsp-0x14000],eax
+  0.46%     0x00007fe5500f7f07: sub    rsp,0x18
+  1.29%     0x00007fe5500f7f0b: mov    QWORD PTR [rsp+0x10],rbp
+  0.51%     0x00007fe5500f7f10: mov    r10d,DWORD PTR [rsi+0xb0]
+                                                          ;*getfield i1 {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@1 (line 378)
+  0.33%     0x00007fe5500f7f17: mov    r11d,edx
+  0.25%     0x00007fe5500f7f1a: xor    r11d,r10d          ;*ixor {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@12 (line 380)
+  1.32%     0x00007fe5500f7f1d: mov    r8d,edx
+  0.51%     0x00007fe5500f7f20: xor    r8d,DWORD PTR [rsi+0xb8]  ;*ixor {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@15 (line 380)
+  0.27%     0x00007fe5500f7f27: cmp    r8d,r11d
+         ╭  0x00007fe5500f7f2a: je     0x00007fe5500f7f43
+  0.23%  │  0x00007fe5500f7f30: mov    rbp,QWORD PTR [rsp+0x10]
+  1.33%  │  0x00007fe5500f7f35: add    rsp,0x18
+  0.38%  │  0x00007fe5500f7f39: test   DWORD PTR [rip+0xa79c0c7],eax        # 0x00007fe55a894006
+         │                                                ;   {poll_return}
+  0.32%  │  0x00007fe5500f7f3f: vzeroupper 
+  2.45%  │  0x00007fe5500f7f42: ret    
+         ↘  0x00007fe5500f7f43: mov    DWORD PTR [r15+0x29c],0xffffffed
+                                                          ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@16 (line 380)
+            0x00007fe5500f7f4e: mov    QWORD PTR [r15+0x2a8],r12
+            0x00007fe5500f7f55: call   0x00007fe5500495fe  ; OopMap{rsi=Oop off=122}
+                                                          ;*istore_2 {reexecute=1 rethrow=0 return_oop=0}
+                                                          ; - org.openjdk.jmh.infra.Blackhole::consume@4 (line 378)
+                                                          ;   {runtime_call}
+            0x00007fe5500f7f5a: nop
+          [Exception Handler]
+....................................................................................................
+ 11.50%  <total for region 2>
+
+....[Hottest Regions]...............................................................................
+ 21.49%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2233 (162 bytes) 
+ 11.50%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2202 (66 bytes) 
+  3.60%         interpreter  method entry point (kind = zerolocals)  (14 bytes) 
+  3.44%         interpreter  method entry point (kind = zerolocals)  (165 bytes) 
+  2.09%         interpreter  fast_aaccess_0  222 fast_aaccess_0  (56 bytes) 
+  1.71%         interpreter  method entry point (kind = zerolocals)  (211 bytes) 
+  1.53%         interpreter  invokevirtual  182 invokevirtual  (121 bytes) 
+  1.30%         interpreter  getstatic  178 getstatic  (76 bytes) 
+  1.27%         interpreter  ireturn  172 ireturn  (4 bytes) 
+  1.22%         interpreter  invokevirtual  182 invokevirtual  (43 bytes) 
+  1.17%         interpreter  areturn  176 areturn  (4 bytes) 
+  1.13%         interpreter  invokevirtual  182 invokevirtual  (1 bytes) 
+  1.07%         interpreter  aload_1  43 aload_1  (70 bytes) 
+  0.88%         interpreter  aload  25 aload  (79 bytes) 
+  0.82%              kernel  [unknown] (0 bytes) 
+  0.80%         interpreter  invokeinterface  185 invokeinterface  (159 bytes) 
+  0.79%         interpreter  ireturn  172 ireturn  (37 bytes) 
+  0.79%         interpreter  fast_aload_0  220 fast_aload_0  (35 bytes) 
+  0.75%         interpreter  invoke return entry points  (115 bytes) 
+  0.74%         interpreter  invokevirtual  182 invokevirtual  (105 bytes) 
+ 41.91%  <...other 809 warm regions...>
+....................................................................................................
+100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 21.49%               JVMCI  org.ib.benchmark.generated.MegamorphicCallKtBenchmark_Megamorphic3Kt_jmhTest::megamorphic3Call_avgt_jmhStub, version 2233 
+ 11.50%               JVMCI  org.openjdk.jmh.infra.Blackhole::consume, version 2202 
+  9.04%         interpreter  method entry point (kind = zerolocals)  
+  5.33%         interpreter  invokevirtual  182 invokevirtual  
+  3.03%         interpreter  invoke return entry points  
+  2.84%              kernel  [unknown] 
+  2.26%         interpreter  ireturn  172 ireturn  
+  2.24%         interpreter  fast_aaccess_0  222 fast_aaccess_0  
+  2.13%         interpreter  getstatic  178 getstatic  
+  2.04%         interpreter  areturn  176 areturn  
+  1.87%         interpreter  invokeinterface  185 invokeinterface  
+  1.80%         interpreter  method entry point (kind = accessor)  
+  1.77%         interpreter  invokespecial  183 invokespecial  
+  1.31%         interpreter  checkcast  192 checkcast  
+  1.07%         interpreter  aload_1  43 aload_1  
+  1.05%         interpreter  instanceof  193 instanceof  
+  0.98%         interpreter  fast_aload_0  220 fast_aload_0  
+  0.92%         interpreter  invokestatic  184 invokestatic  
+  0.88%         interpreter  aload  25 aload  
+  0.80%         interpreter  goto  167 goto  
+ 25.63%  <...other 350 warm methods...>
+....................................................................................................
+100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+ 55.13%         interpreter
+ 33.95%               JVMCI
+  6.80%           libjvm.so
+  2.84%              kernel
+  0.42%        libc-2.28.so
+  0.27%             Unknown
+  0.23%      perf-30564.map
+  0.21%  libpthread-2.28.so
+  0.09%      hsdis-amd64.so
+  0.03%          libjava.so
+  0.03%           libzip.so
+  0.01%        runtime stub
+....................................................................................................
+100.00%  <totals>
+
+
+
+# Run complete. Total time: 00:01:41
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                       (param)  Mode  Cnt  Score   Error  Units
+MegamorphicCallKtBenchmark.Megamorphic3Kt             3  avgt   15  5.064 ± 0.262  ns/op
+MegamorphicCallKtBenchmark.Megamorphic3Kt:·asm        3  avgt         NaN            ---
