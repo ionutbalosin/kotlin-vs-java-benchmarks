@@ -24,6 +24,15 @@ open class HighOrderFunctionKtBenchmark {
     @Param("1000000")
     private var param: Int = 0
 
+    @Param("1")
+    private var factor: Int = 1
+
+    private val sumOfSquares_anonymousFunction = fun(x : Int) : Int = x * x
+    //private val sumOfSquares_anonymousFunction_capturing = fun(x : Int) : Int = x * x * factor
+
+    private val sumOfSquares_methodRef = this::sumOfSquares
+    private val sumOfSquares_methodRef_inline = this::sumOfSquares_inline
+
     companion object {
 
         @Throws(RunnerException::class)
@@ -39,18 +48,66 @@ open class HighOrderFunctionKtBenchmark {
     }
 
     @Benchmark
-    fun sumOfSquares(): Long {
+    fun sumOfSquares_lambda(): Long {
         return sumOfSquares(param) {
             it * it;
         }
     }
 
     @Benchmark
-    fun sumOfSquaresInline(): Long {
-        return sumOfSquaresInline(param) {
+    fun sumOfSquares_lambda_inline(): Long {
+        return sumOfSquares_inline(param) {
             it * it;
         }
     }
+
+    @Benchmark
+    fun sumOfSquares_methodRef(): Long {
+        return sumOfSquares_methodRef(param) {
+            it * it;
+        }
+    }
+
+    @Benchmark
+    fun sumOfSquares_methodRef_inline(): Long {
+        return sumOfSquares_methodRef_inline(param) {
+            it * it;
+        }
+    }
+
+    @Benchmark
+    fun sumOfSquares_capturingLambda(): Long {
+        return sumOfSquares(param) {
+            it * it * factor;
+        }
+    }
+
+    @Benchmark
+    fun sumOfSquares_capturingLambda_inline(): Long {
+        return sumOfSquares_inline(param) {
+            it * it * factor;
+        }
+    }
+
+    @Benchmark
+    fun sumOfSquares_anonymousFunction(): Long {
+        return sumOfSquares(param, sumOfSquares_anonymousFunction)
+    }
+
+    @Benchmark
+    fun sumOfSquares_anonymousFunction_inline(): Long {
+        return sumOfSquares_inline(param, sumOfSquares_anonymousFunction)
+    }
+
+    //@Benchmark
+    //fun sumOfSquares_anonymousFunction_capturing(): Long {
+    //    return sumOfSquares(param, sumOfSquares_anonymousFunction_capturing)
+    //}
+
+    //@Benchmark
+    //fun sumOfSquares_anonymousFunction_capturing_inline(): Long {
+    //    return sumOfSquares_inline(param, sumOfSquares_anonymousFunction_capturing)
+    //}
 
     private fun sumOfSquares(max: Int, square: (Int) -> Int): Long {
         var sum = 0L
@@ -60,7 +117,7 @@ open class HighOrderFunctionKtBenchmark {
         return sum
     }
 
-    private inline fun sumOfSquaresInline(max: Int, square: (Int) -> Int): Long {
+    private inline fun sumOfSquares_inline(max: Int, square: (Int) -> Int): Long {
         var sum = 0L
         for (i in 1..max) {
             sum += square(i)
