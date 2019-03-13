@@ -152,8 +152,8 @@ open class MegamorphicCallKtBenchmark {
             Runner(opt).run()
         }
 
-        @CompilerControl(CompilerControl.Mode.DONT_INLINE)
-        internal fun execute(cmath: VirtualCallKtCMath, i: Int): Int {
+        //internal inline fun execute(cmath: VirtualCallKtCMath, i: Int): Int {
+        internal inline fun execute(cmath: VirtualCallKtCMath, i: Int): Int {
             return cmath.compute(i)
         }
     }
