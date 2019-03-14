@@ -12,220 +12,220 @@
 
 # Run progress: 0.00% complete, ETA 00:04:00
 # Fork: 1 of 3
-# Warmup Iteration   1: 5.757 ms/op
-# Warmup Iteration   2: 4.592 ms/op
-# Warmup Iteration   3: 4.606 ms/op
-# Warmup Iteration   4: 4.627 ms/op
-# Warmup Iteration   5: 4.577 ms/op
-Iteration   1: 4.611 ms/op
-                 ·gc.alloc.rate:               4407.296 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.880 B/op
-                 ·gc.churn.G1_Eden_Space:      4302.263 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31235001.217 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.535 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     11.000 ms
+# Warmup Iteration   1: 5.531 ms/op
+# Warmup Iteration   2: 4.531 ms/op
+# Warmup Iteration   3: 4.614 ms/op
+# Warmup Iteration   4: 4.515 ms/op
+# Warmup Iteration   5: 4.552 ms/op
+Iteration   1: 4.512 ms/op
+                 ·gc.alloc.rate:               4506.955 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4457.468 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31646212.613 B/op
+                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    55.784 B/op
+                 ·gc.count:                    20.000 counts
+                 ·gc.time:                     10.000 ms
 
-Iteration   2: 4.676 ms/op
-                 ·gc.alloc.rate:               4346.706 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.907 B/op
-                 ·gc.churn.G1_Eden_Space:      4302.600 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31672875.065 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    48.224 B/op
+Iteration   2: 4.497 ms/op
+                 ·gc.alloc.rate:               4525.330 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.830 B/op
+                 ·gc.churn.G1_Eden_Space:      4455.570 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31504301.345 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
+                 ·gc.count:                    20.000 counts
+                 ·gc.time:                     12.000 ms
+
+Iteration   3: 4.664 ms/op
+                 ·gc.alloc.rate:               4362.267 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.898 B/op
+                 ·gc.churn.G1_Eden_Space:      4454.836 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32676554.419 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    19.200 B/op
+                 ·gc.count:                    20.000 counts
+                 ·gc.time:                     21.000 ms
+
+Iteration   4: 4.572 ms/op
+                 ·gc.alloc.rate:               4446.721 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.863 B/op
+                 ·gc.churn.G1_Eden_Space:      4458.140 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32079722.374 B/op
+                 ·gc.churn.G1_Old_Gen:         0.010 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    75.397 B/op
+                 ·gc.count:                    20.000 counts
+                 ·gc.time:                     17.000 ms
+
+Iteration   5: 4.548 ms/op
+                 ·gc.alloc.rate:               4470.525 MB/sec
+                 ·gc.alloc.rate.norm:          31997554.000 B/op
+                 ·gc.churn.G1_Eden_Space:      4461.632 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31933905.455 B/op
+                 ·gc.churn.G1_Old_Gen:         0.013 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    93.818 B/op
+                 ·gc.count:                    20.000 counts
+                 ·gc.time:                     18.000 ms
+
+
+# Run progress: 4.17% complete, ETA 00:06:02
+# Fork: 2 of 3
+# Warmup Iteration   1: 5.658 ms/op
+# Warmup Iteration   2: 4.527 ms/op
+# Warmup Iteration   3: 4.516 ms/op
+# Warmup Iteration   4: 4.508 ms/op
+# Warmup Iteration   5: 4.542 ms/op
+Iteration   1: 4.434 ms/op
+                 ·gc.alloc.rate:               4585.598 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.805 B/op
+                 ·gc.churn.G1_Eden_Space:      4623.202 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32259951.009 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     14.000 ms
+
+Iteration   2: 4.486 ms/op
+                 ·gc.alloc.rate:               4538.789 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4616.867 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32547986.286 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.429 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     17.000 ms
+
+Iteration   3: 4.478 ms/op
+                 ·gc.alloc.rate:               4543.271 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4349.577 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30633398.857 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    36.857 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     9.000 ms
+
+Iteration   4: 4.531 ms/op
+                 ·gc.alloc.rate:               4488.039 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4627.216 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32989814.154 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.339 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     10.000 ms
+
+Iteration   5: 4.465 ms/op
+                 ·gc.alloc.rate:               4557.845 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4615.645 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32403328.569 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    36.693 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     9.000 ms
+
+
+# Run progress: 8.33% complete, ETA 00:05:42
+# Fork: 3 of 3
+# Warmup Iteration   1: 5.668 ms/op
+# Warmup Iteration   2: 4.543 ms/op
+# Warmup Iteration   3: 4.497 ms/op
+# Warmup Iteration   4: 4.630 ms/op
+# Warmup Iteration   5: 4.491 ms/op
+Iteration   1: 4.416 ms/op
+                 ·gc.alloc.rate:               4604.940 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.797 B/op
+                 ·gc.churn.G1_Eden_Space:      4552.448 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31632812.546 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.278 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     10.000 ms
+
+Iteration   2: 4.507 ms/op
+                 ·gc.alloc.rate:               4509.291 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4558.293 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32345263.279 B/op
+                 ·gc.churn.G1_Old_Gen:         0.009 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    65.081 B/op
                  ·gc.count:                    16.000 counts
                  ·gc.time:                     17.000 ms
 
-Iteration   3: 4.540 ms/op
-                 ·gc.alloc.rate:               4482.371 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.991 B/op
-                 ·gc.churn.G1_Eden_Space:      4564.876 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32586515.692 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.679 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     12.000 ms
-
-Iteration   4: 4.550 ms/op
-                 ·gc.alloc.rate:               4468.881 MB/sec
+Iteration   3: 4.548 ms/op
+                 ·gc.alloc.rate:               4470.530 MB/sec
                  ·gc.alloc.rate.norm:          31997553.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4571.825 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32734636.218 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    37.527 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     14.000 ms
-
-Iteration   5: 4.545 ms/op
-                 ·gc.alloc.rate:               4479.027 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4293.148 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30669661.828 B/op
+                 ·gc.churn.G1_Eden_Space:      4275.181 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30599354.182 B/op
                  ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.018 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     13.000 ms
+                 ·gc.churn.G1_Old_Gen.norm:    28.145 B/op
+                 ·gc.count:                    15.000 counts
+                 ·gc.time:                     17.000 ms
 
-
-# Run progress: 4.17% complete, ETA 00:05:54
-# Fork: 2 of 3
-# Warmup Iteration   1: 5.937 ms/op
-# Warmup Iteration   2: 4.697 ms/op
-# Warmup Iteration   3: 4.569 ms/op
-# Warmup Iteration   4: 4.559 ms/op
-# Warmup Iteration   5: 4.584 ms/op
-Iteration   1: 4.541 ms/op
-                 ·gc.alloc.rate:               4479.758 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4505.751 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32183217.231 B/op
-                 ·gc.churn.G1_Old_Gen:         0.011 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    79.638 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     16.000 ms
-
-Iteration   2: 4.547 ms/op
-                 ·gc.alloc.rate:               4470.385 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4516.762 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32329504.582 B/op
-                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    56.291 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     12.000 ms
-
-Iteration   3: 4.506 ms/op
-                 ·gc.alloc.rate:               4511.815 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4517.553 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32038247.784 B/op
+Iteration   4: 4.677 ms/op
+                 ·gc.alloc.rate:               4348.252 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.907 B/op
+                 ·gc.churn.G1_Eden_Space:      4559.821 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33554432.000 B/op
                  ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.595 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     10.000 ms
-
-Iteration   4: 4.657 ms/op
-                 ·gc.alloc.rate:               4366.221 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.898 B/op
-                 ·gc.churn.G1_Eden_Space:      4248.575 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31135391.553 B/op
-                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    57.600 B/op
+                 ·gc.churn.G1_Old_Gen.norm:    19.290 B/op
                  ·gc.count:                    16.000 counts
-                 ·gc.time:                     26.000 ms
-
-Iteration   5: 4.571 ms/op
-                 ·gc.alloc.rate:               4447.720 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4514.382 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32477127.890 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.849 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     16.000 ms
-
-
-# Run progress: 8.33% complete, ETA 00:05:38
-# Fork: 3 of 3
-# Warmup Iteration   1: 6.304 ms/op
-# Warmup Iteration   2: 4.609 ms/op
-# Warmup Iteration   3: 4.532 ms/op
-# Warmup Iteration   4: 4.616 ms/op
-# Warmup Iteration   5: 4.492 ms/op
-Iteration   1: 4.511 ms/op
-                 ·gc.alloc.rate:               4507.518 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4584.445 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32543642.523 B/op
-                 ·gc.churn.G1_Old_Gen:         0.002 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    12.541 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     10.000 ms
-
-Iteration   2: 4.453 ms/op
-                 ·gc.alloc.rate:               4567.457 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.813 B/op
-                 ·gc.churn.G1_Eden_Space:      4583.469 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32109727.289 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    27.520 B/op
-                 ·gc.count:                    13.000 counts
                  ·gc.time:                     11.000 ms
 
-Iteration   3: 4.524 ms/op
-                 ·gc.alloc.rate:               4498.741 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4575.519 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32543642.523 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.595 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     15.000 ms
-
-Iteration   4: 4.496 ms/op
-                 ·gc.alloc.rate:               4524.302 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4580.881 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32397706.906 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     14.000 ms
-
-Iteration   5: 4.527 ms/op
-                 ·gc.alloc.rate:               4489.379 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4586.657 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32690898.824 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     11.000 ms
+Iteration   5: 4.604 ms/op
+                 ·gc.alloc.rate:               4419.518 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.872 B/op
+                 ·gc.churn.G1_Eden_Space:      4265.172 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30880082.202 B/op
+                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    47.339 B/op
+                 ·gc.count:                    15.000 counts
+                 ·gc.time:                     16.000 ms
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction":
-  4.550 ±(99.9%) 0.063 ms/op [Average]
-  (min, avg, max) = (4.453, 4.550, 4.676), stdev = 0.059
-  CI (99.9%): [4.487, 4.614] (assumes normal distribution)
+  4.529 ±(99.9%) 0.081 ms/op [Average]
+  (min, avg, max) = (4.416, 4.529, 4.677), stdev = 0.076
+  CI (99.9%): [4.448, 4.610] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate":
-  4469.838 ±(99.9%) 62.294 MB/sec [Average]
-  (min, avg, max) = (4346.706, 4469.838, 4567.457), stdev = 58.269
-  CI (99.9%): [4407.545, 4532.132] (assumes normal distribution)
+  4491.858 ±(99.9%) 79.817 MB/sec [Average]
+  (min, avg, max) = (4348.252, 4491.858, 4604.940), stdev = 74.661
+  CI (99.9%): [4412.042, 4571.675] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate.norm":
-  31997553.863 ±(99.9%) 0.046 B/op [Average]
-  (min, avg, max) = (31997553.813, 31997553.863, 31997553.991), stdev = 0.043
-  CI (99.9%): [31997553.817, 31997553.909] (assumes normal distribution)
+  31997553.854 ±(99.9%) 0.055 B/op [Average]
+  (min, avg, max) = (31997553.797, 31997553.854, 31997554.000), stdev = 0.051
+  CI (99.9%): [31997553.799, 31997553.908] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Eden_Space":
-  4483.247 ±(99.9%) 135.199 MB/sec [Average]
-  (min, avg, max) = (4248.575, 4483.247, 4586.657), stdev = 126.465
-  CI (99.9%): [4348.048, 4618.446] (assumes normal distribution)
+  4488.738 ±(99.9%) 128.916 MB/sec [Average]
+  (min, avg, max) = (4265.172, 4488.738, 4627.216), stdev = 120.588
+  CI (99.9%): [4359.822, 4617.654] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Eden_Space.norm":
-  32089853.142 ±(99.9%) 675050.081 B/op [Average]
-  (min, avg, max) = (30669661.828, 32089853.142, 32734636.218), stdev = 631442.265
-  CI (99.9%): [31414803.060, 32764903.223] (assumes normal distribution)
+  31979141.286 ±(99.9%) 907892.275 B/op [Average]
+  (min, avg, max) = (30599354.182, 31979141.286, 33554432.000), stdev = 849242.998
+  CI (99.9%): [31071249.011, 32887033.561] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Old_Gen":
-  0.004 ±(99.9%) 0.003 MB/sec [Average]
-  (min, avg, max) = (≈ 0, 0.004, 0.011), stdev = 0.003
-  CI (99.9%): [0.001, 0.007] (assumes normal distribution)
+  0.005 ±(99.9%) 0.004 MB/sec [Average]
+  (min, avg, max) = (≈ 0, 0.005, 0.013), stdev = 0.004
+  CI (99.9%): [0.001, 0.009] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Old_Gen.norm":
-  31.275 ±(99.9%) 22.394 B/op [Average]
-  (min, avg, max) = (≈ 0, 31.275, 79.638), stdev = 20.947
-  CI (99.9%): [8.881, 53.669] (assumes normal distribution)
+  36.744 ±(99.9%) 27.957 B/op [Average]
+  (min, avg, max) = (≈ 0, 36.744, 93.818), stdev = 26.151
+  CI (99.9%): [8.787, 64.701] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.count":
-  231.000 ±(99.9%) 0.001 counts [Sum]
-  (min, avg, max) = (13.000, 15.400, 17.000), stdev = 1.805
-  CI (99.9%): [231.000, 231.000] (assumes normal distribution)
+  262.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (15.000, 17.467, 20.000), stdev = 1.959
+  CI (99.9%): [262.000, 262.000] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.time":
   208.000 ±(99.9%) 0.001 ms [Sum]
-  (min, avg, max) = (10.000, 13.867, 26.000), stdev = 4.051
+  (min, avg, max) = (9.000, 13.867, 21.000), stdev = 3.925
   CI (99.9%): [208.000, 208.000] (assumes normal distribution)
 
 
@@ -241,225 +241,221 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_ano
 # Benchmark: org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline
 # Parameters: (factor = 1, param = 1000000)
 
-# Run progress: 12.50% complete, ETA 00:05:23
+# Run progress: 12.50% complete, ETA 00:05:25
 # Fork: 1 of 3
-# Warmup Iteration   1: 5.859 ms/op
-# Warmup Iteration   2: 4.556 ms/op
-# Warmup Iteration   3: 4.656 ms/op
-# Warmup Iteration   4: 4.516 ms/op
-# Warmup Iteration   5: 4.498 ms/op
-Iteration   1: 4.637 ms/op
-                 ·gc.alloc.rate:               4384.178 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.889 B/op
-                 ·gc.churn.G1_Eden_Space:      4395.290 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32078658.370 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    47.778 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     13.000 ms
-
-Iteration   2: 4.639 ms/op
-                 ·gc.alloc.rate:               4384.249 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.889 B/op
-                 ·gc.churn.G1_Eden_Space:      4395.362 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32078658.370 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    47.778 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     12.000 ms
-
-Iteration   3: 4.588 ms/op
-                 ·gc.alloc.rate:               4436.800 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4661.308 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33616676.237 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.849 B/op
+# Warmup Iteration   1: 5.666 ms/op
+# Warmup Iteration   2: 4.558 ms/op
+# Warmup Iteration   3: 4.441 ms/op
+# Warmup Iteration   4: 4.460 ms/op
+# Warmup Iteration   5: 4.439 ms/op
+Iteration   1: 4.467 ms/op
+                 ·gc.alloc.rate:               4550.719 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4730.863 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33264201.143 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.214 B/op
                  ·gc.count:                    17.000 counts
-                 ·gc.time:                     9.000 ms
+                 ·gc.time:                     17.000 ms
 
-Iteration   4: 4.788 ms/op
-                 ·gc.alloc.rate:               4246.711 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.952 B/op
-                 ·gc.churn.G1_Eden_Space:      4125.066 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31080996.746 B/op
-                 ·gc.churn.G1_Old_Gen:         0.013 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    98.756 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     11.000 ms
-
-Iteration   5: 4.579 ms/op
-                 ·gc.alloc.rate:               4443.613 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4393.851 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31639224.694 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.425 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     9.000 ms
-
-
-# Run progress: 16.67% complete, ETA 00:05:07
-# Fork: 2 of 3
-# Warmup Iteration   1: 6.176 ms/op
-# Warmup Iteration   2: 4.601 ms/op
-# Warmup Iteration   3: 4.688 ms/op
-# Warmup Iteration   4: 4.562 ms/op
-# Warmup Iteration   5: 4.781 ms/op
-Iteration   1: 4.696 ms/op
-                 ·gc.alloc.rate:               4334.102 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.907 B/op
-                 ·gc.churn.G1_Eden_Space:      4374.413 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32295160.822 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.290 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     19.000 ms
-
-Iteration   2: 4.757 ms/op
-                 ·gc.alloc.rate:               4276.393 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.934 B/op
-                 ·gc.churn.G1_Eden_Space:      4377.534 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32754333.725 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.564 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     11.000 ms
-
-Iteration   3: 4.443 ms/op
-                 ·gc.alloc.rate:               4580.950 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.805 B/op
-                 ·gc.churn.G1_Eden_Space:      4378.058 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30580373.522 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.133 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     9.000 ms
-
-Iteration   4: 4.489 ms/op
-                 ·gc.alloc.rate:               4529.934 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4725.047 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33375750.888 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.256 B/op
-                 ·gc.count:                    14.000 counts
-                 ·gc.time:                     12.000 ms
-
-Iteration   5: 4.657 ms/op
-                 ·gc.alloc.rate:               4365.250 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.898 B/op
-                 ·gc.churn.G1_Eden_Space:      4385.358 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32144950.772 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.200 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     9.000 ms
-
-
-# Run progress: 20.83% complete, ETA 00:04:52
-# Fork: 3 of 3
-# Warmup Iteration   1: 5.723 ms/op
-# Warmup Iteration   2: 4.585 ms/op
-# Warmup Iteration   3: 4.594 ms/op
-# Warmup Iteration   4: 4.720 ms/op
-# Warmup Iteration   5: 4.662 ms/op
-Iteration   1: 4.547 ms/op
-                 ·gc.alloc.rate:               4469.690 MB/sec
+Iteration   2: 4.566 ms/op
+                 ·gc.alloc.rate:               4457.622 MB/sec
                  ·gc.alloc.rate.norm:          31997553.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4442.157 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31800450.327 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.145 B/op
+                 ·gc.churn.G1_Eden_Space:      4440.788 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31876710.400 B/op
+                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    46.909 B/op
                  ·gc.count:                    16.000 counts
-                 ·gc.time:                     10.000 ms
+                 ·gc.time:                     16.000 ms
 
-Iteration   2: 4.639 ms/op
-                 ·gc.alloc.rate:               4384.384 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.889 B/op
-                 ·gc.churn.G1_Eden_Space:      4438.069 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32389347.556 B/op
-                 ·gc.churn.G1_Old_Gen:         0.010 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    76.444 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     23.000 ms
-
-Iteration   3: 4.528 ms/op
-                 ·gc.alloc.rate:               4489.020 MB/sec
+Iteration   3: 4.526 ms/op
+                 ·gc.alloc.rate:               4491.418 MB/sec
                  ·gc.alloc.rate.norm:          31997553.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4441.180 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31656556.887 B/op
+                 ·gc.churn.G1_Eden_Space:      4454.209 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31732471.891 B/op
                  ·gc.churn.G1_Old_Gen:         0.003 MB/sec
                  ·gc.churn.G1_Old_Gen.norm:    18.679 B/op
                  ·gc.count:                    16.000 counts
-                 ·gc.time:                     11.000 ms
+                 ·gc.time:                     10.000 ms
 
-Iteration   4: 4.571 ms/op
-                 ·gc.alloc.rate:               4448.881 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4441.665 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31945657.863 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    37.699 B/op
+Iteration   4: 4.431 ms/op
+                 ·gc.alloc.rate:               4589.357 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.805 B/op
+                 ·gc.churn.G1_Eden_Space:      4450.643 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31030426.053 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.133 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     10.000 ms
+
+Iteration   5: 4.451 ms/op
+                 ·gc.alloc.rate:               4568.585 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4728.327 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33116360.249 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.347 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     13.000 ms
+
+
+# Run progress: 16.67% complete, ETA 00:05:09
+# Fork: 2 of 3
+# Warmup Iteration   1: 5.644 ms/op
+# Warmup Iteration   2: 4.506 ms/op
+# Warmup Iteration   3: 4.497 ms/op
+# Warmup Iteration   4: 4.564 ms/op
+# Warmup Iteration   5: 4.454 ms/op
+Iteration   1: 4.457 ms/op
+                 ·gc.alloc.rate:               4564.978 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4340.297 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30422685.013 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.520 B/op
                  ·gc.count:                    16.000 counts
                  ·gc.time:                     8.000 ms
 
-Iteration   5: 4.471 ms/op
-                 ·gc.alloc.rate:               4547.833 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.964 B/op
-                 ·gc.churn.G1_Eden_Space:      4716.552 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33184621.714 B/op
+Iteration   2: 4.570 ms/op
+                 ·gc.alloc.rate:               4447.782 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.863 B/op
+                 ·gc.churn.G1_Eden_Space:      4616.274 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33209694.685 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    37.699 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     21.000 ms
+
+Iteration   3: 4.552 ms/op
+                 ·gc.alloc.rate:               4466.698 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.855 B/op
+                 ·gc.churn.G1_Eden_Space:      4343.373 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31114109.673 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.764 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     12.000 ms
+
+Iteration   4: 4.470 ms/op
+                 ·gc.alloc.rate:               4548.934 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4615.873 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32468406.857 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.643 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     13.000 ms
+
+Iteration   5: 4.537 ms/op
+                 ·gc.alloc.rate:               4482.263 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4609.962 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32909154.462 B/op
+                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    46.697 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     14.000 ms
+
+
+# Run progress: 20.83% complete, ETA 00:04:53
+# Fork: 3 of 3
+# Warmup Iteration   1: 5.662 ms/op
+# Warmup Iteration   2: 4.462 ms/op
+# Warmup Iteration   3: 4.536 ms/op
+# Warmup Iteration   4: 4.533 ms/op
+# Warmup Iteration   5: 4.483 ms/op
+Iteration   1: 4.472 ms/op
+                 ·gc.alloc.rate:               4546.667 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4704.035 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33105042.286 B/op
                  ·gc.churn.G1_Old_Gen:         0.003 MB/sec
                  ·gc.churn.G1_Old_Gen.norm:    18.429 B/op
                  ·gc.count:                    17.000 counts
-                 ·gc.time:                     12.000 ms
+                 ·gc.time:                     10.000 ms
+
+Iteration   2: 4.558 ms/op
+                 ·gc.alloc.rate:               4463.901 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.855 B/op
+                 ·gc.churn.G1_Eden_Space:      4425.765 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31724190.255 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    25.891 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     17.000 ms
+
+Iteration   3: 4.400 ms/op
+                 ·gc.alloc.rate:               4624.267 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.789 B/op
+                 ·gc.churn.G1_Eden_Space:      4423.892 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30611060.772 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.105 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     11.000 ms
+
+Iteration   4: 4.517 ms/op
+                 ·gc.alloc.rate:               4503.551 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4701.403 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33403285.910 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     14.000 ms
+
+Iteration   5: 4.464 ms/op
+                 ·gc.alloc.rate:               4558.949 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4419.556 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31019208.249 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     14.000 ms
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline":
-  4.602 ±(99.9%) 0.107 ms/op [Average]
-  (min, avg, max) = (4.443, 4.602, 4.788), stdev = 0.100
-  CI (99.9%): [4.495, 4.708] (assumes normal distribution)
+  4.496 ±(99.9%) 0.057 ms/op [Average]
+  (min, avg, max) = (4.400, 4.496, 4.570), stdev = 0.054
+  CI (99.9%): [4.438, 4.553] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.alloc.rate":
-  4421.466 ±(99.9%) 102.247 MB/sec [Average]
-  (min, avg, max) = (4246.711, 4421.466, 4580.950), stdev = 95.642
-  CI (99.9%): [4319.218, 4523.713] (assumes normal distribution)
+  4524.379 ±(99.9%) 58.130 MB/sec [Average]
+  (min, avg, max) = (4447.782, 4524.379, 4624.267), stdev = 54.375
+  CI (99.9%): [4466.249, 4582.510] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.alloc.rate.norm":
-  31997553.883 ±(99.9%) 0.047 B/op [Average]
-  (min, avg, max) = (31997553.805, 31997553.883, 31997553.964), stdev = 0.044
-  CI (99.9%): [31997553.836, 31997553.930] (assumes normal distribution)
+  31997553.830 ±(99.9%) 0.024 B/op [Average]
+  (min, avg, max) = (31997553.789, 31997553.830, 31997553.863), stdev = 0.022
+  CI (99.9%): [31997553.807, 31997553.854] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Eden_Space":
-  4446.061 ±(99.9%) 163.261 MB/sec [Average]
-  (min, avg, max) = (4125.066, 4446.061, 4725.047), stdev = 152.714
-  CI (99.9%): [4282.800, 4609.321] (assumes normal distribution)
+  4533.684 ±(99.9%) 152.664 MB/sec [Average]
+  (min, avg, max) = (4340.297, 4533.684, 4730.863), stdev = 142.802
+  CI (99.9%): [4381.020, 4686.348] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Eden_Space.norm":
-  32174761.233 ±(99.9%) 878018.327 B/op [Average]
-  (min, avg, max) = (30580373.522, 32174761.233, 33616676.237), stdev = 821298.888
-  CI (99.9%): [31296742.906, 33052779.560] (assumes normal distribution)
+  32067133.860 ±(99.9%) 1133667.534 B/op [Average]
+  (min, avg, max) = (30422685.013, 32067133.860, 33403285.910), stdev = 1060433.314
+  CI (99.9%): [30933466.326, 33200801.393] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen":
-  0.004 ±(99.9%) 0.004 MB/sec [Average]
-  (min, avg, max) = (0.001, 0.004, 0.013), stdev = 0.003
-  CI (99.9%): [0.001, 0.008] (assumes normal distribution)
+  0.003 ±(99.9%) 0.002 MB/sec [Average]
+  (min, avg, max) = (≈ 0, 0.003, 0.007), stdev = 0.002
+  CI (99.9%): [0.001, 0.005] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen.norm":
-  31.895 ±(99.9%) 27.909 B/op [Average]
-  (min, avg, max) = (9.133, 31.895, 98.756), stdev = 26.106
-  CI (99.9%): [3.986, 59.804] (assumes normal distribution)
+  21.535 ±(99.9%) 15.415 B/op [Average]
+  (min, avg, max) = (≈ 0, 21.535, 46.909), stdev = 14.419
+  CI (99.9%): [6.120, 36.950] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.count":
-  227.000 ±(99.9%) 0.001 counts [Sum]
-  (min, avg, max) = (13.000, 15.133, 17.000), stdev = 1.506
-  CI (99.9%): [227.000, 227.000] (assumes normal distribution)
+  247.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (16.000, 16.467, 17.000), stdev = 0.516
+  CI (99.9%): [247.000, 247.000] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.time":
-  178.000 ±(99.9%) 0.001 ms [Sum]
-  (min, avg, max) = (8.000, 11.867, 23.000), stdev = 4.051
-  CI (99.9%): [178.000, 178.000] (assumes normal distribution)
+  200.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (8.000, 13.333, 21.000), stdev = 3.416
+  CI (99.9%): [200.000, 200.000] (assumes normal distribution)
 
 
 # JMH version: 1.21
@@ -476,223 +472,219 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_ano
 
 # Run progress: 25.00% complete, ETA 00:04:37
 # Fork: 1 of 3
-# Warmup Iteration   1: 6.033 ms/op
-# Warmup Iteration   2: 4.554 ms/op
-# Warmup Iteration   3: 4.668 ms/op
-# Warmup Iteration   4: 4.763 ms/op
-# Warmup Iteration   5: 4.742 ms/op
-Iteration   1: 4.603 ms/op
-                 ·gc.alloc.rate:               4420.673 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.872 B/op
-                 ·gc.churn.G1_Eden_Space:      4486.907 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32476996.110 B/op
+# Warmup Iteration   1: 5.665 ms/op
+# Warmup Iteration   2: 4.557 ms/op
+# Warmup Iteration   3: 4.556 ms/op
+# Warmup Iteration   4: 4.491 ms/op
+# Warmup Iteration   5: 4.491 ms/op
+Iteration   1: 4.474 ms/op
+                 ·gc.alloc.rate:               4546.231 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4635.740 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32627565.714 B/op
                  ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    35.596 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     10.000 ms
-
-Iteration   2: 4.849 ms/op
-                 ·gc.alloc.rate:               4196.616 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.971 B/op
-                 ·gc.churn.G1_Eden_Space:      4205.478 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32065150.145 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    39.884 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     12.000 ms
-
-Iteration   3: 4.700 ms/op
-                 ·gc.alloc.rate:               4325.529 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.915 B/op
-                 ·gc.churn.G1_Eden_Space:      4212.561 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31161906.479 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.380 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     8.000 ms
-
-Iteration   4: 4.501 ms/op
-                 ·gc.alloc.rate:               4521.909 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4486.753 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31748812.341 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.256 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     9.000 ms
-
-Iteration   5: 4.800 ms/op
-                 ·gc.alloc.rate:               4238.146 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.952 B/op
-                 ·gc.churn.G1_Eden_Space:      4206.454 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31758306.603 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    29.627 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     8.000 ms
-
-
-# Run progress: 29.17% complete, ETA 00:04:21
-# Fork: 2 of 3
-# Warmup Iteration   1: 5.763 ms/op
-# Warmup Iteration   2: 4.664 ms/op
-# Warmup Iteration   3: 4.539 ms/op
-# Warmup Iteration   4: 4.616 ms/op
-# Warmup Iteration   5: 4.596 ms/op
-Iteration   1: 4.591 ms/op
-                 ·gc.alloc.rate:               4428.349 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.872 B/op
-                 ·gc.churn.G1_Eden_Space:      4441.444 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32092197.578 B/op
-                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    56.807 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     19.000 ms
-
-Iteration   2: 4.670 ms/op
-                 ·gc.alloc.rate:               4358.417 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.898 B/op
-                 ·gc.churn.G1_Eden_Space:      4432.300 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32539995.684 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.800 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     9.000 ms
-
-Iteration   3: 4.514 ms/op
-                 ·gc.alloc.rate:               4505.207 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4437.114 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31513959.784 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    25.658 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     11.000 ms
-
-Iteration   4: 4.500 ms/op
-                 ·gc.alloc.rate:               4522.342 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4711.143 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33333431.677 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
+                 ·gc.churn.G1_Old_Gen.norm:    34.643 B/op
                  ·gc.count:                    17.000 counts
                  ·gc.time:                     10.000 ms
 
-Iteration   5: 4.550 ms/op
-                 ·gc.alloc.rate:               4468.267 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4440.740 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31800450.327 B/op
-                 ·gc.churn.G1_Old_Gen:         0.002 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    16.509 B/op
+Iteration   2: 4.414 ms/op
+                 ·gc.alloc.rate:               4607.301 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.797 B/op
+                 ·gc.churn.G1_Eden_Space:      4363.223 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30302460.617 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.278 B/op
                  ·gc.count:                    16.000 counts
+                 ·gc.time:                     9.000 ms
+
+Iteration   3: 4.539 ms/op
+                 ·gc.alloc.rate:               4483.251 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4633.577 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33070473.846 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.679 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     24.000 ms
+
+Iteration   4: 4.511 ms/op
+                 ·gc.alloc.rate:               4509.003 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4366.306 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30984948.468 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     18.000 ms
+
+Iteration   5: 4.920 ms/op
+                 ·gc.alloc.rate:               4136.047 MB/sec
+                 ·gc.alloc.rate.norm:          31997578.000 B/op
+                 ·gc.churn.G1_Eden_Space:      4104.079 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31750264.471 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    20.235 B/op
+                 ·gc.count:                    13.000 counts
+                 ·gc.time:                     11.000 ms
+
+
+# Run progress: 29.17% complete, ETA 00:04:22
+# Fork: 2 of 3
+# Warmup Iteration   1: 5.943 ms/op
+# Warmup Iteration   2: 4.507 ms/op
+# Warmup Iteration   3: 4.689 ms/op
+# Warmup Iteration   4: 4.458 ms/op
+# Warmup Iteration   5: 4.478 ms/op
+Iteration   1: 4.518 ms/op
+                 ·gc.alloc.rate:               4502.482 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4466.333 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31740678.919 B/op
+                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    55.784 B/op
+                 ·gc.count:                    14.000 counts
+                 ·gc.time:                     8.000 ms
+
+Iteration   2: 4.551 ms/op
+                 ·gc.alloc.rate:               4467.995 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.855 B/op
+                 ·gc.churn.G1_Eden_Space:      4472.415 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32029230.545 B/op
+                 ·gc.churn.G1_Old_Gen:         0.010 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    75.055 B/op
+                 ·gc.count:                    14.000 counts
+                 ·gc.time:                     17.000 ms
+
+Iteration   3: 4.448 ms/op
+                 ·gc.alloc.rate:               4570.598 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4473.450 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31317469.867 B/op
+                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    45.867 B/op
+                 ·gc.count:                    14.000 counts
+                 ·gc.time:                     9.000 ms
+
+Iteration   4: 4.439 ms/op
+                 ·gc.alloc.rate:               4584.191 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.805 B/op
+                 ·gc.churn.G1_Eden_Space:      4785.966 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33405961.062 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.133 B/op
+                 ·gc.count:                    15.000 counts
+                 ·gc.time:                     12.000 ms
+
+Iteration   5: 4.418 ms/op
+                 ·gc.alloc.rate:               4604.599 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.797 B/op
+                 ·gc.churn.G1_Eden_Space:      4467.022 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31041545.022 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.093 B/op
+                 ·gc.count:                    14.000 counts
                  ·gc.time:                     13.000 ms
 
 
 # Run progress: 33.33% complete, ETA 00:04:06
 # Fork: 3 of 3
-# Warmup Iteration   1: 5.933 ms/op
-# Warmup Iteration   2: 4.615 ms/op
-# Warmup Iteration   3: 4.646 ms/op
-# Warmup Iteration   4: 4.721 ms/op
-# Warmup Iteration   5: 4.660 ms/op
-Iteration   1: 4.686 ms/op
-                 ·gc.alloc.rate:               4341.310 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.907 B/op
-                 ·gc.churn.G1_Eden_Space:      4317.864 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31824771.589 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.645 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     10.000 ms
-
-Iteration   2: 4.596 ms/op
-                 ·gc.alloc.rate:               4424.655 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.872 B/op
-                 ·gc.churn.G1_Eden_Space:      4320.012 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31240830.826 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    37.872 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     8.000 ms
-
-Iteration   3: 4.517 ms/op
-                 ·gc.alloc.rate:               4504.682 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4606.827 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32723128.505 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    37.189 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     9.000 ms
-
-Iteration   4: 4.496 ms/op
-                 ·gc.alloc.rate:               4524.205 MB/sec
+# Warmup Iteration   1: 5.863 ms/op
+# Warmup Iteration   2: 4.520 ms/op
+# Warmup Iteration   3: 4.575 ms/op
+# Warmup Iteration   4: 4.487 ms/op
+# Warmup Iteration   5: 4.542 ms/op
+Iteration   1: 4.488 ms/op
+                 ·gc.alloc.rate:               4529.326 MB/sec
                  ·gc.alloc.rate.norm:          31997577.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4606.045 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32576388.018 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    27.767 B/op
+                 ·gc.churn.G1_Eden_Space:      4382.958 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30963555.874 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
+                 ·gc.count:                    15.000 counts
+                 ·gc.time:                     8.000 ms
+
+Iteration   2: 4.575 ms/op
+                 ·gc.alloc.rate:               4444.927 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.863 B/op
+                 ·gc.churn.G1_Eden_Space:      4379.849 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31529100.274 B/op
+                 ·gc.churn.G1_Old_Gen:         0.006 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    44.858 B/op
+                 ·gc.count:                    15.000 counts
+                 ·gc.time:                     20.000 ms
+
+Iteration   3: 4.568 ms/op
+                 ·gc.alloc.rate:               4450.334 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.863 B/op
+                 ·gc.churn.G1_Eden_Space:      4677.522 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33631040.292 B/op
                  ·gc.count:                    16.000 counts
                  ·gc.time:                     9.000 ms
 
-Iteration   5: 4.738 ms/op
-                 ·gc.alloc.rate:               4295.386 MB/sec
-                 ·gc.alloc.rate.norm:          31997577.925 B/op
-                 ·gc.churn.G1_Eden_Space:      4312.492 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32125005.283 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    48.679 B/op
+Iteration   4: 4.493 ms/op
+                 ·gc.alloc.rate:               4525.873 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.830 B/op
+                 ·gc.churn.G1_Eden_Space:      4379.617 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30963555.874 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
                  ·gc.count:                    15.000 counts
                  ·gc.time:                     8.000 ms
+
+Iteration   5: 4.595 ms/op
+                 ·gc.alloc.rate:               4425.074 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.872 B/op
+                 ·gc.churn.G1_Eden_Space:      4380.288 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31673729.174 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    28.404 B/op
+                 ·gc.count:                    15.000 counts
+                 ·gc.time:                     12.000 ms
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda":
-  4.621 ±(99.9%) 0.123 ms/op [Average]
-  (min, avg, max) = (4.496, 4.621, 4.849), stdev = 0.115
-  CI (99.9%): [4.498, 4.743] (assumes normal distribution)
+  4.530 ±(99.9%) 0.130 ms/op [Average]
+  (min, avg, max) = (4.414, 4.530, 4.920), stdev = 0.122
+  CI (99.9%): [4.400, 4.660] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate":
-  4405.046 ±(99.9%) 115.221 MB/sec [Average]
-  (min, avg, max) = (4196.616, 4405.046, 4524.205), stdev = 107.778
-  CI (99.9%): [4289.825, 4520.268] (assumes normal distribution)
+  4492.482 ±(99.9%) 121.997 MB/sec [Average]
+  (min, avg, max) = (4136.047, 4492.482, 4607.301), stdev = 114.116
+  CI (99.9%): [4370.486, 4614.479] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate.norm":
-  31997577.880 ±(99.9%) 0.049 B/op [Average]
-  (min, avg, max) = (31997577.830, 31997577.880, 31997577.971), stdev = 0.046
-  CI (99.9%): [31997577.831, 31997577.929] (assumes normal distribution)
+  31997577.845 ±(99.9%) 0.052 B/op [Average]
+  (min, avg, max) = (31997577.797, 31997577.845, 31997578.000), stdev = 0.049
+  CI (99.9%): [31997577.792, 31997577.897] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Eden_Space":
-  4414.942 ±(99.9%) 164.333 MB/sec [Average]
-  (min, avg, max) = (4205.478, 4414.942, 4711.143), stdev = 153.717
-  CI (99.9%): [4250.610, 4579.275] (assumes normal distribution)
+  4464.556 ±(99.9%) 177.214 MB/sec [Average]
+  (min, avg, max) = (4104.079, 4464.556, 4785.966), stdev = 165.766
+  CI (99.9%): [4287.343, 4641.770] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Eden_Space.norm":
-  32065422.063 ±(99.9%) 627506.920 B/op [Average]
-  (min, avg, max) = (31161906.479, 32065422.063, 33333431.677), stdev = 586970.362
-  CI (99.9%): [31437915.143, 32692928.983] (assumes normal distribution)
+  31802105.335 ±(99.9%) 1049520.321 B/op [Average]
+  (min, avg, max) = (30302460.617, 31802105.335, 33631040.292), stdev = 981721.959
+  CI (99.9%): [30752585.014, 32851625.656] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen":
-  0.004 ±(99.9%) 0.002 MB/sec [Average]
-  (min, avg, max) = (0.001, 0.004, 0.008), stdev = 0.002
-  CI (99.9%): [0.002, 0.006] (assumes normal distribution)
+  0.004 ±(99.9%) 0.003 MB/sec [Average]
+  (min, avg, max) = (≈ 0, 0.004, 0.010), stdev = 0.003
+  CI (99.9%): [0.001, 0.007] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen.norm":
-  29.412 ±(99.9%) 14.574 B/op [Average]
-  (min, avg, max) = (9.256, 29.412, 56.807), stdev = 13.633
-  CI (99.9%): [14.838, 43.986] (assumes normal distribution)
+  27.070 ±(99.9%) 22.552 B/op [Average]
+  (min, avg, max) = (≈ 0, 27.070, 75.055), stdev = 21.095
+  CI (99.9%): [4.518, 49.622] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.count":
-  235.000 ±(99.9%) 0.001 counts [Sum]
-  (min, avg, max) = (15.000, 15.667, 17.000), stdev = 0.617
-  CI (99.9%): [235.000, 235.000] (assumes normal distribution)
+  226.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (13.000, 15.067, 17.000), stdev = 1.163
+  CI (99.9%): [226.000, 226.000] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.time":
-  153.000 ±(99.9%) 0.001 ms [Sum]
-  (min, avg, max) = (8.000, 10.200, 19.000), stdev = 2.859
-  CI (99.9%): [153.000, 153.000] (assumes normal distribution)
+  188.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (8.000, 12.533, 24.000), stdev = 4.969
+  CI (99.9%): [188.000, 188.000] (assumes normal distribution)
 
 
 # JMH version: 1.21
@@ -707,36 +699,36 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_cap
 # Benchmark: org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline
 # Parameters: (factor = 1, param = 1000000)
 
-# Run progress: 37.50% complete, ETA 00:03:50
+# Run progress: 37.50% complete, ETA 00:03:51
 # Fork: 1 of 3
-# Warmup Iteration   1: 0.520 ms/op
-# Warmup Iteration   2: 0.538 ms/op
-# Warmup Iteration   3: 0.538 ms/op
-# Warmup Iteration   4: 0.542 ms/op
-# Warmup Iteration   5: 0.538 ms/op
-Iteration   1: 0.537 ms/op
+# Warmup Iteration   1: 0.523 ms/op
+# Warmup Iteration   2: 0.525 ms/op
+# Warmup Iteration   3: 0.525 ms/op
+# Warmup Iteration   4: 0.521 ms/op
+# Warmup Iteration   5: 0.523 ms/op
+Iteration   1: 0.525 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.219 B/op
+                 ·gc.alloc.rate.norm: 0.214 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   2: 0.536 ms/op
+Iteration   2: 0.524 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.219 B/op
+                 ·gc.alloc.rate.norm: 0.214 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   3: 0.534 ms/op
+Iteration   3: 0.524 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.235 B/op
+                 ·gc.alloc.rate.norm: 0.214 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   4: 0.535 ms/op
+Iteration   4: 0.524 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.218 B/op
+                 ·gc.alloc.rate.norm: 0.214 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   5: 0.533 ms/op
+Iteration   5: 0.526 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.217 B/op
+                 ·gc.alloc.rate.norm: 0.215 B/op
                  ·gc.count:           ≈ 0 counts
 
 
@@ -744,45 +736,45 @@ Iteration   5: 0.533 ms/op
 # Fork: 2 of 3
 # Warmup Iteration   1: 0.521 ms/op
 # Warmup Iteration   2: 0.523 ms/op
-# Warmup Iteration   3: 0.523 ms/op
-# Warmup Iteration   4: 0.524 ms/op
-# Warmup Iteration   5: 0.524 ms/op
-Iteration   1: 0.522 ms/op
+# Warmup Iteration   3: 0.527 ms/op
+# Warmup Iteration   4: 0.525 ms/op
+# Warmup Iteration   5: 0.521 ms/op
+Iteration   1: 0.527 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.213 B/op
+                 ·gc.alloc.rate.norm: 0.215 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   2: 0.521 ms/op
+Iteration   2: 0.524 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.214 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 0.525 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.214 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 0.538 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.219 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 0.521 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
                  ·gc.alloc.rate.norm: 0.212 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   3: 0.521 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.229 B/op
-                 ·gc.count:           ≈ 0 counts
 
-Iteration   4: 0.523 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.214 B/op
-                 ·gc.count:           ≈ 0 counts
-
-Iteration   5: 0.523 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.213 B/op
-                 ·gc.count:           ≈ 0 counts
-
-
-# Run progress: 45.83% complete, ETA 00:03:19
+# Run progress: 45.83% complete, ETA 00:03:20
 # Fork: 3 of 3
-# Warmup Iteration   1: 0.519 ms/op
-# Warmup Iteration   2: 0.526 ms/op
-# Warmup Iteration   3: 0.523 ms/op
-# Warmup Iteration   4: 0.526 ms/op
-# Warmup Iteration   5: 0.526 ms/op
-Iteration   1: 0.525 ms/op
+# Warmup Iteration   1: 0.521 ms/op
+# Warmup Iteration   2: 0.522 ms/op
+# Warmup Iteration   3: 0.527 ms/op
+# Warmup Iteration   4: 0.522 ms/op
+# Warmup Iteration   5: 0.524 ms/op
+Iteration   1: 0.531 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.214 B/op
+                 ·gc.alloc.rate.norm: 0.217 B/op
                  ·gc.count:           ≈ 0 counts
 
 Iteration   2: 0.523 ms/op
@@ -790,35 +782,35 @@ Iteration   2: 0.523 ms/op
                  ·gc.alloc.rate.norm: 0.213 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   3: 0.526 ms/op
+Iteration   3: 0.520 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.215 B/op
+                 ·gc.alloc.rate.norm: 0.212 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   4: 0.541 ms/op
+Iteration   4: 0.520 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.220 B/op
+                 ·gc.alloc.rate.norm: 0.212 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   5: 0.539 ms/op
+Iteration   5: 0.524 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.220 B/op
+                 ·gc.alloc.rate.norm: 0.214 B/op
                  ·gc.count:           ≈ 0 counts
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline":
-  0.529 ±(99.9%) 0.008 ms/op [Average]
-  (min, avg, max) = (0.521, 0.529, 0.541), stdev = 0.007
-  CI (99.9%): [0.522, 0.537] (assumes normal distribution)
+  0.525 ±(99.9%) 0.005 ms/op [Average]
+  (min, avg, max) = (0.520, 0.525, 0.538), stdev = 0.004
+  CI (99.9%): [0.520, 0.530] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate":
   ≈ 10⁻⁴ MB/sec
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate.norm":
-  0.218 ±(99.9%) 0.007 B/op [Average]
-  (min, avg, max) = (0.212, 0.218, 0.235), stdev = 0.006
-  CI (99.9%): [0.211, 0.225] (assumes normal distribution)
+  0.214 ±(99.9%) 0.002 B/op [Average]
+  (min, avg, max) = (0.212, 0.214, 0.219), stdev = 0.002
+  CI (99.9%): [0.212, 0.216] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.count":
   ≈ 0 counts
@@ -838,223 +830,221 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_cap
 
 # Run progress: 50.00% complete, ETA 00:03:04
 # Fork: 1 of 3
-# Warmup Iteration   1: 5.737 ms/op
-# Warmup Iteration   2: 4.635 ms/op
-# Warmup Iteration   3: 4.549 ms/op
-# Warmup Iteration   4: 4.448 ms/op
-# Warmup Iteration   5: 4.679 ms/op
-Iteration   1: 4.722 ms/op
-                 ·gc.alloc.rate:               4305.889 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.925 B/op
-                 ·gc.churn.G1_Eden_Space:      4213.217 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31308896.604 B/op
-                 ·gc.churn.G1_Old_Gen:         0.002 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    17.132 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     8.000 ms
-
-Iteration   2: 4.451 ms/op
-                 ·gc.alloc.rate:               4568.673 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.813 B/op
-                 ·gc.churn.G1_Eden_Space:      4492.862 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31466600.676 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    45.867 B/op
+# Warmup Iteration   1: 5.674 ms/op
+# Warmup Iteration   2: 4.501 ms/op
+# Warmup Iteration   3: 4.458 ms/op
+# Warmup Iteration   4: 4.484 ms/op
+# Warmup Iteration   5: 4.478 ms/op
+Iteration   1: 4.519 ms/op
+                 ·gc.alloc.rate:               4500.846 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4358.411 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30984948.468 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.892 B/op
                  ·gc.count:                    16.000 counts
-                 ·gc.time:                     10.000 ms
+                 ·gc.time:                     12.000 ms
 
-Iteration   3: 4.568 ms/op
-                 ·gc.alloc.rate:               4450.888 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4496.950 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32328699.324 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.849 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     11.000 ms
-
-Iteration   4: 4.466 ms/op
-                 ·gc.alloc.rate:               4551.943 MB/sec
+Iteration   2: 4.481 ms/op
+                 ·gc.alloc.rate:               4540.441 MB/sec
                  ·gc.alloc.rate.norm:          31997553.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4777.418 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33582518.857 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.429 B/op
+                 ·gc.churn.G1_Eden_Space:      4629.840 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32627565.714 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.643 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     13.000 ms
+
+Iteration   3: 4.436 ms/op
+                 ·gc.alloc.rate:               4585.019 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.805 B/op
+                 ·gc.churn.G1_Eden_Space:      4633.921 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32338826.195 B/op
                  ·gc.count:                    17.000 counts
                  ·gc.time:                     10.000 ms
 
-Iteration   5: 4.741 ms/op
-                 ·gc.alloc.rate:               4286.457 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.934 B/op
-                 ·gc.churn.G1_Eden_Space:      4214.081 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31457280.000 B/op
+Iteration   4: 4.460 ms/op
+                 ·gc.alloc.rate:               4562.134 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4358.856 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30571815.822 B/op
+                 ·gc.churn.G1_Old_Gen:         0.012 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    82.560 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     12.000 ms
+
+Iteration   5: 4.497 ms/op
+                 ·gc.alloc.rate:               4522.556 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.830 B/op
+                 ·gc.churn.G1_Eden_Space:      4632.283 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32773877.668 B/op
                  ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.564 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     8.000 ms
+                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     13.000 ms
 
 
 # Run progress: 54.17% complete, ETA 00:02:49
 # Fork: 2 of 3
-# Warmup Iteration   1: 5.909 ms/op
-# Warmup Iteration   2: 4.569 ms/op
-# Warmup Iteration   3: 4.605 ms/op
-# Warmup Iteration   4: 4.643 ms/op
-# Warmup Iteration   5: 4.668 ms/op
-Iteration   1: 4.687 ms/op
-                 ·gc.alloc.rate:               4340.170 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.907 B/op
-                 ·gc.churn.G1_Eden_Space:      4107.377 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30281306.916 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    48.224 B/op
-                 ·gc.count:                    15.000 counts
+# Warmup Iteration   1: 5.740 ms/op
+# Warmup Iteration   2: 4.512 ms/op
+# Warmup Iteration   3: 4.507 ms/op
+# Warmup Iteration   4: 4.486 ms/op
+# Warmup Iteration   5: 4.441 ms/op
+Iteration   1: 4.561 ms/op
+                 ·gc.alloc.rate:               4460.152 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.855 B/op
+                 ·gc.churn.G1_Eden_Space:      4619.365 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33139767.855 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.764 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     17.000 ms
+
+Iteration   2: 4.450 ms/op
+                 ·gc.alloc.rate:               4569.524 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4627.472 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32403328.569 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.347 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     8.000 ms
+
+Iteration   3: 4.430 ms/op
+                 ·gc.alloc.rate:               4590.595 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.805 B/op
+                 ·gc.churn.G1_Eden_Space:      4628.240 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32259951.009 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.265 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     10.000 ms
+
+Iteration   4: 4.503 ms/op
+                 ·gc.alloc.rate:               4519.580 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.830 B/op
+                 ·gc.churn.G1_Eden_Space:      4346.299 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30770768.359 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    25.543 B/op
+                 ·gc.count:                    16.000 counts
                  ·gc.time:                     13.000 ms
 
-Iteration   2: 4.708 ms/op
-                 ·gc.alloc.rate:               4322.224 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.915 B/op
-                 ·gc.churn.G1_Eden_Space:      4383.570 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32451704.188 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    29.070 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     18.000 ms
-
-Iteration   3: 4.564 ms/op
-                 ·gc.alloc.rate:               4459.162 MB/sec
+Iteration   5: 4.562 ms/op
+                 ·gc.alloc.rate:               4461.134 MB/sec
                  ·gc.alloc.rate.norm:          31997553.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4652.216 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33382846.836 B/op
-                 ·gc.churn.G1_Old_Gen:         0.006 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    44.655 B/op
+                 ·gc.churn.G1_Eden_Space:      4620.383 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33139767.855 B/op
+                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    46.909 B/op
                  ·gc.count:                    17.000 counts
                  ·gc.time:                     16.000 ms
-
-Iteration   4: 4.509 ms/op
-                 ·gc.alloc.rate:               4508.324 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4386.948 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31136094.559 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    46.486 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     15.000 ms
-
-Iteration   5: 4.679 ms/op
-                 ·gc.alloc.rate:               4345.388 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.907 B/op
-                 ·gc.churn.G1_Eden_Space:      4386.469 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32300060.710 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.290 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     15.000 ms
 
 
 # Run progress: 58.33% complete, ETA 00:02:33
 # Fork: 3 of 3
-# Warmup Iteration   1: 5.762 ms/op
-# Warmup Iteration   2: 4.515 ms/op
-# Warmup Iteration   3: 4.509 ms/op
-# Warmup Iteration   4: 4.499 ms/op
-# Warmup Iteration   5: 4.589 ms/op
-Iteration   1: 4.486 ms/op
-                 ·gc.alloc.rate:               4530.509 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4410.071 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31146939.121 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    46.278 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     12.000 ms
-
-Iteration   2: 4.581 ms/op
-                 ·gc.alloc.rate:               4441.274 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4402.171 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31715832.986 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.274 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     17.000 ms
-
-Iteration   3: 4.570 ms/op
-                 ·gc.alloc.rate:               4448.315 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4684.722 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33698072.548 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    26.521 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     19.000 ms
-
-Iteration   4: 4.531 ms/op
-                 ·gc.alloc.rate:               4488.253 MB/sec
+# Warmup Iteration   1: 5.676 ms/op
+# Warmup Iteration   2: 4.446 ms/op
+# Warmup Iteration   3: 4.477 ms/op
+# Warmup Iteration   4: 4.427 ms/op
+# Warmup Iteration   5: 4.506 ms/op
+Iteration   1: 4.531 ms/op
+                 ·gc.alloc.rate:               4486.275 MB/sec
                  ·gc.alloc.rate.norm:          31997553.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4408.477 MB/sec
+                 ·gc.churn.G1_Eden_Space:      4406.534 MB/sec
                  ·gc.churn.G1_Eden_Space.norm: 31428811.873 B/op
                  ·gc.churn.G1_Old_Gen:         0.005 MB/sec
                  ·gc.churn.G1_Old_Gen.norm:    37.357 B/op
                  ·gc.count:                    16.000 counts
-                 ·gc.time:                     16.000 ms
+                 ·gc.time:                     10.000 ms
 
-Iteration   5: 4.770 ms/op
-                 ·gc.alloc.rate:               4261.677 MB/sec
-                 ·gc.alloc.rate.norm:          31997553.943 B/op
-                 ·gc.churn.G1_Eden_Space:      4129.866 MB/sec
+Iteration   2: 4.471 ms/op
+                 ·gc.alloc.rate:               4547.450 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4682.225 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32945883.429 B/op
+                 ·gc.churn.G1_Old_Gen:         0.009 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    64.500 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     14.000 ms
+
+Iteration   3: 4.482 ms/op
+                 ·gc.alloc.rate:               4541.297 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4400.837 MB/sec
                  ·gc.churn.G1_Eden_Space.norm: 31007890.286 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.829 B/op
-                 ·gc.count:                    15.000 counts
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    27.643 B/op
+                 ·gc.count:                    16.000 counts
                  ·gc.time:                     11.000 ms
+
+Iteration   4: 4.536 ms/op
+                 ·gc.alloc.rate:               4484.117 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4679.689 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 33393112.615 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    28.018 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     10.000 ms
+
+Iteration   5: 4.462 ms/op
+                 ·gc.alloc.rate:               4561.025 MB/sec
+                 ·gc.alloc.rate.norm:          31997553.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4400.311 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30870077.440 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    36.693 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     15.000 ms
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda":
-  4.602 ±(99.9%) 0.114 ms/op [Average]
-  (min, avg, max) = (4.451, 4.602, 4.770), stdev = 0.106
-  CI (99.9%): [4.489, 4.716] (assumes normal distribution)
+  4.492 ±(99.9%) 0.046 ms/op [Average]
+  (min, avg, max) = (4.430, 4.492, 4.562), stdev = 0.043
+  CI (99.9%): [4.446, 4.538] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate":
-  4420.610 ±(99.9%) 108.927 MB/sec [Average]
-  (min, avg, max) = (4261.677, 4420.610, 4568.673), stdev = 101.890
-  CI (99.9%): [4311.683, 4529.536] (assumes normal distribution)
+  4528.810 ±(99.9%) 45.561 MB/sec [Average]
+  (min, avg, max) = (4460.152, 4528.810, 4590.595), stdev = 42.618
+  CI (99.9%): [4483.248, 4574.371] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate.norm":
-  31997553.875 ±(99.9%) 0.046 B/op [Average]
-  (min, avg, max) = (31997553.813, 31997553.875, 31997553.943), stdev = 0.043
-  CI (99.9%): [31997553.829, 31997553.921] (assumes normal distribution)
+  31997553.828 ±(99.9%) 0.018 B/op [Average]
+  (min, avg, max) = (31997553.805, 31997553.828, 31997553.855), stdev = 0.017
+  CI (99.9%): [31997553.810, 31997553.846] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Eden_Space":
-  4409.761 ±(99.9%) 208.511 MB/sec [Average]
-  (min, avg, max) = (4107.377, 4409.761, 4777.418), stdev = 195.041
-  CI (99.9%): [4201.250, 4618.272] (assumes normal distribution)
+  4534.978 ±(99.9%) 143.705 MB/sec [Average]
+  (min, avg, max) = (4346.299, 4534.978, 4682.225), stdev = 134.422
+  CI (99.9%): [4391.273, 4678.683] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Eden_Space.norm":
-  31912903.699 ±(99.9%) 1086644.701 B/op [Average]
-  (min, avg, max) = (30281306.916, 31912903.699, 33698072.548), stdev = 1016448.127
-  CI (99.9%): [30826258.998, 32999548.400] (assumes normal distribution)
+  32043759.544 ±(99.9%) 1065655.847 B/op [Average]
+  (min, avg, max) = (30571815.822, 32043759.544, 33393112.615), stdev = 996815.140
+  CI (99.9%): [30978103.697, 33109415.391] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen":
-  0.004 ±(99.9%) 0.002 MB/sec [Average]
-  (min, avg, max) = (0.001, 0.004, 0.007), stdev = 0.002
-  CI (99.9%): [0.002, 0.006] (assumes normal distribution)
+  0.005 ±(99.9%) 0.003 MB/sec [Average]
+  (min, avg, max) = (≈ 0, 0.005, 0.012), stdev = 0.003
+  CI (99.9%): [0.001, 0.008] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen.norm":
-  30.388 ±(99.9%) 14.164 B/op [Average]
-  (min, avg, max) = (9.829, 30.388, 48.224), stdev = 13.249
-  CI (99.9%): [16.224, 44.552] (assumes normal distribution)
+  31.910 ±(99.9%) 21.673 B/op [Average]
+  (min, avg, max) = (≈ 0, 31.910, 82.560), stdev = 20.273
+  CI (99.9%): [10.236, 53.583] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.count":
-  239.000 ±(99.9%) 0.001 counts [Sum]
-  (min, avg, max) = (15.000, 15.933, 17.000), stdev = 0.704
-  CI (99.9%): [239.000, 239.000] (assumes normal distribution)
+  249.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (16.000, 16.600, 17.000), stdev = 0.507
+  CI (99.9%): [249.000, 249.000] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.time":
-  199.000 ±(99.9%) 0.001 ms [Sum]
-  (min, avg, max) = (8.000, 13.267, 19.000), stdev = 3.575
-  CI (99.9%): [199.000, 199.000] (assumes normal distribution)
+  184.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (8.000, 12.267, 17.000), stdev = 2.520
+  CI (99.9%): [184.000, 184.000] (assumes normal distribution)
 
 
 # JMH version: 1.21
@@ -1071,62 +1061,29 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lam
 
 # Run progress: 62.50% complete, ETA 00:02:18
 # Fork: 1 of 3
-# Warmup Iteration   1: 0.402 ms/op
-# Warmup Iteration   2: 0.447 ms/op
-# Warmup Iteration   3: 0.498 ms/op
-# Warmup Iteration   4: 0.398 ms/op
-# Warmup Iteration   5: 0.401 ms/op
-Iteration   1: 0.378 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.154 B/op
-                 ·gc.count:           ≈ 0 counts
-
-Iteration   2: 0.377 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.154 B/op
-                 ·gc.count:           ≈ 0 counts
-
-Iteration   3: 0.371 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.151 B/op
-                 ·gc.count:           ≈ 0 counts
-
-Iteration   4: 0.395 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.161 B/op
-                 ·gc.count:           ≈ 0 counts
-
-Iteration   5: 0.391 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.159 B/op
-                 ·gc.count:           ≈ 0 counts
-
-
-# Run progress: 66.67% complete, ETA 00:02:02
-# Fork: 2 of 3
 # Warmup Iteration   1: 0.369 ms/op
-# Warmup Iteration   2: 0.369 ms/op
+# Warmup Iteration   2: 0.372 ms/op
 # Warmup Iteration   3: 0.371 ms/op
-# Warmup Iteration   4: 0.368 ms/op
-# Warmup Iteration   5: 0.374 ms/op
-Iteration   1: 0.371 ms/op
+# Warmup Iteration   4: 0.371 ms/op
+# Warmup Iteration   5: 0.380 ms/op
+Iteration   1: 0.370 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
                  ·gc.alloc.rate.norm: 0.151 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   2: 0.372 ms/op
-                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.152 B/op
-                 ·gc.count:           ≈ 0 counts
-
-Iteration   3: 0.369 ms/op
+Iteration   2: 0.370 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
                  ·gc.alloc.rate.norm: 0.151 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   4: 0.378 ms/op
+Iteration   3: 0.370 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.154 B/op
+                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 0.371 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.151 B/op
                  ·gc.count:           ≈ 0 counts
 
 Iteration   5: 0.370 ms/op
@@ -1135,19 +1092,19 @@ Iteration   5: 0.370 ms/op
                  ·gc.count:           ≈ 0 counts
 
 
-# Run progress: 70.83% complete, ETA 00:01:47
-# Fork: 3 of 3
-# Warmup Iteration   1: 0.370 ms/op
-# Warmup Iteration   2: 0.372 ms/op
+# Run progress: 66.67% complete, ETA 00:02:03
+# Fork: 2 of 3
+# Warmup Iteration   1: 0.369 ms/op
+# Warmup Iteration   2: 0.371 ms/op
 # Warmup Iteration   3: 0.372 ms/op
 # Warmup Iteration   4: 0.374 ms/op
-# Warmup Iteration   5: 0.370 ms/op
-Iteration   1: 0.371 ms/op
+# Warmup Iteration   5: 0.373 ms/op
+Iteration   1: 0.373 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.alloc.rate.norm: 0.152 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   2: 0.373 ms/op
+Iteration   2: 0.374 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
                  ·gc.alloc.rate.norm: 0.152 B/op
                  ·gc.count:           ≈ 0 counts
@@ -1159,28 +1116,61 @@ Iteration   3: 0.371 ms/op
 
 Iteration   4: 0.374 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.153 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 0.373 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
                  ·gc.alloc.rate.norm: 0.152 B/op
                  ·gc.count:           ≈ 0 counts
 
-Iteration   5: 0.388 ms/op
+
+# Run progress: 70.83% complete, ETA 00:01:47
+# Fork: 3 of 3
+# Warmup Iteration   1: 0.369 ms/op
+# Warmup Iteration   2: 0.371 ms/op
+# Warmup Iteration   3: 0.367 ms/op
+# Warmup Iteration   4: 0.369 ms/op
+# Warmup Iteration   5: 0.370 ms/op
+Iteration   1: 0.370 ms/op
                  ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
-                 ·gc.alloc.rate.norm: 0.158 B/op
+                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   2: 0.370 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   3: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   4: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
+
+Iteration   5: 0.370 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.151 B/op
                  ·gc.count:           ≈ 0 counts
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline":
-  0.376 ±(99.9%) 0.009 ms/op [Average]
-  (min, avg, max) = (0.369, 0.376, 0.395), stdev = 0.008
-  CI (99.9%): [0.368, 0.385] (assumes normal distribution)
+  0.371 ±(99.9%) 0.002 ms/op [Average]
+  (min, avg, max) = (0.370, 0.371, 0.374), stdev = 0.002
+  CI (99.9%): [0.370, 0.373] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate":
   ≈ 10⁻⁴ MB/sec
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate.norm":
-  0.154 ±(99.9%) 0.004 B/op [Average]
-  (min, avg, max) = (0.151, 0.154, 0.161), stdev = 0.003
-  CI (99.9%): [0.150, 0.157] (assumes normal distribution)
+  0.151 ±(99.9%) 0.001 B/op [Average]
+  (min, avg, max) = (0.151, 0.151, 0.153), stdev = 0.001
+  CI (99.9%): [0.151, 0.152] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.count":
   ≈ 0 counts
@@ -1200,219 +1190,223 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_lam
 
 # Run progress: 75.00% complete, ETA 00:01:32
 # Fork: 1 of 3
-# Warmup Iteration   1: 6.644 ms/op
-# Warmup Iteration   2: 4.512 ms/op
-# Warmup Iteration   3: 4.514 ms/op
-# Warmup Iteration   4: 4.481 ms/op
-# Warmup Iteration   5: 4.591 ms/op
-Iteration   1: 4.504 ms/op
-                 ·gc.alloc.rate:               4518.243 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4461.867 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31598344.036 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    37.022 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     8.000 ms
+# Warmup Iteration   1: 5.735 ms/op
+# Warmup Iteration   2: 4.570 ms/op
+# Warmup Iteration   3: 4.556 ms/op
+# Warmup Iteration   4: 4.456 ms/op
+# Warmup Iteration   5: 4.507 ms/op
+Iteration   1: 4.482 ms/op
+                 ·gc.alloc.rate:               4539.083 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4356.190 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30708297.143 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    25.500 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     16.000 ms
 
-Iteration   2: 4.469 ms/op
-                 ·gc.alloc.rate:               4549.255 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4472.436 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31457280.000 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.214 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     8.000 ms
-
-Iteration   3: 4.738 ms/op
-                 ·gc.alloc.rate:               4294.872 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.925 B/op
-                 ·gc.churn.G1_Eden_Space:      4461.349 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33237880.755 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.472 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     10.000 ms
-
-Iteration   4: 4.483 ms/op
-                 ·gc.alloc.rate:               4540.460 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4463.789 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31457280.000 B/op
+Iteration   2: 4.471 ms/op
+                 ·gc.alloc.rate:               4548.879 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4638.440 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32627565.714 B/op
                  ·gc.churn.G1_Old_Gen:         0.004 MB/sec
                  ·gc.churn.G1_Old_Gen.norm:    27.643 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     9.000 ms
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     13.000 ms
 
-Iteration   5: 4.534 ms/op
-                 ·gc.alloc.rate:               4484.989 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4469.110 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31884301.900 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.339 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     9.000 ms
+Iteration   3: 4.569 ms/op
+                 ·gc.alloc.rate:               4449.727 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.863 B/op
+                 ·gc.churn.G1_Eden_Space:      4367.932 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31409399.817 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    28.274 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     14.000 ms
+
+Iteration   4: 4.459 ms/op
+                 ·gc.alloc.rate:               4562.149 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4631.296 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32482554.311 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.347 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     13.000 ms
+
+Iteration   5: 4.489 ms/op
+                 ·gc.alloc.rate:               4529.033 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.830 B/op
+                 ·gc.churn.G1_Eden_Space:      4638.913 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32773877.668 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.511 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     11.000 ms
 
 
 # Run progress: 79.17% complete, ETA 00:01:16
 # Fork: 2 of 3
-# Warmup Iteration   1: 5.789 ms/op
-# Warmup Iteration   2: 4.532 ms/op
-# Warmup Iteration   3: 4.720 ms/op
-# Warmup Iteration   4: 4.659 ms/op
-# Warmup Iteration   5: 4.592 ms/op
-Iteration   1: 4.828 ms/op
-                 ·gc.alloc.rate:               4215.579 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.962 B/op
-                 ·gc.churn.G1_Eden_Space:      4134.432 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31381661.538 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     10.000 ms
-
-Iteration   2: 4.611 ms/op
-                 ·gc.alloc.rate:               4415.204 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.872 B/op
-                 ·gc.churn.G1_Eden_Space:      4682.458 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33934420.550 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.936 B/op
+# Warmup Iteration   1: 5.706 ms/op
+# Warmup Iteration   2: 4.513 ms/op
+# Warmup Iteration   3: 4.583 ms/op
+# Warmup Iteration   4: 4.646 ms/op
+# Warmup Iteration   5: 4.447 ms/op
+Iteration   1: 4.509 ms/op
+                 ·gc.alloc.rate:               4509.668 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4605.935 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32680618.667 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    34.955 B/op
                  ·gc.count:                    17.000 counts
-                 ·gc.time:                     16.000 ms
-
-Iteration   3: 4.543 ms/op
-                 ·gc.alloc.rate:               4479.663 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4410.662 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31504726.878 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.018 B/op
-                 ·gc.count:                    16.000 counts
                  ·gc.time:                     14.000 ms
 
-Iteration   4: 4.782 ms/op
-                 ·gc.alloc.rate:               4257.345 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.943 B/op
-                 ·gc.churn.G1_Eden_Space:      4135.628 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31082788.571 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.657 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     8.000 ms
-
-Iteration   5: 4.607 ms/op
-                 ·gc.alloc.rate:               4417.885 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.872 B/op
-                 ·gc.churn.G1_Eden_Space:      4409.695 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31938278.165 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.468 B/op
+Iteration   2: 4.543 ms/op
+                 ·gc.alloc.rate:               4480.095 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4326.056 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30897406.842 B/op
+                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    46.697 B/op
                  ·gc.count:                    16.000 counts
+                 ·gc.time:                     10.000 ms
+
+Iteration   3: 4.517 ms/op
+                 ·gc.alloc.rate:               4503.683 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.838 B/op
+                 ·gc.churn.G1_Eden_Space:      4599.821 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32680618.667 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.595 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     17.000 ms
+
+Iteration   4: 4.447 ms/op
+                 ·gc.alloc.rate:               4571.791 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.813 B/op
+                 ·gc.churn.G1_Eden_Space:      4607.125 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32244877.084 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.173 B/op
+                 ·gc.count:                    17.000 counts
                  ·gc.time:                     9.000 ms
+
+Iteration   5: 4.565 ms/op
+                 ·gc.alloc.rate:               4458.518 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.855 B/op
+                 ·gc.churn.G1_Eden_Space:      4324.790 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 31037849.600 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    37.527 B/op
+                 ·gc.count:                    16.000 counts
+                 ·gc.time:                     16.000 ms
 
 
 # Run progress: 83.33% complete, ETA 00:01:01
 # Fork: 3 of 3
-# Warmup Iteration   1: 5.790 ms/op
-# Warmup Iteration   2: 4.653 ms/op
-# Warmup Iteration   3: 4.703 ms/op
-# Warmup Iteration   4: 4.475 ms/op
-# Warmup Iteration   5: 4.655 ms/op
-Iteration   1: 4.471 ms/op
-                 ·gc.alloc.rate:               4547.282 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4704.665 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33105042.286 B/op
+# Warmup Iteration   1: 5.785 ms/op
+# Warmup Iteration   2: 4.476 ms/op
+# Warmup Iteration   3: 4.580 ms/op
+# Warmup Iteration   4: 4.565 ms/op
+# Warmup Iteration   5: 4.604 ms/op
+Iteration   1: 4.583 ms/op
+                 ·gc.alloc.rate:               4440.581 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.863 B/op
+                 ·gc.churn.G1_Eden_Space:      4552.317 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32802713.132 B/op
                  ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.429 B/op
+                 ·gc.churn.G1_Old_Gen.norm:    18.849 B/op
                  ·gc.count:                    17.000 counts
-                 ·gc.time:                     13.000 ms
+                 ·gc.time:                     17.000 ms
 
-Iteration   2: 4.479 ms/op
-                 ·gc.alloc.rate:               4543.362 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4424.103 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31157686.857 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.429 B/op
-                 ·gc.count:                    16.000 counts
+Iteration   2: 4.478 ms/op
+                 ·gc.alloc.rate:               4543.108 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.821 B/op
+                 ·gc.churn.G1_Eden_Space:      4553.463 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32070509.714 B/op
+                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    9.214 B/op
+                 ·gc.count:                    17.000 counts
+                 ·gc.time:                     14.000 ms
+
+Iteration   3: 4.537 ms/op
+                 ·gc.alloc.rate:               4484.354 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4555.587 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32505856.000 B/op
+                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    37.357 B/op
+                 ·gc.count:                    17.000 counts
                  ·gc.time:                     12.000 ms
 
-Iteration   3: 4.466 ms/op
-                 ·gc.alloc.rate:               4558.826 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.813 B/op
-                 ·gc.churn.G1_Eden_Space:      4695.646 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32957908.764 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.347 B/op
+Iteration   4: 4.533 ms/op
+                 ·gc.alloc.rate:               4485.433 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4556.683 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 32505856.000 B/op
+                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    28.018 B/op
                  ·gc.count:                    17.000 counts
-                 ·gc.time:                     10.000 ms
+                 ·gc.time:                     8.000 ms
 
-Iteration   4: 4.614 ms/op
-                 ·gc.alloc.rate:               4407.210 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.880 B/op
-                 ·gc.churn.G1_Eden_Space:      4153.088 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30152600.184 B/op
-                 ·gc.count:                    15.000 counts
-                 ·gc.time:                     7.000 ms
-
-Iteration   5: 4.653 ms/op
-                 ·gc.alloc.rate:               4367.637 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.898 B/op
-                 ·gc.churn.G1_Eden_Space:      4431.023 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32461962.121 B/op
-                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    57.600 B/op
+Iteration   5: 4.538 ms/op
+                 ·gc.alloc.rate:               4483.614 MB/sec
+                 ·gc.alloc.rate.norm:          31997577.846 B/op
+                 ·gc.churn.G1_Eden_Space:      4286.904 MB/sec
+                 ·gc.churn.G1_Eden_Space.norm: 30593746.824 B/op
+                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
+                 ·gc.churn.G1_Old_Gen.norm:    18.679 B/op
                  ·gc.count:                    16.000 counts
-                 ·gc.time:                     13.000 ms
+                 ·gc.time:                     16.000 ms
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef":
-  4.585 ±(99.9%) 0.128 ms/op [Average]
-  (min, avg, max) = (4.466, 4.585, 4.828), stdev = 0.120
-  CI (99.9%): [4.457, 4.714] (assumes normal distribution)
+  4.515 ±(99.9%) 0.045 ms/op [Average]
+  (min, avg, max) = (4.447, 4.515, 4.583), stdev = 0.042
+  CI (99.9%): [4.469, 4.560] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate":
-  4439.854 ±(99.9%) 121.310 MB/sec [Average]
-  (min, avg, max) = (4215.579, 4439.854, 4558.826), stdev = 113.473
-  CI (99.9%): [4318.544, 4561.164] (assumes normal distribution)
+  4505.981 ±(99.9%) 44.360 MB/sec [Average]
+  (min, avg, max) = (4440.581, 4505.981, 4571.791), stdev = 41.494
+  CI (99.9%): [4461.621, 4550.341] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate.norm":
-  31997593.865 ±(99.9%) 0.052 B/op [Average]
-  (min, avg, max) = (31997593.813, 31997593.865, 31997593.962), stdev = 0.048
-  CI (99.9%): [31997593.813, 31997593.916] (assumes normal distribution)
+  31997577.837 ±(99.9%) 0.018 B/op [Average]
+  (min, avg, max) = (31997577.813, 31997577.837, 31997577.863), stdev = 0.017
+  CI (99.9%): [31997577.820, 31997577.855] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space":
-  4433.997 ±(99.9%) 195.355 MB/sec [Average]
-  (min, avg, max) = (4134.432, 4433.997, 4704.665), stdev = 182.736
-  CI (99.9%): [4238.641, 4629.352] (assumes normal distribution)
+  4506.763 ±(99.9%) 141.153 MB/sec [Average]
+  (min, avg, max) = (4286.904, 4506.763, 4638.913), stdev = 132.034
+  CI (99.9%): [4365.611, 4647.916] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space.norm":
-  31954144.174 ±(99.9%) 1067295.718 B/op [Average]
-  (min, avg, max) = (30152600.184, 31954144.174, 33934420.550), stdev = 998349.077
-  CI (99.9%): [30886848.456, 33021439.892] (assumes normal distribution)
+  32001449.812 ±(99.9%) 881079.042 B/op [Average]
+  (min, avg, max) = (30593746.824, 32001449.812, 32802713.132), stdev = 824161.882
+  CI (99.9%): [31120370.770, 32882528.854] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen":
-  0.003 ±(99.9%) 0.002 MB/sec [Average]
-  (min, avg, max) = (≈ 0, 0.003, 0.008), stdev = 0.002
-  CI (99.9%): [0.001, 0.005] (assumes normal distribution)
+  0.004 ±(99.9%) 0.002 MB/sec [Average]
+  (min, avg, max) = (0.001, 0.004, 0.007), stdev = 0.001
+  CI (99.9%): [0.002, 0.005] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen.norm":
-  19.438 ±(99.9%) 15.575 B/op [Average]
-  (min, avg, max) = (≈ 0, 19.438, 57.600), stdev = 14.569
-  CI (99.9%): [3.863, 35.013] (assumes normal distribution)
+  25.156 ±(99.9%) 11.468 B/op [Average]
+  (min, avg, max) = (9.173, 25.156, 46.697), stdev = 10.727
+  CI (99.9%): [13.688, 36.624] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.count":
-  220.000 ±(99.9%) 0.001 counts [Sum]
-  (min, avg, max) = (12.000, 14.667, 17.000), stdev = 2.059
-  CI (99.9%): [220.000, 220.000] (assumes normal distribution)
+  250.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (16.000, 16.667, 17.000), stdev = 0.488
+  CI (99.9%): [250.000, 250.000] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.time":
-  156.000 ±(99.9%) 0.001 ms [Sum]
-  (min, avg, max) = (7.000, 10.400, 16.000), stdev = 2.613
-  CI (99.9%): [156.000, 156.000] (assumes normal distribution)
+  200.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (8.000, 13.333, 17.000), stdev = 2.870
+  CI (99.9%): [200.000, 200.000] (assumes normal distribution)
 
 
 # JMH version: 1.21
@@ -1429,223 +1423,119 @@ Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_met
 
 # Run progress: 87.50% complete, ETA 00:00:46
 # Fork: 1 of 3
-# Warmup Iteration   1: 5.975 ms/op
-# Warmup Iteration   2: 4.572 ms/op
-# Warmup Iteration   3: 4.446 ms/op
-# Warmup Iteration   4: 4.438 ms/op
-# Warmup Iteration   5: 4.500 ms/op
-Iteration   1: 4.549 ms/op
-                 ·gc.alloc.rate:               4468.719 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4421.882 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31662228.945 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.145 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     8.000 ms
+# Warmup Iteration   1: 0.370 ms/op
+# Warmup Iteration   2: 0.371 ms/op
+# Warmup Iteration   3: 0.370 ms/op
+# Warmup Iteration   4: 0.370 ms/op
+# Warmup Iteration   5: 0.370 ms/op
+Iteration   1: 0.371 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   2: 4.435 ms/op
-                 ·gc.alloc.rate:               4586.008 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.805 B/op
-                 ·gc.churn.G1_Eden_Space:      4417.466 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30821638.796 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    36.531 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     10.000 ms
+Iteration   2: 0.373 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   3: 4.442 ms/op
-                 ·gc.alloc.rate:               4580.473 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.805 B/op
-                 ·gc.churn.G1_Eden_Space:      4751.529 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 33192534.088 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.265 B/op
-                 ·gc.count:                    14.000 counts
-                 ·gc.time:                     11.000 ms
+Iteration   3: 0.373 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   4: 4.420 ms/op
-                 ·gc.alloc.rate:               4603.421 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.797 B/op
-                 ·gc.churn.G1_Eden_Space:      4414.705 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30685860.652 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    27.278 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     9.000 ms
+Iteration   4: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   5: 4.551 ms/op
-                 ·gc.alloc.rate:               4468.130 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.855 B/op
-                 ·gc.churn.G1_Eden_Space:      4421.300 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31662228.945 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.382 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     8.000 ms
+Iteration   5: 0.373 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
 
 # Run progress: 91.67% complete, ETA 00:00:30
 # Fork: 2 of 3
-# Warmup Iteration   1: 5.762 ms/op
-# Warmup Iteration   2: 4.531 ms/op
-# Warmup Iteration   3: 4.465 ms/op
-# Warmup Iteration   4: 4.583 ms/op
-# Warmup Iteration   5: 4.488 ms/op
-Iteration   1: 4.479 ms/op
-                 ·gc.alloc.rate:               4542.974 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4677.611 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32945883.429 B/op
-                 ·gc.churn.G1_Old_Gen:         0.007 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    46.071 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     11.000 ms
+# Warmup Iteration   1: 0.377 ms/op
+# Warmup Iteration   2: 0.370 ms/op
+# Warmup Iteration   3: 0.373 ms/op
+# Warmup Iteration   4: 0.373 ms/op
+# Warmup Iteration   5: 0.371 ms/op
+Iteration   1: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   2: 4.529 ms/op
-                 ·gc.alloc.rate:               4488.417 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.846 B/op
-                 ·gc.churn.G1_Eden_Space:      4408.632 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31428811.873 B/op
-                 ·gc.churn.G1_Old_Gen:         0.008 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    56.036 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     16.000 ms
+Iteration   2: 0.373 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   3: 4.606 ms/op
-                 ·gc.alloc.rate:               4418.261 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.872 B/op
-                 ·gc.churn.G1_Eden_Space:      4399.444 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31861318.459 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    28.404 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     14.000 ms
+Iteration   3: 0.370 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   4: 4.386 ms/op
-                 ·gc.alloc.rate:               4641.570 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.782 B/op
-                 ·gc.churn.G1_Eden_Space:      4674.781 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32226540.996 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.026 B/op
-                 ·gc.count:                    17.000 counts
-                 ·gc.time:                     10.000 ms
+Iteration   4: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   5: 4.522 ms/op
-                 ·gc.alloc.rate:               4499.961 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4400.061 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31287240.649 B/op
-                 ·gc.churn.G1_Old_Gen:         0.005 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    37.189 B/op
-                 ·gc.count:                    16.000 counts
-                 ·gc.time:                     14.000 ms
+Iteration   5: 0.373 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
 
 # Run progress: 95.83% complete, ETA 00:00:15
 # Fork: 3 of 3
-# Warmup Iteration   1: 6.443 ms/op
-# Warmup Iteration   2: 4.565 ms/op
-# Warmup Iteration   3: 4.552 ms/op
-# Warmup Iteration   4: 4.677 ms/op
-# Warmup Iteration   5: 4.522 ms/op
-Iteration   1: 4.473 ms/op
-                 ·gc.alloc.rate:               4546.873 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.821 B/op
-                 ·gc.churn.G1_Eden_Space:      4643.709 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32679058.286 B/op
-                 ·gc.churn.G1_Old_Gen:         0.004 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    30.857 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     12.000 ms
+# Warmup Iteration   1: 0.371 ms/op
+# Warmup Iteration   2: 0.370 ms/op
+# Warmup Iteration   3: 0.373 ms/op
+# Warmup Iteration   4: 0.372 ms/op
+# Warmup Iteration   5: 0.372 ms/op
+Iteration   1: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   2: 4.629 ms/op
-                 ·gc.alloc.rate:               4398.233 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.880 B/op
-                 ·gc.churn.G1_Eden_Space:      4280.126 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 31138358.267 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    19.023 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     14.000 ms
+Iteration   2: 0.375 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.153 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   3: 4.518 ms/op
-                 ·gc.alloc.rate:               4502.543 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.838 B/op
-                 ·gc.churn.G1_Eden_Space:      4639.863 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32973464.216 B/op
-                 ·gc.churn.G1_Old_Gen:         0.003 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    18.595 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     11.000 ms
+Iteration   3: 0.374 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   4: 4.492 ms/op
-                 ·gc.alloc.rate:               4528.466 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.830 B/op
-                 ·gc.churn.G1_Eden_Space:      4645.650 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 32825601.148 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.256 B/op
-                 ·gc.count:                    13.000 counts
-                 ·gc.time:                     8.000 ms
+Iteration   4: 0.372 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.152 B/op
+                 ·gc.count:           ≈ 0 counts
 
-Iteration   5: 4.570 ms/op
-                 ·gc.alloc.rate:               4448.770 MB/sec
-                 ·gc.alloc.rate.norm:          31997593.863 B/op
-                 ·gc.churn.G1_Eden_Space:      4289.770 MB/sec
-                 ·gc.churn.G1_Eden_Space.norm: 30853989.699 B/op
-                 ·gc.churn.G1_Old_Gen:         0.001 MB/sec
-                 ·gc.churn.G1_Old_Gen.norm:    9.425 B/op
-                 ·gc.count:                    12.000 counts
-                 ·gc.time:                     8.000 ms
+Iteration   5: 0.371 ms/op
+                 ·gc.alloc.rate:      ≈ 10⁻⁴ MB/sec
+                 ·gc.alloc.rate.norm: 0.151 B/op
+                 ·gc.count:           ≈ 0 counts
 
 
 
 Result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline":
-  4.507 ±(99.9%) 0.074 ms/op [Average]
-  (min, avg, max) = (4.386, 4.507, 4.629), stdev = 0.069
-  CI (99.9%): [4.432, 4.581] (assumes normal distribution)
+  0.372 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.370, 0.372, 0.375), stdev = 0.001
+  CI (99.9%): [0.371, 0.374] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate":
-  4514.855 ±(99.9%) 74.480 MB/sec [Average]
-  (min, avg, max) = (4398.233, 4514.855, 4641.570), stdev = 69.669
-  CI (99.9%): [4440.374, 4589.335] (assumes normal distribution)
+  ≈ 10⁻⁴ MB/sec
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate.norm":
-  31997593.834 ±(99.9%) 0.031 B/op [Average]
-  (min, avg, max) = (31997593.782, 31997593.834, 31997593.880), stdev = 0.029
-  CI (99.9%): [31997593.803, 31997593.864] (assumes normal distribution)
-
-Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Eden_Space":
-  4499.102 ±(99.9%) 165.161 MB/sec [Average]
-  (min, avg, max) = (4280.126, 4499.102, 4751.529), stdev = 154.492
-  CI (99.9%): [4333.941, 4664.263] (assumes normal distribution)
-
-Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Eden_Space.norm":
-  31882983.897 ±(99.9%) 926102.079 B/op [Average]
-  (min, avg, max) = (30685860.652, 31882983.897, 33192534.088), stdev = 866276.459
-  CI (99.9%): [30956881.818, 32809085.975] (assumes normal distribution)
-
-Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Old_Gen":
-  0.004 ±(99.9%) 0.002 MB/sec [Average]
-  (min, avg, max) = (0.001, 0.004, 0.008), stdev = 0.002
-  CI (99.9%): [0.002, 0.006] (assumes normal distribution)
-
-Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Old_Gen.norm":
-  26.166 ±(99.9%) 14.665 B/op [Average]
-  (min, avg, max) = (9.256, 26.166, 56.036), stdev = 13.718
-  CI (99.9%): [11.500, 40.831] (assumes normal distribution)
+  0.152 ±(99.9%) 0.001 B/op [Average]
+  (min, avg, max) = (0.151, 0.152, 0.153), stdev = 0.001
+  CI (99.9%): [0.151, 0.152] (assumes normal distribution)
 
 Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.count":
-  211.000 ±(99.9%) 0.001 counts [Sum]
-  (min, avg, max) = (12.000, 14.067, 17.000), stdev = 1.792
-  CI (99.9%): [211.000, 211.000] (assumes normal distribution)
-
-Secondary result "org.ib.benchmark.HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.time":
-  164.000 ±(99.9%) 0.001 ms [Sum]
-  (min, avg, max) = (8.000, 10.933, 16.000), stdev = 2.604
-  CI (99.9%): [164.000, 164.000] (assumes normal distribution)
+  ≈ 0 counts
 
 
 # Run complete. Total time: 00:06:08
@@ -1658,72 +1548,71 @@ Do not assume the numbers tell you what you want them to tell.
 
 Benchmark                                                                                        (factor)  (param)  Mode  Cnt         Score         Error   Units
 
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline                                                 1  1000000  avgt   15         0.376 ±       0.009   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline                                                 1  1000000  avgt   15         0.371 ±       0.002   ms/op
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate                                  1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate.norm                             1  1000000  avgt   15         0.154 ±       0.004    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate.norm                             1  1000000  avgt   15         0.151 ±       0.001    B/op
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.count                                       1  1000000  avgt   15           ≈ 0                counts
 
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda                                                        1  1000000  avgt   15         4.602 ±       0.114   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate                                         1  1000000  avgt   15      4420.610 ±     108.927  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate.norm                                    1  1000000  avgt   15  31997553.875 ±       0.046    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Eden_Space                                1  1000000  avgt   15      4409.761 ±     208.511  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Eden_Space.norm                           1  1000000  avgt   15  31912903.699 ± 1086644.701    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen                                   1  1000000  avgt   15         0.004 ±       0.002  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen.norm                              1  1000000  avgt   15        30.388 ±      14.164    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.count                                              1  1000000  avgt   15       239.000                counts
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.time                                               1  1000000  avgt   15       199.000                    ms
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda                                                        1  1000000  avgt   15         4.492 ±       0.046   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate                                         1  1000000  avgt   15      4528.810 ±      45.561  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate.norm                                    1  1000000  avgt   15  31997553.828 ±       0.018    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Eden_Space                                1  1000000  avgt   15      4534.978 ±     143.705  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Eden_Space.norm                           1  1000000  avgt   15  32043759.544 ± 1065655.847    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen                                   1  1000000  avgt   15         0.005 ±       0.003  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen.norm                              1  1000000  avgt   15        31.910 ±      21.673    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.count                                              1  1000000  avgt   15       249.000                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.time                                               1  1000000  avgt   15       184.000                    ms
 
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline                                        1  1000000  avgt   15         0.529 ±       0.008   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline                                        1  1000000  avgt   15         0.525 ±       0.005   ms/op
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate                         1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate.norm                    1  1000000  avgt   15         0.218 ±       0.007    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate.norm                    1  1000000  avgt   15         0.214 ±       0.002    B/op
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.count                              1  1000000  avgt   15           ≈ 0                counts
 
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda                                               1  1000000  avgt   15         4.621 ±       0.123   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate                                1  1000000  avgt   15      4405.046 ±     115.221  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate.norm                           1  1000000  avgt   15  31997577.880 ±       0.049    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Eden_Space                       1  1000000  avgt   15      4414.942 ±     164.333  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Eden_Space.norm                  1  1000000  avgt   15  32065422.063 ±  627506.920    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen                          1  1000000  avgt   15         0.004 ±       0.002  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen.norm                     1  1000000  avgt   15        29.412 ±      14.574    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.count                                     1  1000000  avgt   15       235.000                counts
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.time                                      1  1000000  avgt   15       153.000                    ms
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda                                               1  1000000  avgt   15         4.530 ±       0.130   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate                                1  1000000  avgt   15      4492.482 ±     121.997  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate.norm                           1  1000000  avgt   15  31997577.845 ±       0.052    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Eden_Space                       1  1000000  avgt   15      4464.556 ±     177.214  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Eden_Space.norm                  1  1000000  avgt   15  31802105.335 ± 1049520.321    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen                          1  1000000  avgt   15         0.004 ±       0.003  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen.norm                     1  1000000  avgt   15        27.070 ±      22.552    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.count                                     1  1000000  avgt   15       226.000                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.time                                      1  1000000  avgt   15       188.000                    ms
 
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction                                             1  1000000  avgt   15         4.550 ±       0.063   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate                              1  1000000  avgt   15      4469.838 ±      62.294  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate.norm                         1  1000000  avgt   15  31997553.863 ±       0.046    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Eden_Space                     1  1000000  avgt   15      4483.247 ±     135.199  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Eden_Space.norm                1  1000000  avgt   15  32089853.142 ±  675050.081    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Old_Gen                        1  1000000  avgt   15         0.004 ±       0.003  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Old_Gen.norm                   1  1000000  avgt   15        31.275 ±      22.394    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.count                                   1  1000000  avgt   15       231.000                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline                                              1  1000000  avgt   15         0.372 ±       0.001   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate                               1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate.norm                          1  1000000  avgt   15         0.152 ±       0.001    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.count                                    1  1000000  avgt   15           ≈ 0                counts
+
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef                                                     1  1000000  avgt   15         4.515 ±       0.045   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate                                      1  1000000  avgt   15      4505.981 ±      44.360  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate.norm                                 1  1000000  avgt   15  31997577.837 ±       0.018    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space                             1  1000000  avgt   15      4506.763 ±     141.153  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space.norm                        1  1000000  avgt   15  32001449.812 ±  881079.042    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen                                1  1000000  avgt   15         0.004 ±       0.002  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen.norm                           1  1000000  avgt   15        25.156 ±      11.468    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.count                                           1  1000000  avgt   15       250.000                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.time                                            1  1000000  avgt   15       200.000                    ms
+
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction                                             1  1000000  avgt   15         4.529 ±       0.081   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate                              1  1000000  avgt   15      4491.858 ±      79.817  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate.norm                         1  1000000  avgt   15  31997553.854 ±       0.055    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Eden_Space                     1  1000000  avgt   15      4488.738 ±     128.916  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Eden_Space.norm                1  1000000  avgt   15  31979141.286 ±  907892.275    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Old_Gen                        1  1000000  avgt   15         0.005 ±       0.004  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.churn.G1_Old_Gen.norm                   1  1000000  avgt   15        36.744 ±      27.957    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.count                                   1  1000000  avgt   15       262.000                counts
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.time                                    1  1000000  avgt   15       208.000                    ms
 
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline                                      1  1000000  avgt   15         4.602 ±       0.107   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.alloc.rate                       1  1000000  avgt   15      4421.466 ±     102.247  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.alloc.rate.norm                  1  1000000  avgt   15  31997553.883 ±       0.047    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Eden_Space              1  1000000  avgt   15      4446.061 ±     163.261  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Eden_Space.norm         1  1000000  avgt   15  32174761.233 ±  878018.327    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen                 1  1000000  avgt   15         0.004 ±       0.004  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen.norm            1  1000000  avgt   15        31.895 ±      27.909    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.count                            1  1000000  avgt   15       227.000                counts
-HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.time                             1  1000000  avgt   15       178.000                    ms
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline                                      1  1000000  avgt   15         4.496 ±       0.057   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.alloc.rate                       1  1000000  avgt   15      4524.379 ±      58.130  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.alloc.rate.norm                  1  1000000  avgt   15  31997553.830 ±       0.024    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Eden_Space              1  1000000  avgt   15      4533.684 ±     152.664  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Eden_Space.norm         1  1000000  avgt   15  32067133.860 ± 1133667.534    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen                 1  1000000  avgt   15         0.003 ±       0.002  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen.norm            1  1000000  avgt   15        21.535 ±      15.415    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.count                            1  1000000  avgt   15       247.000                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.time                             1  1000000  avgt   15       200.000                    ms
 
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef                                                     1  1000000  avgt   15         4.585 ±       0.128   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate                                      1  1000000  avgt   15      4439.854 ±     121.310  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate.norm                                 1  1000000  avgt   15  31997593.865 ±       0.052    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space                             1  1000000  avgt   15      4433.997 ±     195.355  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space.norm                        1  1000000  avgt   15  31954144.174 ± 1067295.718    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen                                1  1000000  avgt   15         0.003 ±       0.002  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen.norm                           1  1000000  avgt   15        19.438 ±      15.575    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.count                                           1  1000000  avgt   15       220.000                counts
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.time                                            1  1000000  avgt   15       156.000                    ms
-
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline                                              1  1000000  avgt   15         4.507 ±       0.074   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate                               1  1000000  avgt   15      4514.855 ±      74.480  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate.norm                          1  1000000  avgt   15  31997593.834 ±       0.031    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Eden_Space                      1  1000000  avgt   15      4499.102 ±     165.161  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Eden_Space.norm                 1  1000000  avgt   15  31882983.897 ±  926102.079    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Old_Gen                         1  1000000  avgt   15         0.004 ±       0.002  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.churn.G1_Old_Gen.norm                    1  1000000  avgt   15        26.166 ±      14.665    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.count                                    1  1000000  avgt   15       211.000                counts
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.time                                     1  1000000  avgt   15       164.000                    ms
+Few thoughts:
+    - high level order functions comes at a cost
+    - inlining helps in case of lambda (capturing) and method reference but the Kotlin compiler cannot optimize the anonymous functions

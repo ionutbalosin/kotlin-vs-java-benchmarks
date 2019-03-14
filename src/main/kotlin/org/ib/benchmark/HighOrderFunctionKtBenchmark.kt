@@ -27,11 +27,8 @@ open class HighOrderFunctionKtBenchmark {
     @Param("1")
     private var factor: Int = 1
 
-    private val sumOfSquares_anonymousFunction = fun(x : Int) : Int = x * x
+    private val sumOfSquares_anonymousFunction = fun(x: Int): Int = x * x
     //private val sumOfSquares_anonymousFunction_capturing = fun(x : Int) : Int = x * x * factor
-
-    private val sumOfSquares_methodRef = this::sumOfSquares
-    private val sumOfSquares_methodRef_inline = this::sumOfSquares_inline
 
     companion object {
 
@@ -63,16 +60,13 @@ open class HighOrderFunctionKtBenchmark {
 
     @Benchmark
     fun sumOfSquares_methodRef(): Long {
-        return sumOfSquares_methodRef(param) {
-            it * it;
-        }
+        return sumOfSquares(param, this::square)
     }
 
     @Benchmark
     fun sumOfSquares_methodRef_inline(): Long {
-        return sumOfSquares_methodRef_inline(param) {
-            it * it;
-        }
+        return sumOfSquares_inline(param, this::square)
+
     }
 
     @Benchmark
@@ -108,6 +102,10 @@ open class HighOrderFunctionKtBenchmark {
     //fun sumOfSquares_anonymousFunction_capturing_inline(): Long {
     //    return sumOfSquares_inline(param, sumOfSquares_anonymousFunction_capturing)
     //}
+
+    private fun square(it: Int): Int {
+        return it * it
+    }
 
     private fun sumOfSquares(max: Int, square: (Int) -> Int): Long {
         var sum = 0L
