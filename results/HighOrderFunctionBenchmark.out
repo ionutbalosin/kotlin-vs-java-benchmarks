@@ -1578,21 +1578,6 @@ HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen.
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.count                                     1  1000000  avgt   15       226.000                counts
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.time                                      1  1000000  avgt   15       188.000                    ms
 
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline                                              1  1000000  avgt   15         0.372 ±       0.001   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate                               1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate.norm                          1  1000000  avgt   15         0.152 ±       0.001    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.count                                    1  1000000  avgt   15           ≈ 0                counts
-
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef                                                     1  1000000  avgt   15         4.515 ±       0.045   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate                                      1  1000000  avgt   15      4505.981 ±      44.360  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate.norm                                 1  1000000  avgt   15  31997577.837 ±       0.018    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space                             1  1000000  avgt   15      4506.763 ±     141.153  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space.norm                        1  1000000  avgt   15  32001449.812 ±  881079.042    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen                                1  1000000  avgt   15         0.004 ±       0.002  MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen.norm                           1  1000000  avgt   15        25.156 ±      11.468    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.count                                           1  1000000  avgt   15       250.000                counts
-HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.time                                            1  1000000  avgt   15       200.000                    ms
-
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction                                             1  1000000  avgt   15         4.529 ±       0.081   ms/op
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate                              1  1000000  avgt   15      4491.858 ±      79.817  MB/sec
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate.norm                         1  1000000  avgt   15  31997553.854 ±       0.055    B/op
@@ -1612,6 +1597,21 @@ HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.churn.G1_Old_Gen.norm            1  1000000  avgt   15        21.535 ±      15.415    B/op
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.count                            1  1000000  avgt   15       247.000                counts
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction_inline:·gc.time                             1  1000000  avgt   15       200.000                    ms
+
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline                                              1  1000000  avgt   15         0.372 ±       0.001   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate                               1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.alloc.rate.norm                          1  1000000  avgt   15         0.152 ±       0.001    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef_inline:·gc.count                                    1  1000000  avgt   15           ≈ 0                counts
+
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef                                                     1  1000000  avgt   15         4.515 ±       0.045   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate                                      1  1000000  avgt   15      4505.981 ±      44.360  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.alloc.rate.norm                                 1  1000000  avgt   15  31997577.837 ±       0.018    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space                             1  1000000  avgt   15      4506.763 ±     141.153  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Eden_Space.norm                        1  1000000  avgt   15  32001449.812 ±  881079.042    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen                                1  1000000  avgt   15         0.004 ±       0.002  MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.churn.G1_Old_Gen.norm                           1  1000000  avgt   15        25.156 ±      11.468    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.count                                           1  1000000  avgt   15       250.000                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_methodRef:·gc.time                                            1  1000000  avgt   15       200.000                    ms
 
 Few thoughts:
     - high level order functions comes at a cost
