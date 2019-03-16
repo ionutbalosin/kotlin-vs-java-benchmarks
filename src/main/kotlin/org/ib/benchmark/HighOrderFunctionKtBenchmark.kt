@@ -17,17 +17,17 @@ import java.util.concurrent.TimeUnit
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
-@Fork(value = 3, jvmArgsAppend = [])
+@Fork(value = 3, jvmArgsAppend = ["-XX:-TieredCompilation"])
 @State(Scope.Benchmark)
 open class HighOrderFunctionKtBenchmark {
 
     @Param("1000000")
-    private var param: Int = 0
+    private var param: Long = 0
 
     @Param("1")
     private var factor: Int = 1
 
-    private val sumOfSquares_anonymousFunction = fun(x: Int): Int = x * x
+    private val sumOfSquares_anonymousFunction = fun(x: Long): Long = x * x
     //private val sumOfSquares_anonymousFunction_capturing = fun(x : Int) : Int = x * x * factor
 
     companion object {
@@ -103,11 +103,11 @@ open class HighOrderFunctionKtBenchmark {
     //    return sumOfSquares_inline(param, sumOfSquares_anonymousFunction_capturing)
     //}
 
-    private fun square(it: Int): Int {
+    private fun square(it: Long): Long {
         return it * it
     }
 
-    private fun sumOfSquares(max: Int, square: (Int) -> Int): Long {
+    private fun sumOfSquares(max: Long, square: (Long) -> Long): Long {
         var sum = 0L
         for (i in 1..max) {
             sum += square(i)
@@ -115,7 +115,7 @@ open class HighOrderFunctionKtBenchmark {
         return sum
     }
 
-    private inline fun sumOfSquares_inline(max: Int, square: (Int) -> Int): Long {
+    private inline fun sumOfSquares_inline(max: Long, square: (Long) -> Long): Long {
         var sum = 0L
         for (i in 1..max) {
             sum += square(i)
