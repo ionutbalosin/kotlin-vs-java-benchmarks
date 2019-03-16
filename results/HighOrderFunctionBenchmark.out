@@ -1548,11 +1548,6 @@ Do not assume the numbers tell you what you want them to tell.
 
 Benchmark                                                                                        (factor)  (param)  Mode  Cnt         Score         Error   Units
 
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline                                                 1  1000000  avgt   15         0.371 ±       0.002   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate                                  1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate.norm                             1  1000000  avgt   15         0.151 ±       0.001    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.count                                       1  1000000  avgt   15           ≈ 0                counts
-
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda                                                        1  1000000  avgt   15         4.492 ±       0.046   ms/op
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate                                         1  1000000  avgt   15      4528.810 ±      45.561  MB/sec
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.alloc.rate.norm                                    1  1000000  avgt   15  31997553.828 ±       0.018    B/op
@@ -1563,10 +1558,10 @@ HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.churn.G1_Old_Gen.norm     
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.count                                              1  1000000  avgt   15       249.000                counts
 HighOrderFunctionKtBenchmark.sumOfSquares_lambda:·gc.time                                               1  1000000  avgt   15       184.000                    ms
 
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline                                        1  1000000  avgt   15         0.525 ±       0.005   ms/op
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate                         1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate.norm                    1  1000000  avgt   15         0.214 ±       0.002    B/op
-HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.count                              1  1000000  avgt   15           ≈ 0                counts
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline                                                 1  1000000  avgt   15         0.371 ±       0.002   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate                                  1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.alloc.rate.norm                             1  1000000  avgt   15         0.151 ±       0.001    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_lambda_inline:·gc.count                                       1  1000000  avgt   15           ≈ 0                counts
 
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda                                               1  1000000  avgt   15         4.530 ±       0.130   ms/op
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.alloc.rate                                1  1000000  avgt   15      4492.482 ±     121.997  MB/sec
@@ -1577,6 +1572,11 @@ HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen 
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.churn.G1_Old_Gen.norm                     1  1000000  avgt   15        27.070 ±      22.552    B/op
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.count                                     1  1000000  avgt   15       226.000                counts
 HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda:·gc.time                                      1  1000000  avgt   15       188.000                    ms
+
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline                                        1  1000000  avgt   15         0.525 ±       0.005   ms/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate                         1  1000000  avgt   15        ≈ 10⁻⁴                MB/sec
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.alloc.rate.norm                    1  1000000  avgt   15         0.214 ±       0.002    B/op
+HighOrderFunctionKtBenchmark.sumOfSquares_capturingLambda_inline:·gc.count                              1  1000000  avgt   15           ≈ 0                counts
 
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction                                             1  1000000  avgt   15         4.529 ±       0.081   ms/op
 HighOrderFunctionKtBenchmark.sumOfSquares_anonymousFunction:·gc.alloc.rate                              1  1000000  avgt   15      4491.858 ±      79.817  MB/sec
